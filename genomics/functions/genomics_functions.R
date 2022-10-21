@@ -14,108 +14,108 @@ import::from(scales, rescale_none)
 #### DICTIONARY FUNCTIONS #####
 load_filters <- function(){
   ## Alpha ##
-  filtro_alpha <<- c("B.1.1.7", "^Q.")
+  filter_alpha <<- c("B.1.1.7", "^Q.")
   # ## Beta ## 
-  # filtro_beta <<- c("B.1.351", "^B.1.351.")
+  # filter_beta <<- c("B.1.351", "^B.1.351.")
   ## Gamma ## 
-  filtro_gamma <<- c("P.1", "^P.1.")
+  filter_gamma <<- c("P.1", "^P.1.")
   ## Delta ## 
-  filtro_delta <<- c("B.1.617.2", "^AY.")
+  filter_delta <<- c("B.1.617.2", "^AY.")
   ## Lambda ## 
-  # filtro_lambda <<- c("C.37", "C.37.1")
+  # filter_lambda <<- c("C.37", "C.37.1")
   ## Mu ## 
-  filtro_mu <<- c("B.1.621", "B.1.621.1", "B.1.621.2", "BB.1", "BB.2")
+  filter_mu <<- c("B.1.621", "B.1.621.1", "B.1.621.2", "BB.1", "BB.2")
   ## Omicron ##
-  filtro_omicron <<- c("B.1.1.529", "BA.1", "^BA.1.", "^BA.1.1","^BA.1.1", "BA.2","^BA.2.", 
+  filter_omicron <<- c("B.1.1.529", "BA.1", "^BA.1.", "^BA.1.1","^BA.1.1", "BA.2","^BA.2.", 
                        "BA.3", "BA.4", "BA.5", "B.2.12.1")
 }
 
-add_variant_dictionary <- function(dic_variantes,
+add_variant_dictionary <- function(dic_variants,
                              list_lineages = list_lineages,
-                             variante,
-                             filtro_variante){
-  list_pos_variante <- grep(paste(filtro_variante, collapse="|"), 
+                             variant,
+                             filter_variant){
+  list_pos_variant <- grep(paste(filter_variant, collapse="|"), 
                              list_lineages)
-  tabla_aux <- cbind(variante, list_lineages[list_pos_variante])
-  dic_variantes <- dic_variantes %>% add_row(label = tabla_aux[,1],
+  tabla_aux <- cbind(variant, list_lineages[list_pos_variant])
+  dic_variants <- dic_variants %>% add_row(label = tabla_aux[,1],
                                              lineage = tabla_aux[,2])
-  return (dic_variantes)
+  return (dic_variants)
 }
 
 generate_dictionary <- function(Base_genomas){
   list_lineages <- unique(Base_genomas$lineage) 
-  dic_variantes <- data.frame(label = character(),
+  dic_variants <- data.frame(label = character(),
                               lineage = character())
   
-  # dic_variantes <- add_variant_dictionary (dic_variantes = dic_variantes,
+  # dic_variants <- add_variant_dictionary (dic_variants = dic_variants,
   #                                    list_lineages = list_lineages,
-  #                                    variante = "Alpha",
-  #                                    filtro_variante = filtro_alpha)
+  #                                    variant = "Alpha",
+  #                                    filter_variant = filter_alpha)
   
-  # dic_variantes <- add_variant_dictionary (dic_variantes = dic_variantes,
+  # dic_variants <- add_variant_dictionary (dic_variants = dic_variants,
   #                                        list_lineages = list_lineages,
-  #                                        variante = "Beta",
-  #                                        filtro_variante = filtro_beta)
+  #                                        variant = "Beta",
+  #                                        filter_variant = filter_beta)
   
   
-  dic_variantes <- add_variant_dictionary (dic_variantes = dic_variantes,
+  dic_variants <- add_variant_dictionary (dic_variants = dic_variants,
                                      list_lineages = list_lineages,
-                                     variante = "Gamma",
-                                     filtro_variante = filtro_gamma)
+                                     variant = "Gamma",
+                                     filter_variant = filter_gamma)
   
   
-  dic_variantes <- add_variant_dictionary (dic_variantes = dic_variantes,
+  dic_variants <- add_variant_dictionary (dic_variants = dic_variants,
                                      list_lineages = list_lineages,
-                                     variante = "Delta",
-                                     filtro_variante = filtro_delta)
+                                     variant = "Delta",
+                                     filter_variant = filter_delta)
   
-  # dic_variantes <- add_variant_dictionary (dic_variantes = dic_variantes,
+  # dic_variants <- add_variant_dictionary (dic_variants = dic_variants,
   #                                        list_lineages = list_lineages,
-  #                                        Variante = "Lambda",
-  #                                        filtro_variante = filtro_lambda)
+  #                                        variant = "Lambda",
+  #                                        filter_variant = filter_lambda)
   
   
-  dic_variantes <- add_variant_dictionary (dic_variantes = dic_variantes,
+  dic_variants <- add_variant_dictionary (dic_variants = dic_variants,
                                      list_lineages = list_lineages,
-                                     variante = "Mu",
-                                     filtro_variante = filtro_mu)
+                                     variant = "Mu",
+                                     filter_variant = filter_mu)
   
   
-  dic_variantes <- add_variant_dictionary (dic_variantes = dic_variantes,
+  dic_variants <- add_variant_dictionary (dic_variants = dic_variants,
                                      list_lineages = list_lineages,
-                                     variante = "Omicron",
-                                     filtro_variante = filtro_omicron)
+                                     variant = "Omicron",
+                                     filter_variant = filter_omicron)
   ## Others ##
   
-  dic_variantes <- left_join(data.frame(lineage = list_lineages), 
-                             dic_variantes, by = "lineage") %>% 
+  dic_variants <- left_join(data.frame(lineage = list_lineages), 
+                             dic_variants, by = "lineage") %>% 
     # filter(lineage != "None") %>% filter(!is.na(lineage)) %>%
     mutate(label = replace_na(label, "Other")) %>% arrange(label)
   
-  dic_variantes <- dic_variantes[, c(2,1)]
-  return(dic_variantes)
+  dic_variants <- dic_variants[, c(2,1)]
+  return(dic_variants)
 }
 
 #### CODIFICATION FUNCTIONS AND GENOMES AGGRUPATIONS ####
 filter_genomes <- function(df_genomas,
                             Variable_filtros = "Lugar",
-                            list_filtros){
-  Filtros_pos <- grep(paste(list_filtros, collapse="|"), df_genomas[, Variable_filtros][[1]])
-  df_genomas <- df_genomas[Filtros_pos,]
+                            filter_list){
+  filter_positions <- grep(paste(filter_list, collapse="|"), df_genomas[, Variable_filtros][[1]])
+  df_genomas <- df_genomas[filter_positions,]
   return (df_genomas)
 }
 
 lineage_codification <- function(df_genomas, 
-                         dic_variantes){
+                         dic_variants){
   df_genomas <- df_genomas %>% filter(lineage != "None") %>% filter(!is.na(lineage))
   df_genomas$lineage_recod = NA
-  for (i in c(1:length(dic_variantes$lineage))){
-    df_genomas$lineage_recod[df_genomas$lineage == dic_variantes$lineage[i]] = dic_variantes$label[i]
+  for (i in c(1:length(dic_variants$lineage))){
+    df_genomas$lineage_recod[df_genomas$lineage == dic_variants$lineage[i]] = dic_variants$label[i]
   }
   return(df_genomas)
 }
 
-group_variant_epiweek <- function(df_genomas_recod, fecha_inicial){
+group_variant_epiweek <- function(df_genomas_recod, initial_date){
   df_genomas <- df_genomas_recod %>% add_column(epiweek = NA, .after = "date") %>% 
     add_column(year = NA, .after = "date")
   df_genomas$year <- format(df_genomas$date, format="%Y")
@@ -134,42 +134,42 @@ group_variant_epiweek <- function(df_genomas_recod, fecha_inicial){
   df_aux <- df_aux[order(df_aux$Group.1, df_aux$Group.2), ]
   df_aux_tot <- df_aux_tot[order(df_aux_tot$Group.1, df_aux_tot$Group.2), ]
   
-  date_list <- seq(fecha_inicial, length.out = length(df_aux_tot$Group.1), by = 7)
+  date_list <- seq(initial_date, length.out = length(df_aux_tot$Group.1), by = 7)
   df_aux_tot <- data.frame(Group.0 = date_list, df_aux_tot)
   
-  df_agrupada <- left_join(df_aux, df_aux_tot, by=c('Group.1', 'Group.2'))
-  df_agrupada <- df_agrupada[, c("Group.0", "Group.1", "Group.2", "Group.3", "x.x", "x.y")]
-  colnames(df_agrupada) <- c('date', 'year', 'week', 'lineage', 'n_seq_var', 'n_seq_tot')
+  df_grouped <- left_join(df_aux, df_aux_tot, by=c('Group.1', 'Group.2'))
+  df_grouped <- df_grouped[, c("Group.0", "Group.1", "Group.2", "Group.3", "x.x", "x.y")]
+  colnames(df_grouped) <- c('date', 'year', 'week', 'lineage', 'n_seq_var', 'n_seq_tot')
   
-  df_agrupada <- cbind(df_agrupada, (binconf(df_agrupada$n_seq_var, df_agrupada$n_seq_tot)))
+  df_grouped <- cbind(df_grouped, (binconf(df_grouped$n_seq_var, df_grouped$n_seq_tot)))
   
   rm(df_aux, df_aux_tot)
-  return(df_agrupada)
+  return(df_grouped)
 }
 
 
 #### PLOTTING FUNCTIONS ####
-plot_prevalence_histogram <- function(df_agrupada,
-                                      Fecha_corte = Fecha_GISAID,
-                                      Titulo = "Prevalencia",
-                                      Paleta = "Thomas"){
-  Plot_prevalencia <- ggplot(df_agrupada, aes (x = as.factor(date), fill = lineage)) +
-    ggtitle(Titulo) +
+plot_prevalence_histogram <- function(df_grouped,
+                                      download_date = Fecha_GISAID,
+                                      title = "Prevalencia",
+                                      pallete = "Thomas"){
+  plot_prevalence <- ggplot(df_grouped, aes (x = as.factor(date), fill = lineage)) +
+    ggtitle(title) +
     geom_bar(aes (y = PointEst), stat = "identity", alpha=0.6, colour = "black")+
     geom_text(aes (y=1.035, label = n_seq_tot), hjust=0.5, alpha = 0.8, angle = 90) +
     geom_text(aes(y = PointEst, label = n_seq_var), position = position_stack(vjust = 0.5), angle = 90) +
-    labs (caption=paste0("Corte al ", Fecha_corte,",\t epiweek = ", epiweek(Fecha_corte)),
-          fill ="Variante", 
-          x = "Fecha de recolección", 
-          y= "Prevalencia por variante / Linaje viral") +
+    labs (caption=paste0("Corte al ", download_date,",\t epiweek = ", epiweek(download_date)),
+          fill ="variant", 
+          x = "Collection date", 
+          y= "Prevalence per variant / Viral lineage") +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5))+
     theme(legend.position="bottom",
           axis.text.y = element_text(margin = margin(r = 0)),
           panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
           panel.background = element_blank()) +
     scale_y_continuous(limits=c(0.045, 1.03), oob=rescale_none)+
-    scale_fill_manual(values = met.brewer(Paleta, n = length(unique(df_agrupada$lineage))))
-  # df_agrupada <- df_agrupada[(df_agrupada$n_seq_tot>=Secuencias_min),]
-  # df_agrupada$date <- as.Date(df_agrupada$date)
-  return (Plot_prevalencia)
+    scale_fill_manual(values = met.brewer(pallete, n = length(unique(df_grouped$lineage))))
+  # df_grouped <- df_grouped[(df_grouped$n_seq_tot>=Secuencias_min),]
+  # df_grouped$date <- as.Date(df_grouped$date)
+  return (plot_prevalence)
 }
