@@ -1,0 +1,1236 @@
+nohup: ignoring input
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_d1ce29d6f4bb314200053b8a3e328069 NOW.
+
+
+
+
+
+icu_stay
+
+Gradient evaluation took 0.041278 seconds
+1000 transitions using 10 leapfrog steps per transition would take 412.78 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.035946 seconds
+1000 transitions using 10 leapfrog steps per transition would take 359.46 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.040596 seconds
+1000 transitions using 10 leapfrog steps per transition would take 405.96 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.036806 seconds
+1000 transitions using 10 leapfrog steps per transition would take 368.06 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 266.669 seconds (Warm-up)
+               262.364 seconds (Sampling)
+               529.034 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 265.759 seconds (Warm-up)
+               292.744 seconds (Sampling)
+               558.503 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 278.379 seconds (Warm-up)
+               301.525 seconds (Sampling)
+               579.904 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 276.365 seconds (Warm-up)
+               313.909 seconds (Sampling)
+               590.274 seconds (Total)
+
+Inference for Stan model: anon_model_d1ce29d6f4bb314200053b8a3e328069.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+        mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu      2.34  1.1e-4 5.2e-3   2.33   2.34   2.34   2.34   2.35   2148    1.0
+sigma   0.74  3.6e-4   0.01   0.71   0.73   0.74   0.74   0.76   1108    1.0
+g       1.72  7.7e-4   0.03   1.67    1.7   1.72   1.73   1.77   1117    1.0
+lp__  -1.1e5    0.03   1.18 -1.1e5 -1.1e5 -1.1e5 -1.1e5 -1.1e5   1429    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 16:58:57 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+hosp_stay
+
+Gradient evaluation took 0.089494 seconds
+1000 transitions using 10 leapfrog steps per transition would take 894.94 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.083917 seconds
+1000 transitions using 10 leapfrog steps per transition would take 839.17 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.085196 seconds
+1000 transitions using 10 leapfrog steps per transition would take 851.96 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.083651 seconds
+1000 transitions using 10 leapfrog steps per transition would take 836.51 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 573.147 seconds (Warm-up)
+               662.366 seconds (Sampling)
+               1235.51 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 617.009 seconds (Warm-up)
+               623.139 seconds (Sampling)
+               1240.15 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 617.556 seconds (Warm-up)
+               661.558 seconds (Sampling)
+               1279.11 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 747.196 seconds (Warm-up)
+               644.607 seconds (Sampling)
+               1391.8 seconds (Total)
+
+Inference for Stan model: anon_model_d1ce29d6f4bb314200053b8a3e328069.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+        mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu      1.86  5.4e-5 3.1e-3   1.85   1.85   1.86   1.86   1.86   3174    1.0
+sigma   0.82  2.2e-4 6.5e-3   0.81   0.82   0.82   0.83   0.84    896    1.0
+g       1.92  5.3e-4   0.02   1.89   1.91   1.92   1.93   1.95    879    1.0
+lp__  -2.3e5    0.03   1.23 -2.3e5 -2.3e5 -2.3e5 -2.3e5 -2.3e5   1497    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 17:42:22 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_icu
+
+Gradient evaluation took 0.044894 seconds
+1000 transitions using 10 leapfrog steps per transition would take 448.94 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.044259 seconds
+1000 transitions using 10 leapfrog steps per transition would take 442.59 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.043652 seconds
+1000 transitions using 10 leapfrog steps per transition would take 436.52 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.044862 seconds
+1000 transitions using 10 leapfrog steps per transition would take 448.62 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 242.898 seconds (Warm-up)
+               255.028 seconds (Sampling)
+               497.926 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 267.088 seconds (Warm-up)
+               238.517 seconds (Sampling)
+               505.606 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 256.186 seconds (Warm-up)
+               299.982 seconds (Sampling)
+               556.168 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 271.385 seconds (Warm-up)
+               341.654 seconds (Sampling)
+               613.039 seconds (Total)
+
+Inference for Stan model: anon_model_d1ce29d6f4bb314200053b8a3e328069.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+        mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu      2.04  8.7e-5 4.4e-3   2.03   2.03   2.04   2.04   2.04   2564    1.0
+sigma   0.54  2.4e-4 8.3e-3   0.52   0.53   0.54   0.55   0.56   1152    1.0
+g       1.48  5.1e-4   0.02   1.45   1.47   1.48   1.49   1.51   1135    1.0
+lp__  -9.8e4    0.04   1.28 -9.8e4 -9.8e4 -9.8e4 -9.8e4 -9.8e4   1301    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 17:57:45 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_hosp
+
+Gradient evaluation took 0.097314 seconds
+1000 transitions using 10 leapfrog steps per transition would take 973.14 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.099486 seconds
+1000 transitions using 10 leapfrog steps per transition would take 994.86 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.096848 seconds
+1000 transitions using 10 leapfrog steps per transition would take 968.48 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.095632 seconds
+1000 transitions using 10 leapfrog steps per transition would take 956.32 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 631.345 seconds (Warm-up)
+               587.045 seconds (Sampling)
+               1218.39 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 633.738 seconds (Warm-up)
+               578.236 seconds (Sampling)
+               1211.97 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 646.812 seconds (Warm-up)
+               625.428 seconds (Sampling)
+               1272.24 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 633.802 seconds (Warm-up)
+               701.765 seconds (Sampling)
+               1335.57 seconds (Total)
+
+Inference for Stan model: anon_model_d1ce29d6f4bb314200053b8a3e328069.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+        mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu      1.79  4.2e-5 2.3e-3   1.78   1.78   1.79   1.79   1.79   3065    1.0
+sigma   0.65  1.5e-4 4.8e-3   0.65   0.65   0.65   0.66   0.66    972   1.01
+g       1.96  4.8e-4   0.02   1.93   1.95   1.96   1.97   1.99    967   1.01
+lp__  -2.3e5    0.03   1.11 -2.3e5 -2.3e5 -2.3e5 -2.3e5 -2.3e5   1326    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 18:22:06 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_death
+
+Gradient evaluation took 0.025355 seconds
+1000 transitions using 10 leapfrog steps per transition would take 253.55 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.02947 seconds
+1000 transitions using 10 leapfrog steps per transition would take 294.7 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.036587 seconds
+1000 transitions using 10 leapfrog steps per transition would take 365.87 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.036383 seconds
+1000 transitions using 10 leapfrog steps per transition would take 363.83 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 154.839 seconds (Warm-up)
+               196.665 seconds (Sampling)
+               351.504 seconds (Total)
+
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 181.428 seconds (Warm-up)
+               178.172 seconds (Sampling)
+               359.601 seconds (Total)
+
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 235.636 seconds (Warm-up)
+               190.105 seconds (Sampling)
+               425.74 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 226.55 seconds (Warm-up)
+               241.741 seconds (Sampling)
+               468.291 seconds (Total)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_22def586b696de9362b5b2da6a760223 NOW.
+Inference for Stan model: anon_model_d1ce29d6f4bb314200053b8a3e328069.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+        mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu      2.64  1.0e-4 5.1e-3   2.63   2.64   2.64   2.65   2.65   2358    1.0
+sigma    0.6  2.9e-4   0.01   0.58    0.6    0.6   0.61   0.62   1188    1.0
+g       1.59  6.3e-4   0.02   1.55   1.58   1.59   1.61   1.64   1200    1.0
+lp__  -1.0e5    0.03   1.24 -1.0e5 -1.0e5 -1.0e5 -1.0e5 -1.0e5   1275    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 18:29:55 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+icu_stay
+
+Gradient evaluation took 0.027754 seconds
+1000 transitions using 10 leapfrog steps per transition would take 277.54 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.039616 seconds
+1000 transitions using 10 leapfrog steps per transition would take 396.16 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.038115 seconds
+1000 transitions using 10 leapfrog steps per transition would take 381.15 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.036874 seconds
+1000 transitions using 10 leapfrog steps per transition would take 368.74 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 33)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 709.317 seconds (Warm-up)
+               587.249 seconds (Sampling)
+               1296.57 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 918.485 seconds (Warm-up)
+               469.736 seconds (Sampling)
+               1388.22 seconds (Total)
+
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 975.479 seconds (Warm-up)
+               503.997 seconds (Sampling)
+               1479.48 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 1110.84 seconds (Warm-up)
+               473.855 seconds (Sampling)
+               1584.69 seconds (Total)
+
+WARNING:pystan:9 of 4000 iterations ended with a divergence (0.225 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_1d86751b5a1365a49090395aa27fb009 NOW.
+Inference for Stan model: anon_model_22def586b696de9362b5b2da6a760223.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+              mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu[1]         2.36  2.0e-4   0.01   2.34   2.35   2.36   2.37   2.38   3846    1.0
+mu[2]         2.36  1.6e-4   0.01   2.34   2.36   2.36   2.37   2.39   4309    1.0
+mu[3]         2.32  1.1e-4 7.4e-3   2.31   2.32   2.32   2.33   2.34   4966    1.0
+mu[4]          2.2  5.1e-4   0.03   2.15   2.19    2.2   2.22   2.26   2518    1.0
+sigma[1]      0.81  6.5e-4   0.03   0.76   0.79   0.81   0.83   0.87   1947    1.0
+sigma[2]      0.69  5.2e-4   0.02   0.65   0.67   0.69    0.7   0.73   1785    1.0
+sigma[3]      0.73  3.2e-4   0.02   0.69   0.72   0.73   0.74   0.76   2445    1.0
+sigma[4]      0.82  1.5e-3   0.06   0.72   0.77   0.82   0.86   0.94   1584    1.0
+g[1]          1.75  1.3e-3   0.06   1.64   1.72   1.75   1.79   1.88   1937    1.0
+g[2]          1.63  1.1e-3   0.04   1.54    1.6   1.62   1.66   1.72   1750    1.0
+g[3]          1.75  7.3e-4   0.04   1.68   1.73   1.75   1.78   1.83   2445    1.0
+g[4]          2.07  4.5e-3   0.18   1.76   1.93   2.05   2.18   2.46   1606    1.0
+sigma_mu      0.52    0.02   0.62   0.05   0.09   0.18    0.8   2.12   1129   1.01
+sigma_sigma   0.11  1.7e-3   0.08   0.03   0.06   0.09   0.13   0.33   2270    1.0
+sigma_g       0.52  8.5e-3   0.42   0.06    0.2   0.39   0.73   1.64   2448    1.0
+lp__        -1.1e5    0.06   2.62 -1.1e5 -1.1e5 -1.1e5 -1.1e5 -1.1e5   1765    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 18:57:24 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+hosp_stay
+
+Gradient evaluation took 0.068353 seconds
+1000 transitions using 10 leapfrog steps per transition would take 683.53 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.083001 seconds
+1000 transitions using 10 leapfrog steps per transition would take 830.01 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.120785 seconds
+1000 transitions using 10 leapfrog steps per transition would take 1207.85 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.11904 seconds
+1000 transitions using 10 leapfrog steps per transition would take 1190.4 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 33)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 1515.67 seconds (Warm-up)
+               1338.28 seconds (Sampling)
+               2853.94 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 1574.79 seconds (Warm-up)
+               1318.64 seconds (Sampling)
+               2893.44 seconds (Total)
+
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 1892.16 seconds (Warm-up)
+               1239.05 seconds (Sampling)
+               3131.21 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 2244.85 seconds (Warm-up)
+               1291.77 seconds (Sampling)
+               3536.62 seconds (Total)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_fe9133f7d9ccd00d1ac7cc25ab907e45 NOW.
+Inference for Stan model: anon_model_1d86751b5a1365a49090395aa27fb009.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+              mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu[1]         1.93  7.8e-5 6.8e-3   1.91   1.92   1.93   1.93   1.94   7606    1.0
+mu[2]         1.84  7.1e-5 6.1e-3   1.82   1.83   1.84   1.84   1.85   7468    1.0
+mu[3]         1.85  5.5e-5 4.8e-3   1.84   1.84   1.85   1.85   1.86   7684    1.0
+mu[4]         1.75  1.3e-4 9.3e-3   1.73   1.74   1.75   1.75   1.76   5103    1.0
+sigma[1]      0.94  2.9e-4   0.01   0.91   0.93   0.94   0.95   0.97   2432    1.0
+sigma[2]      0.75  2.5e-4   0.01   0.73   0.74   0.75   0.76   0.78   2452    1.0
+sigma[3]      0.79  2.0e-4   0.01   0.77   0.78   0.79   0.79   0.81   2600    1.0
+sigma[4]      1.01  4.1e-4   0.02   0.97    1.0   1.01   1.02   1.05   2197    1.0
+g[1]          1.99  6.5e-4   0.03   1.92   1.96   1.99   2.01   2.05   2535    1.0
+g[2]          1.81  5.8e-4   0.03   1.76   1.79   1.81   1.83   1.87   2457    1.0
+g[3]          1.95  5.1e-4   0.03    1.9   1.93   1.95   1.97   2.01   2676    1.0
+g[4]           2.8  1.8e-3   0.09   2.63   2.74    2.8   2.86   2.97   2207    1.0
+sigma_mu      0.52    0.02   0.61   0.05   0.09   0.18   0.83   2.07   1014    1.0
+sigma_sigma    0.2  2.8e-3   0.12   0.08   0.12   0.16   0.23   0.52   2060    1.0
+sigma_g       0.95  7.0e-3   0.42   0.36   0.63   0.89    1.2   1.92   3563    1.0
+lp__        -2.3e5    0.06   2.67 -2.3e5 -2.3e5 -2.3e5 -2.3e5 -2.3e5   1745    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 19:57:43 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_icu
+
+Gradient evaluation took 0.047826 seconds
+1000 transitions using 10 leapfrog steps per transition would take 478.26 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.048053 seconds
+1000 transitions using 10 leapfrog steps per transition would take 480.53 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.044045 seconds
+1000 transitions using 10 leapfrog steps per transition would take 440.45 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.042537 seconds
+1000 transitions using 10 leapfrog steps per transition would take 425.37 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 33)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 1152.25 seconds (Warm-up)
+               479.6 seconds (Sampling)
+               1631.85 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 1154.52 seconds (Warm-up)
+               542.704 seconds (Sampling)
+               1697.23 seconds (Total)
+
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 1919.9 seconds (Warm-up)
+               504.113 seconds (Sampling)
+               2424.02 seconds (Total)
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 3358.8 seconds (Warm-up)
+               481.396 seconds (Sampling)
+               3840.2 seconds (Total)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_cde7354f96a29b64896e0a12a86e9911 NOW.
+Inference for Stan model: anon_model_fe9133f7d9ccd00d1ac7cc25ab907e45.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+              mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu[1]         2.13  1.4e-4 7.0e-3   2.12   2.13   2.13   2.14   2.14   2370    1.0
+mu[2]         2.03  1.2e-4 9.1e-3   2.01   2.03   2.03   2.04   2.05   6225    1.0
+mu[3]         2.01  9.0e-5 5.7e-3    2.0   2.01   2.01   2.01   2.02   4028    1.0
+mu[4]         1.78  3.2e-4   0.02   1.74   1.76   1.78   1.79   1.82   4738    1.0
+sigma[1]      0.44  4.6e-4   0.02    0.4   0.42   0.44   0.45   0.48   2049    1.0
+sigma[2]      0.64  4.3e-4   0.02    0.6   0.63   0.64   0.66   0.68   2285    1.0
+sigma[3]      0.57  2.3e-4   0.01   0.55   0.56   0.57   0.58    0.6   2601    1.0
+sigma[4]       0.7  9.9e-4   0.05    0.6   0.66    0.7   0.73   0.79   2496    1.0
+g[1]          1.19  7.3e-4   0.03   1.13   1.17   1.19   1.22   1.26   2045    1.0
+g[2]          1.58  8.7e-4   0.04    1.5   1.55   1.58    1.6   1.66   2302    1.0
+g[3]          1.78  6.7e-4   0.03   1.71   1.75   1.78    1.8   1.85   2625    1.0
+g[4]          1.86  2.7e-3   0.13   1.62   1.77   1.85   1.94   2.14   2498    1.0
+sigma_mu      0.93    0.01   0.66   0.12   0.31   0.82   1.43   2.32   2015    1.0
+sigma_sigma   0.18  2.2e-3   0.11   0.07   0.11   0.15   0.21   0.48   2569    1.0
+sigma_g       0.74  6.9e-3   0.42   0.22   0.41   0.63    1.0   1.77   3698    1.0
+lp__        -9.8e4    0.07   2.75 -9.8e4 -9.8e4 -9.8e4 -9.8e4 -9.8e4   1602    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 21:03:38 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_hosp
+
+Gradient evaluation took 0.069902 seconds
+1000 transitions using 10 leapfrog steps per transition would take 699.02 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.090408 seconds
+1000 transitions using 10 leapfrog steps per transition would take 904.08 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.099376 seconds
+1000 transitions using 10 leapfrog steps per transition would take 993.76 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.098245 seconds
+1000 transitions using 10 leapfrog steps per transition would take 982.45 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 33)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 29249.3 seconds (Warm-up)
+               14823.8 seconds (Sampling)
+               44073.1 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 29162.4 seconds (Warm-up)
+               15510.3 seconds (Sampling)
+               44672.7 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 32784.3 seconds (Warm-up)
+               12038.1 seconds (Sampling)
+               44822.4 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 30086.9 seconds (Warm-up)
+               15504.9 seconds (Sampling)
+               45591.8 seconds (Total)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_034365b032de09c901f5f20f84dd9d81 NOW.
+Inference for Stan model: anon_model_cde7354f96a29b64896e0a12a86e9911.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+              mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu[1]         1.75  7.8e-5 4.9e-3   1.74   1.75   1.75   1.75   1.76   4000    1.0
+mu[2]         1.83  8.2e-5 5.2e-3   1.82   1.83   1.83   1.83   1.84   4113    1.0
+mu[3]         1.85  4.8e-5 3.4e-3   1.85   1.85   1.85   1.86   1.86   5000    1.0
+mu[4]          1.5  8.4e-6 3.9e-4    1.5    1.5    1.5    1.5    1.5   2189    1.0
+sigma[1]      0.65  2.6e-4 9.3e-3   0.63   0.64   0.65   0.65   0.67   1318    1.0
+sigma[2]       0.7  3.3e-4   0.01   0.68    0.7    0.7   0.71   0.73   1578    1.0
+sigma[3]      0.58  2.0e-4 7.5e-3   0.57   0.58   0.58   0.59    0.6   1443    1.0
+sigma[4]      0.22  5.5e-5 2.7e-3   0.21   0.22   0.22   0.22   0.22   2439    1.0
+g[1]          1.85  7.2e-4   0.03    1.8   1.83   1.85   1.87    1.9   1329    1.0
+g[2]          2.02  1.1e-3   0.04   1.94   1.99   2.02   2.04    2.1   1564    1.0
+g[3]          1.85  6.1e-4   0.02    1.8   1.83   1.85   1.86   1.89   1505    1.0
+g[4]           1.0  4.2e-5 2.0e-3    1.0    1.0    1.0    1.0   1.01   2331    1.0
+sigma_mu      0.97    0.02   0.65   0.13   0.38   0.86   1.46   2.31   1751    1.0
+sigma_sigma   0.33  3.7e-3   0.16   0.15   0.22   0.29    0.4   0.78   1955    1.0
+sigma_g       0.99  7.7e-3    0.4    0.4   0.68   0.93   1.24   1.88   2631    1.0
+lp__        -2.3e5    0.08   2.81 -2.3e5 -2.3e5 -2.3e5 -2.3e5 -2.3e5   1360    1.0
+
+Samples were drawn using NUTS at Tue Aug  9 09:45:05 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_death
+
+Gradient evaluation took 0.028555 seconds
+1000 transitions using 10 leapfrog steps per transition would take 285.55 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.034393 seconds
+1000 transitions using 10 leapfrog steps per transition would take 343.93 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.041083 seconds
+1000 transitions using 10 leapfrog steps per transition would take 410.83 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.04002 seconds
+1000 transitions using 10 leapfrog steps per transition would take 400.2 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 33)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 613.769 seconds (Warm-up)
+               354.508 seconds (Sampling)
+               968.277 seconds (Total)
+
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 781.264 seconds (Warm-up)
+               338.745 seconds (Sampling)
+               1120.01 seconds (Total)
+
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 789.578 seconds (Warm-up)
+               380.529 seconds (Sampling)
+               1170.11 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 892.823 seconds (Warm-up)
+               388.249 seconds (Sampling)
+               1281.07 seconds (Total)
+
+Inference for Stan model: anon_model_034365b032de09c901f5f20f84dd9d81.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+              mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu[1]         2.63  1.7e-4   0.01   2.61   2.62   2.63   2.63   2.65   3741    1.0
+mu[2]         2.73  1.9e-4   0.01   2.71   2.72   2.73   2.74   2.75   3241    1.0
+mu[3]         2.65  1.1e-4 7.4e-3   2.63   2.64   2.65   2.65   2.66   4702    1.0
+mu[4]         2.44  2.8e-4   0.02    2.4   2.42   2.44   2.45   2.47   4292    1.0
+sigma[1]      0.62  4.1e-4   0.02   0.58   0.61   0.62   0.63   0.66   2201    1.0
+sigma[2]      0.54  6.1e-4   0.02   0.49   0.52   0.53   0.55   0.58   1382    1.0
+sigma[3]      0.59  2.7e-4   0.01   0.57   0.58   0.59    0.6   0.62   2400    1.0
+sigma[4]      0.69  9.9e-4   0.04   0.61   0.66   0.69   0.72   0.77   1711    1.0
+g[1]           1.6  9.1e-4   0.04   1.52   1.57    1.6   1.63   1.68   2065    1.0
+g[2]          1.45  1.2e-3   0.05   1.37   1.42   1.45   1.48   1.55   1365    1.0
+g[3]          1.59  6.1e-4   0.03   1.53   1.57   1.59   1.61   1.65   2371    1.0
+g[4]          1.83  2.6e-3   0.11   1.63   1.76   1.83    1.9   2.06   1743    1.0
+sigma_mu      0.83    0.02   0.67   0.09   0.23   0.64   1.32   2.25   1350    1.0
+sigma_sigma    0.1  1.6e-3   0.07   0.02   0.05   0.08   0.11   0.29   2121    1.0
+sigma_g       0.42  8.0e-3   0.37   0.06   0.16   0.29   0.55   1.44   2189    1.0
+lp__        -1.0e5    0.07   2.64 -1.0e5 -1.0e5 -1.0e5 -1.0e5 -1.0e5   1578    1.0
+
+Samples were drawn using NUTS at Tue Aug  9 10:07:32 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+GLN model fits done
+Time elapsed:  1053.9  minutes

@@ -1,0 +1,2844 @@
+nohup: ignoring input
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_98fc4a37b352420dbf3d543070cc7db8 NOW.
+
+
+
+
+
+icu_stay
+
+Gradient evaluation took 0.001285 seconds
+1000 transitions using 10 leapfrog steps per transition would take 12.85 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.001266 seconds
+1000 transitions using 10 leapfrog steps per transition would take 12.66 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.001311 seconds
+1000 transitions using 10 leapfrog steps per transition would take 13.11 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.00134 seconds
+1000 transitions using 10 leapfrog steps per transition would take 13.4 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.03518 seconds (Warm-up)
+               7.20876 seconds (Sampling)
+               14.2439 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.3457 seconds (Warm-up)
+               7.11337 seconds (Sampling)
+               14.4591 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.1059 seconds (Warm-up)
+               7.20572 seconds (Sampling)
+               14.3116 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.31173 seconds (Warm-up)
+               7.42086 seconds (Sampling)
+               14.7326 seconds (Total)
+
+Inference for Stan model: anon_model_98fc4a37b352420dbf3d543070cc7db8.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+        mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu      2.32  8.4e-5 5.1e-3   2.31   2.31   2.32   2.32   2.33   3651    1.0
+sigma   0.85  8.6e-5 3.5e-3   0.85   0.85   0.85   0.86   0.86   1663    1.0
+lp__  -1.0e4    0.03   1.01 -1.0e4 -1.0e4 -1.0e4 -1.0e4 -1.0e4   1555    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 16:35:59 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+hosp_stay
+
+Gradient evaluation took 0.003292 seconds
+1000 transitions using 10 leapfrog steps per transition would take 32.92 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.003302 seconds
+1000 transitions using 10 leapfrog steps per transition would take 33.02 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.003281 seconds
+1000 transitions using 10 leapfrog steps per transition would take 32.81 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.003312 seconds
+1000 transitions using 10 leapfrog steps per transition would take 33.12 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 17.3877 seconds (Warm-up)
+               16.9826 seconds (Sampling)
+               34.3703 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 17.2597 seconds (Warm-up)
+               17.3448 seconds (Sampling)
+               34.6045 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 17.6324 seconds (Warm-up)
+               17.9897 seconds (Sampling)
+               35.6221 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 16.5471 seconds (Warm-up)
+               18.9186 seconds (Sampling)
+               35.4657 seconds (Total)
+
+Inference for Stan model: anon_model_98fc4a37b352420dbf3d543070cc7db8.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+        mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu      1.86  4.7e-5 3.1e-3   1.85   1.85   1.86   1.86   1.86   4365    1.0
+sigma   0.85  4.8e-5 2.3e-3   0.85   0.85   0.85   0.85   0.86   2241    1.0
+lp__  -2.5e4    0.02   1.03 -2.5e4 -2.5e4 -2.5e4 -2.5e4 -2.5e4   1778    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 16:37:43 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_icu
+
+Gradient evaluation took 0.001388 seconds
+1000 transitions using 10 leapfrog steps per transition would take 13.88 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.001481 seconds
+1000 transitions using 10 leapfrog steps per transition would take 14.81 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.001398 seconds
+1000 transitions using 10 leapfrog steps per transition would take 13.98 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.001385 seconds
+1000 transitions using 10 leapfrog steps per transition would take 13.85 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.45903 seconds (Warm-up)
+               7.49903 seconds (Sampling)
+               14.9581 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.49006 seconds (Warm-up)
+               7.62193 seconds (Sampling)
+               15.112 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.74305 seconds (Warm-up)
+               7.89393 seconds (Sampling)
+               15.637 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.74456 seconds (Warm-up)
+               7.90466 seconds (Sampling)
+               15.6492 seconds (Total)
+
+Inference for Stan model: anon_model_98fc4a37b352420dbf3d543070cc7db8.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+        mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu      2.01  7.2e-5 4.4e-3    2.0   2.01   2.01   2.01   2.02   3667    1.0
+sigma   0.75  6.7e-5 3.0e-3   0.74   0.75   0.75   0.75   0.75   1989    1.0
+lp__   -6585    0.03   1.09  -6588  -6586  -6585  -6584  -6584   1672    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 16:38:30 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_hosp
+
+Gradient evaluation took 0.003823 seconds
+1000 transitions using 10 leapfrog steps per transition would take 38.23 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.003779 seconds
+1000 transitions using 10 leapfrog steps per transition would take 37.79 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.003645 seconds
+1000 transitions using 10 leapfrog steps per transition would take 36.45 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.003733 seconds
+1000 transitions using 10 leapfrog steps per transition would take 37.33 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 21.2486 seconds (Warm-up)
+               17.816 seconds (Sampling)
+               39.0646 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 21.2853 seconds (Warm-up)
+               19.6486 seconds (Sampling)
+               40.934 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 20.2397 seconds (Warm-up)
+               18.7937 seconds (Sampling)
+               39.0334 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 21.1287 seconds (Warm-up)
+               20.1981 seconds (Sampling)
+               41.3268 seconds (Total)
+
+Inference for Stan model: anon_model_98fc4a37b352420dbf3d543070cc7db8.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+        mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu      1.79  3.7e-5 2.3e-3   1.78   1.78   1.79   1.79   1.79   3849    1.0
+sigma   0.67  4.1e-5 1.6e-3   0.66   0.67   0.67   0.67   0.67   1632    1.0
+lp__   -7870    0.02    1.0  -7873  -7871  -7870  -7870  -7869   1860    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 16:40:20 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_death
+
+Gradient evaluation took 0.001329 seconds
+1000 transitions using 10 leapfrog steps per transition would take 13.29 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.001256 seconds
+1000 transitions using 10 leapfrog steps per transition would take 12.56 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.001212 seconds
+1000 transitions using 10 leapfrog steps per transition would take 12.12 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.001187 seconds
+1000 transitions using 10 leapfrog steps per transition would take 11.87 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 13)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 6.86498 seconds (Warm-up)
+               6.74752 seconds (Sampling)
+               13.6125 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.26309 seconds (Warm-up)
+               7.04472 seconds (Sampling)
+               14.3078 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.58594 seconds (Warm-up)
+               6.56908 seconds (Sampling)
+               14.155 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 7.2992 seconds (Warm-up)
+               6.86596 seconds (Sampling)
+               14.1652 seconds (Total)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_2ae24581719a650cb845587f73c2ac40 NOW.
+Inference for Stan model: anon_model_98fc4a37b352420dbf3d543070cc7db8.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+        mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu      2.61  7.5e-5 4.6e-3    2.6    2.6   2.61   2.61   2.61   3847    1.0
+sigma   0.76  8.7e-5 3.3e-3   0.76   0.76   0.76   0.76   0.77   1415    1.0
+lp__   -6147    0.02    1.0  -6150  -6147  -6147  -6146  -6146   1657    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 16:40:59 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+icu_stay
+
+Gradient evaluation took 0.006133 seconds
+1000 transitions using 10 leapfrog steps per transition would take 61.33 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.006454 seconds
+1000 transitions using 10 leapfrog steps per transition would take 64.54 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.006243 seconds
+1000 transitions using 10 leapfrog steps per transition would take 62.43 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.0061 seconds
+1000 transitions using 10 leapfrog steps per transition would take 61 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 54.8099 seconds (Warm-up)
+               30.7075 seconds (Sampling)
+               85.5174 seconds (Total)
+
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 71.9676 seconds (Warm-up)
+               30.3413 seconds (Sampling)
+               102.309 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 81.0644 seconds (Warm-up)
+               29.9712 seconds (Sampling)
+               111.036 seconds (Total)
+
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 103.711 seconds (Warm-up)
+               29.8879 seconds (Sampling)
+               133.599 seconds (Total)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_27ec3899d96922064b2832c167fb1239 NOW.
+Inference for Stan model: anon_model_2ae24581719a650cb845587f73c2ac40.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+              mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu[1]         2.34  1.2e-4   0.01   2.32   2.33   2.34   2.35   2.36   8489    1.0
+mu[2]         2.33  1.1e-4 9.6e-3   2.31   2.33   2.33   2.34   2.35   8192    1.0
+mu[3]         2.31  8.0e-5 6.8e-3   2.29    2.3   2.31   2.31   2.32   7259    1.0
+mu[4]         2.22  3.6e-4   0.02   2.17    2.2   2.22   2.23   2.26   4565    1.0
+sigma[1]      0.92  1.1e-4 8.0e-3    0.9   0.91   0.92   0.93   0.94   5529    1.0
+sigma[2]      0.85  8.5e-5 6.9e-3   0.84   0.85   0.85   0.85   0.86   6556    1.0
+sigma[3]      0.82  5.6e-5 4.8e-3   0.81   0.82   0.82   0.83   0.83   7266    1.0
+sigma[4]      0.81  2.1e-4   0.02   0.78    0.8   0.81   0.82   0.84   5509    1.0
+sigma_mu      0.08  1.1e-3   0.06   0.03   0.05   0.07    0.1   0.24   2882    1.0
+sigma_sigma   0.07  1.2e-3   0.05   0.03   0.04   0.06   0.08    0.2   2046    1.0
+lp__        -1.0e4    0.06   2.25 -1.0e4 -1.0e4 -1.0e4 -1.0e4 -1.0e4   1457    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 16:49:51 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+hosp_stay
+
+Gradient evaluation took 0.015763 seconds
+1000 transitions using 10 leapfrog steps per transition would take 157.63 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.015485 seconds
+1000 transitions using 10 leapfrog steps per transition would take 154.85 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.015689 seconds
+1000 transitions using 10 leapfrog steps per transition would take 156.89 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.015595 seconds
+1000 transitions using 10 leapfrog steps per transition would take 155.95 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 164.029 seconds (Warm-up)
+               84.4701 seconds (Sampling)
+               248.499 seconds (Total)
+
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 203.476 seconds (Warm-up)
+               83.5217 seconds (Sampling)
+               286.998 seconds (Total)
+
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 220.695 seconds (Warm-up)
+               84.5756 seconds (Sampling)
+               305.27 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 247.625 seconds (Warm-up)
+               85.1123 seconds (Sampling)
+               332.738 seconds (Total)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_b7f8a0f778ecbd14b98a52aa0d22f260 NOW.
+Inference for Stan model: anon_model_27ec3899d96922064b2832c167fb1239.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+              mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu[1]         1.93  6.8e-5 6.6e-3   1.91   1.92   1.93   1.93   1.94   9427    1.0
+mu[2]         1.84  5.9e-5 6.1e-3   1.82   1.83   1.84   1.84   1.85  10755    1.0
+mu[3]         1.85  5.4e-5 4.6e-3   1.84   1.84   1.85   1.85   1.86   7307    1.0
+mu[4]         1.73  1.1e-4 9.4e-3   1.71   1.72   1.73   1.74   1.75   7428    1.0
+sigma[1]      0.95  5.5e-5 4.6e-3   0.94   0.94   0.95   0.95   0.96   6794    1.0
+sigma[2]      0.82  4.7e-5 4.4e-3   0.82   0.82   0.82   0.83   0.83   8601    1.0
+sigma[3]       0.8  3.4e-5 3.5e-3    0.8    0.8    0.8   0.81   0.81  10702    1.0
+sigma[4]      0.81  8.3e-5 7.0e-3   0.79    0.8   0.81   0.81   0.82   7028    1.0
+sigma_mu      0.11  1.6e-3   0.08   0.05   0.07   0.09   0.13    0.3   2121    1.0
+sigma_sigma   0.09  1.4e-3   0.06   0.04   0.06   0.08   0.11   0.25   2021    1.0
+lp__        -2.5e4    0.05   2.28 -2.5e4 -2.5e4 -2.5e4 -2.5e4 -2.5e4   1736    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 17:06:15 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_icu
+
+Gradient evaluation took 0.009506 seconds
+1000 transitions using 10 leapfrog steps per transition would take 95.06 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.009271 seconds
+1000 transitions using 10 leapfrog steps per transition would take 92.71 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.009785 seconds
+1000 transitions using 10 leapfrog steps per transition would take 97.85 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.010202 seconds
+1000 transitions using 10 leapfrog steps per transition would take 102.02 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 75.1755 seconds (Warm-up)
+               34.5009 seconds (Sampling)
+               109.676 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 80.5782 seconds (Warm-up)
+               34.1674 seconds (Sampling)
+               114.746 seconds (Total)
+
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 86.0345 seconds (Warm-up)
+               34.7659 seconds (Sampling)
+               120.8 seconds (Total)
+
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 123.829 seconds (Warm-up)
+               34.595 seconds (Sampling)
+               158.424 seconds (Total)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_f7da9c0accb9255d467ea9c27eba718a NOW.
+Inference for Stan model: anon_model_b7f8a0f778ecbd14b98a52aa0d22f260.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+              mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu[1]         2.06  9.7e-5 9.3e-3   2.04   2.06   2.06   2.07   2.08   9158    1.0
+mu[2]         2.02  1.0e-4 9.6e-3    2.0   2.01   2.02   2.03   2.04   8471    1.0
+mu[3]         1.99  6.1e-5 5.2e-3   1.98   1.99   1.99   1.99    2.0   7373    1.0
+mu[4]         1.78  2.7e-4   0.02   1.74   1.77   1.78    1.8   1.83   6707    1.0
+sigma[1]      0.84  7.1e-5 6.5e-3   0.83   0.84   0.84   0.85   0.85   8288    1.0
+sigma[2]      0.82  7.9e-5 6.7e-3   0.81   0.82   0.82   0.83   0.84   7117    1.0
+sigma[3]      0.64  3.9e-5 3.7e-3   0.63   0.64   0.64   0.64   0.65   9136    1.0
+sigma[4]      0.75  1.9e-4   0.02   0.72   0.74   0.75   0.76   0.78   6539    1.0
+sigma_mu      0.18  2.1e-3   0.11   0.07   0.11   0.15   0.21   0.45   2697    1.0
+sigma_sigma   0.13  1.6e-3   0.08   0.05   0.08   0.11   0.15   0.34   2419    1.0
+lp__         -5974    0.06   2.22  -5979  -5975  -5974  -5973  -5971   1616    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 17:15:18 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_hosp
+
+Gradient evaluation took 0.019422 seconds
+1000 transitions using 10 leapfrog steps per transition would take 194.22 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.020123 seconds
+1000 transitions using 10 leapfrog steps per transition would take 201.23 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.019287 seconds
+1000 transitions using 10 leapfrog steps per transition would take 192.87 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.019686 seconds
+1000 transitions using 10 leapfrog steps per transition would take 196.86 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 185.867 seconds (Warm-up)
+               98.3587 seconds (Sampling)
+               284.225 seconds (Total)
+
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 236.652 seconds (Warm-up)
+               97.2915 seconds (Sampling)
+               333.943 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 254.361 seconds (Warm-up)
+               100.979 seconds (Sampling)
+               355.34 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 277.919 seconds (Warm-up)
+               96.6009 seconds (Sampling)
+               374.52 seconds (Total)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_06a9fe98b12a90361bfadda9ab935dad NOW.
+Inference for Stan model: anon_model_f7da9c0accb9255d467ea9c27eba718a.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+              mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu[1]         1.74  5.1e-5 5.0e-3   1.73   1.74   1.74   1.75   1.75   9767    1.0
+mu[2]         1.83  5.6e-5 5.1e-3   1.82   1.83   1.83   1.83   1.84   8161    1.0
+mu[3]         1.85  4.4e-5 3.3e-3   1.84   1.84   1.85   1.85   1.85   5568    1.0
+mu[4]         1.47  8.4e-5 6.8e-3   1.46   1.47   1.47   1.48   1.49   6579    1.0
+sigma[1]       0.7  4.1e-5 3.4e-3   0.69   0.69    0.7    0.7    0.7   7200    1.0
+sigma[2]       0.7  4.2e-5 3.6e-3   0.69    0.7    0.7    0.7   0.71   7436    1.0
+sigma[3]      0.63  2.4e-5 2.3e-3   0.62   0.63   0.63   0.63   0.63   9340    1.0
+sigma[4]      0.59  6.7e-5 4.9e-3   0.58   0.59   0.59    0.6    0.6   5485    1.0
+sigma_mu      0.25  2.7e-3   0.14   0.11   0.16   0.21   0.29   0.64   2683    1.0
+sigma_sigma   0.08  1.6e-3   0.06   0.03   0.05   0.06   0.09   0.21   1437    1.0
+lp__         -6521    0.06   2.28  -6526  -6522  -6520  -6519  -6517   1652    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 17:30:18 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_death
+
+Gradient evaluation took 0.007133 seconds
+1000 transitions using 10 leapfrog steps per transition would take 71.33 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+Gradient evaluation took 0.006717 seconds
+1000 transitions using 10 leapfrog steps per transition would take 67.17 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.007016 seconds
+1000 transitions using 10 leapfrog steps per transition would take 70.16 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.007068 seconds
+1000 transitions using 10 leapfrog steps per transition would take 70.68 seconds.
+Adjust your expectations accordingly!
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Location parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: lognormal_lpdf: Scale parameter is inf, but must be finite!  (in 'unknown file name' at line 19)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 61.6589 seconds (Warm-up)
+               27.8726 seconds (Sampling)
+               89.5315 seconds (Total)
+
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 59.2647 seconds (Warm-up)
+               31.1063 seconds (Sampling)
+               90.371 seconds (Total)
+
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 77.762 seconds (Warm-up)
+               29.2179 seconds (Sampling)
+               106.98 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 85.5423 seconds (Warm-up)
+               31.7255 seconds (Sampling)
+               117.268 seconds (Total)
+
+WARNING:pystan:6 of 4000 iterations ended with a divergence (0.15 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+Inference for Stan model: anon_model_06a9fe98b12a90361bfadda9ab935dad.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+              mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+mu[1]         2.59  1.1e-4 9.4e-3   2.57   2.58   2.59   2.59    2.6   7434    1.0
+mu[2]         2.67  1.3e-4   0.01   2.65   2.66   2.67   2.68   2.69   6340    1.0
+mu[3]         2.61  7.3e-5 6.8e-3   2.59    2.6   2.61   2.61   2.62   8739    1.0
+mu[4]         2.43  2.7e-4   0.02    2.4   2.42   2.43   2.45   2.47   4622    1.0
+sigma[1]      0.78  1.2e-4 6.7e-3   0.76   0.77   0.77   0.78   0.79   3277    1.0
+sigma[2]      0.76  9.0e-5 6.1e-3   0.75   0.76   0.76   0.77   0.77   4609    1.0
+sigma[3]      0.75  7.7e-5 4.6e-3   0.74   0.75   0.75   0.75   0.76   3590    1.0
+sigma[4]      0.76  1.8e-4 9.7e-3   0.73   0.75   0.76   0.76   0.77   2845    1.0
+sigma_mu      0.14  2.0e-3   0.09   0.06   0.09   0.12   0.17   0.38   1951    1.0
+sigma_sigma   0.02  3.1e-4   0.01 4.3e-3 9.5e-3   0.01   0.02   0.05   2119    1.0
+lp__         -6052    0.06   2.37  -6058  -6053  -6052  -6050  -6048   1705    1.0
+
+Samples were drawn using NUTS at Mon Aug  8 17:36:27 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+Lognorm model fits done
+Time elapsed:  62.7  minutes

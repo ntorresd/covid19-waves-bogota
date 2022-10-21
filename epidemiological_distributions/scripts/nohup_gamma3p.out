@@ -1,0 +1,2051 @@
+nohup: ignoring input
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_c1e7d1708a169683b0876d02b20c7e1e NOW.
+
+
+
+
+
+icu_stay
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.028894 seconds
+1000 transitions using 10 leapfrog steps per transition would take 288.94 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.028098 seconds
+1000 transitions using 10 leapfrog steps per transition would take 280.98 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.029146 seconds
+1000 transitions using 10 leapfrog steps per transition would take 291.46 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.029128 seconds
+1000 transitions using 10 leapfrog steps per transition would take 291.28 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 103.163 seconds (Warm-up)
+               77.5656 seconds (Sampling)
+               180.728 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 123.831 seconds (Warm-up)
+               83.3526 seconds (Sampling)
+               207.183 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 115.995 seconds (Warm-up)
+               101.139 seconds (Sampling)
+               217.134 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 123.876 seconds (Warm-up)
+               103.238 seconds (Sampling)
+               227.114 seconds (Total)
+
+WARNING:pystan:n_eff / iter below 0.001 indicates that the effective sample size has likely been overestimated
+WARNING:pystan:Rhat above 1.1 or below 0.9 indicates that the chains very likely have not mixed
+WARNING:pystan:174 of 4000 iterations ended with a divergence (4.35 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+WARNING:pystan:Chain 1: E-BFMI = 3.01e-05
+WARNING:pystan:Chain 2: E-BFMI = 3.12e-05
+WARNING:pystan:Chain 3: E-BFMI = 4.76e-05
+WARNING:pystan:Chain 4: E-BFMI = 9.59e-05
+WARNING:pystan:E-BFMI below 0.2 indicates you may need to reparameterize your model
+Inference for Stan model: anon_model_c1e7d1708a169683b0876d02b20c7e1e.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+       mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+a      4.71    2.93   4.15   0.16   0.53   4.65    8.9   9.13      2  55.41
+b      2.51    1.14   1.62   0.65   0.88   2.61   4.12   4.16      2  3.1e4
+c      0.49    0.41   0.58   0.07   0.12    0.2   0.92    1.5      2 5135.7
+lp__  4.0e5   1.2e5  2.3e5  1.3e5  2.3e5  2.5e5  5.9e5  8.5e5      3   3.91
+
+Samples were drawn using NUTS at Mon Aug  8 16:43:45 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+hosp_stay
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.065069 seconds
+1000 transitions using 10 leapfrog steps per transition would take 650.69 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.064536 seconds
+1000 transitions using 10 leapfrog steps per transition would take 645.36 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.066244 seconds
+1000 transitions using 10 leapfrog steps per transition would take 662.44 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.066163 seconds
+1000 transitions using 10 leapfrog steps per transition would take 661.63 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 271.309 seconds (Warm-up)
+               200.92 seconds (Sampling)
+               472.23 seconds (Total)
+
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 306.998 seconds (Warm-up)
+               244.446 seconds (Sampling)
+               551.445 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 307.756 seconds (Warm-up)
+               289.683 seconds (Sampling)
+               597.439 seconds (Total)
+
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 491.96 seconds (Warm-up)
+               6415.08 seconds (Sampling)
+               6907.04 seconds (Total)
+
+WARNING:pystan:n_eff / iter below 0.001 indicates that the effective sample size has likely been overestimated
+WARNING:pystan:Rhat above 1.1 or below 0.9 indicates that the chains very likely have not mixed
+WARNING:pystan:1070 of 4000 iterations ended with a divergence (26.8 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+WARNING:pystan:18 of 4000 iterations saturated the maximum tree depth of 10 (0.45 %)
+WARNING:pystan:Run again with max_treedepth larger than 10 to avoid saturation
+WARNING:pystan:Chain 1: E-BFMI = 3.83e-05
+WARNING:pystan:Chain 2: E-BFMI = 2.84e-05
+WARNING:pystan:Chain 4: E-BFMI = 7.04e-05
+WARNING:pystan:E-BFMI below 0.2 indicates you may need to reparameterize your model
+Inference for Stan model: anon_model_c1e7d1708a169683b0876d02b20c7e1e.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+       mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+a      4.72    2.77   3.92   0.16   0.77   4.73   8.62    9.1      2  50.01
+b      3.33    0.91   1.29   1.17   2.24   3.83   4.32    4.5      2  2.5e4
+c      0.84    0.46   0.65   0.18   0.19   0.85    1.5    1.5      2 901.64
+lp__  3.2e5   1.6e5  2.7e5 -3.3e4  4.6e4  2.6e5  5.2e5  8.8e5      3   4.63
+
+Samples were drawn using NUTS at Mon Aug  8 19:15:17 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_icu
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.089503 seconds
+1000 transitions using 10 leapfrog steps per transition would take 895.03 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.093122 seconds
+1000 transitions using 10 leapfrog steps per transition would take 931.22 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.08068 seconds
+1000 transitions using 10 leapfrog steps per transition would take 806.8 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.081166 seconds
+1000 transitions using 10 leapfrog steps per transition would take 811.66 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 116.533 seconds (Warm-up)
+               87.6012 seconds (Sampling)
+               204.134 seconds (Total)
+
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 129.36 seconds (Warm-up)
+               94.0418 seconds (Sampling)
+               223.402 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 124.892 seconds (Warm-up)
+               104.633 seconds (Sampling)
+               229.524 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 131.302 seconds (Warm-up)
+               121.789 seconds (Sampling)
+               253.091 seconds (Total)
+
+WARNING:pystan:n_eff / iter below 0.001 indicates that the effective sample size has likely been overestimated
+WARNING:pystan:Rhat above 1.1 or below 0.9 indicates that the chains very likely have not mixed
+WARNING:pystan:133 of 4000 iterations ended with a divergence (3.33 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+WARNING:pystan:Chain 1: E-BFMI = 3.82e-05
+WARNING:pystan:Chain 2: E-BFMI = 3.2e-05
+WARNING:pystan:Chain 3: E-BFMI = 6.69e-05
+WARNING:pystan:Chain 4: E-BFMI = 3.79e-05
+WARNING:pystan:E-BFMI below 0.2 indicates you may need to reparameterize your model
+Inference for Stan model: anon_model_c1e7d1708a169683b0876d02b20c7e1e.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+       mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+a       4.9    3.07   4.34   0.15   0.53   4.75   9.24   9.72      2  53.54
+b      2.18    1.13   1.59   0.13   0.59   2.33   3.75   3.94      2  2.5e4
+c      0.61    0.38   0.53   0.18   0.19   0.39   1.08    1.5      2 3577.0
+lp__  4.2e5   1.1e5  2.2e5  1.5e5  2.5e5  3.4e5  5.8e5  9.2e5      4    3.4
+
+Samples were drawn using NUTS at Mon Aug  8 19:19:34 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_hosp
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.084118 seconds
+1000 transitions using 10 leapfrog steps per transition would take 841.18 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.189038 seconds
+1000 transitions using 10 leapfrog steps per transition would take 1890.38 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.140498 seconds
+1000 transitions using 10 leapfrog steps per transition would take 1404.98 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.14437 seconds
+1000 transitions using 10 leapfrog steps per transition would take 1443.7 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 311.51 seconds (Warm-up)
+               230.901 seconds (Sampling)
+               542.411 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 386.105 seconds (Warm-up)
+               234.439 seconds (Sampling)
+               620.543 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 339.988 seconds (Warm-up)
+               284.458 seconds (Sampling)
+               624.446 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 336.924 seconds (Warm-up)
+               292.505 seconds (Sampling)
+               629.429 seconds (Total)
+
+WARNING:pystan:n_eff / iter below 0.001 indicates that the effective sample size has likely been overestimated
+WARNING:pystan:Rhat above 1.1 or below 0.9 indicates that the chains very likely have not mixed
+WARNING:pystan:154 of 4000 iterations ended with a divergence (3.85 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+WARNING:pystan:Chain 1: E-BFMI = 3.75e-05
+WARNING:pystan:Chain 2: E-BFMI = 3.2e-05
+WARNING:pystan:Chain 3: E-BFMI = 0.000107
+WARNING:pystan:Chain 4: E-BFMI = 5.1e-05
+WARNING:pystan:E-BFMI below 0.2 indicates you may need to reparameterize your model
+Inference for Stan model: anon_model_c1e7d1708a169683b0876d02b20c7e1e.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+       mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+a      4.65     2.9   4.11   0.16   0.52   4.42   8.71   9.39      2  43.76
+b       3.5    1.15   1.62   1.21   2.09   3.52    4.9   5.74      2  1.9e4
+c      0.53    0.39   0.56   0.18   0.19   0.22   0.92   1.49      2 1034.3
+lp__  4.2e5   8.4e4  1.9e5  1.7e5  2.8e5  3.5e5  5.4e5  8.2e5      5    3.1
+
+Samples were drawn using NUTS at Mon Aug  8 19:30:17 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_death
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.030043 seconds
+1000 transitions using 10 leapfrog steps per transition would take 300.43 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.034632 seconds
+1000 transitions using 10 leapfrog steps per transition would take 346.32 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.032836 seconds
+1000 transitions using 10 leapfrog steps per transition would take 328.36 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.030043 seconds
+1000 transitions using 10 leapfrog steps per transition would take 300.43 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 99.8808 seconds (Warm-up)
+               74.7403 seconds (Sampling)
+               174.621 seconds (Total)
+
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 100.764 seconds (Warm-up)
+               79.7678 seconds (Sampling)
+               180.531 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 117.473 seconds (Warm-up)
+               84.814 seconds (Sampling)
+               202.287 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 114.245 seconds (Warm-up)
+               94.0918 seconds (Sampling)
+               208.337 seconds (Total)
+
+WARNING:pystan:n_eff / iter below 0.001 indicates that the effective sample size has likely been overestimated
+WARNING:pystan:Rhat above 1.1 or below 0.9 indicates that the chains very likely have not mixed
+WARNING:pystan:170 of 4000 iterations ended with a divergence (4.25 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+WARNING:pystan:Chain 1: E-BFMI = 3.4e-05
+WARNING:pystan:Chain 2: E-BFMI = 3.29e-05
+WARNING:pystan:Chain 3: E-BFMI = 4.9e-05
+WARNING:pystan:Chain 4: E-BFMI = 8.89e-05
+WARNING:pystan:E-BFMI below 0.2 indicates you may need to reparameterize your model
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_d3a071563d3751f39e7e08f7749d1c4e NOW.
+Inference for Stan model: anon_model_c1e7d1708a169683b0876d02b20c7e1e.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+       mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+a      4.62    2.86   4.06   0.17   0.54   4.59   8.71   8.93      2  54.12
+b      2.88     1.0   1.41   1.17   1.46   3.03   4.28   4.32      2  2.6e4
+c      0.76    0.41   0.58   0.18   0.19   0.69   1.35    1.5      2  1.8e4
+lp__  4.2e5   9.5e4  1.9e5  1.5e5  2.4e5  3.8e5  5.7e5  8.3e5      4   3.37
+
+Samples were drawn using NUTS at Mon Aug  8 19:33:52 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+icu_stay
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.02903 seconds
+1000 transitions using 10 leapfrog steps per transition would take 290.3 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.027839 seconds
+1000 transitions using 10 leapfrog steps per transition would take 278.39 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.028433 seconds
+1000 transitions using 10 leapfrog steps per transition would take 284.33 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.028824 seconds
+1000 transitions using 10 leapfrog steps per transition would take 288.24 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 151.222 seconds (Warm-up)
+               119.746 seconds (Sampling)
+               270.968 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 168.025 seconds (Warm-up)
+               104.087 seconds (Sampling)
+               272.112 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 174.269 seconds (Warm-up)
+               110.043 seconds (Sampling)
+               284.312 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 166.015 seconds (Warm-up)
+               121.683 seconds (Sampling)
+               287.699 seconds (Total)
+
+WARNING:pystan:n_eff / iter below 0.001 indicates that the effective sample size has likely been overestimated
+WARNING:pystan:Rhat above 1.1 or below 0.9 indicates that the chains very likely have not mixed
+WARNING:pystan:263 of 4000 iterations ended with a divergence (6.58 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+WARNING:pystan:Chain 1: E-BFMI = 4.71e-05
+WARNING:pystan:Chain 2: E-BFMI = 3.91e-05
+WARNING:pystan:Chain 3: E-BFMI = 0.000101
+WARNING:pystan:Chain 4: E-BFMI = 4.45e-05
+WARNING:pystan:E-BFMI below 0.2 indicates you may need to reparameterize your model
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_ebed89a8a1752cdb7be437358d35fdd6 NOW.
+Inference for Stan model: anon_model_d3a071563d3751f39e7e08f7749d1c4e.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+          mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+a[1]      2.22     0.5   0.71   1.47   1.71    2.0   2.77    3.4      2 4588.5
+a[2]       0.9    0.45   0.64   0.47    0.5   0.57   1.37    2.0      2 6444.4
+a[3]      1.13     0.6   0.85   0.16   0.34    1.0   1.94   2.35      2  2.0e6
+a[4]      1.74    0.86   1.21   0.23   0.54   1.73   2.93   3.25      2  2.1e6
+b[1]       2.2    1.21   1.71   0.27   0.49   2.14   3.92   4.24      2  3.6e6
+b[2]      1.92    1.32   1.87   0.21   0.23   1.37   3.72   4.74      2  2.1e6
+b[3]      2.37    1.05   1.49   0.48    1.0   2.27   3.77   4.48      2  1.6e6
+b[4]      2.06    1.11   1.57   0.33   0.53   1.86   3.62   4.17      2  1.8e6
+c[1]      0.85    0.24   0.34   0.43   0.59   0.78   1.12   1.39      2  4.3e5
+c[2]      0.69    0.35   0.49   0.22   0.31   0.53   1.11    1.5      2  6.3e5
+c[3]      0.56    0.33   0.46   0.14   0.21   0.38   0.95   1.34      2  1.2e6
+c[4]      0.48    0.22   0.31   0.24   0.25   0.33   0.73   1.01      2  1.6e6
+sigma_a   0.63    0.42   0.59   0.16   0.23   0.36   1.09   1.65      2  2.0e6
+sigma_b   3.31     1.3   1.84   0.29   1.83   3.86   4.68   5.23      2  2.0e6
+sigma_c   3.14    0.95   1.35   1.65   1.93   2.86   4.41    5.2      2  6.7e5
+lp__     5.4e5  10.0e4  1.9e5  2.4e5  3.2e5  5.8e5  7.0e5  8.1e5      4   3.38
+
+Samples were drawn using NUTS at Mon Aug  8 19:39:53 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+hosp_stay
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.075001 seconds
+1000 transitions using 10 leapfrog steps per transition would take 750.01 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.074617 seconds
+1000 transitions using 10 leapfrog steps per transition would take 746.17 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.06464 seconds
+1000 transitions using 10 leapfrog steps per transition would take 646.4 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.066982 seconds
+1000 transitions using 10 leapfrog steps per transition would take 669.82 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 365.846 seconds (Warm-up)
+               195.287 seconds (Sampling)
+               561.133 seconds (Total)
+
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 397.144 seconds (Warm-up)
+               214.686 seconds (Sampling)
+               611.831 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 408.959 seconds (Warm-up)
+               238.438 seconds (Sampling)
+               647.397 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 405.361 seconds (Warm-up)
+               241.596 seconds (Sampling)
+               646.957 seconds (Total)
+
+WARNING:pystan:n_eff / iter below 0.001 indicates that the effective sample size has likely been overestimated
+WARNING:pystan:Rhat above 1.1 or below 0.9 indicates that the chains very likely have not mixed
+WARNING:pystan:214 of 4000 iterations ended with a divergence (5.35 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+WARNING:pystan:Chain 1: E-BFMI = 7.21e-05
+WARNING:pystan:Chain 2: E-BFMI = 4.22e-05
+WARNING:pystan:Chain 3: E-BFMI = 4.28e-05
+WARNING:pystan:Chain 4: E-BFMI = 3.53e-05
+WARNING:pystan:E-BFMI below 0.2 indicates you may need to reparameterize your model
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_1f34252ef0955376700404091d805bfe NOW.
+Inference for Stan model: anon_model_ebed89a8a1752cdb7be437358d35fdd6.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+          mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+a[1]      2.22     0.5    0.7   1.47   1.71   2.01   2.76   3.37      2 1117.7
+a[2]      0.88    0.46   0.65   0.47   0.48   0.52   1.34   2.01      2 2568.7
+a[3]      1.12    0.59   0.83   0.17   0.34   1.01   1.93   2.31      2  6.7e5
+a[4]      1.73    0.83   1.17   0.23   0.57   1.76   2.88   3.17      2  7.9e4
+b[1]      2.16    1.19   1.69   0.27   0.49   2.07   3.86   4.24      2  1.3e6
+b[2]      1.91    1.32   1.86   0.21   0.22   1.37   3.71   4.71      2  9.2e5
+b[3]      2.44    1.07   1.52   0.46    1.0   2.41   3.89   4.48      2  4.2e5
+b[4]      2.05    1.11   1.57   0.33   0.52   1.85   3.61   4.16      2  4.0e5
+c[1]      0.85    0.24   0.35   0.43   0.59   0.78   1.12   1.39      2  5.1e4
+c[2]      0.55    0.19   0.26   0.21   0.31   0.53   0.79   0.92      2  1.2e6
+c[3]      0.56    0.33   0.46   0.14   0.21   0.38   0.95   1.33      2  4.9e5
+c[4]      0.48    0.23   0.32   0.23   0.25   0.33   0.74   1.03      2  6.5e5
+sigma_a   0.62    0.42    0.6   0.16    0.2   0.33   1.08   1.64      2  7.0e5
+sigma_b   3.26    1.29   1.83   0.28   1.75   3.76   4.66   5.23      2  8.8e5
+sigma_c   3.13    0.96   1.35   1.64   1.92   2.84    4.4   5.19      2  6.6e5
+lp__     6.2e5   6.0e4  1.4e5  3.4e5  5.2e5  6.1e5  6.9e5  9.3e5      6   2.54
+
+Samples were drawn using NUTS at Mon Aug  8 19:52:04 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_icu
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+
+Gradient evaluation took 0.03337 seconds
+1000 transitions using 10 leapfrog steps per transition would take 333.7 seconds.
+Adjust your expectations accordingly!
+Gradient evaluation took 0.031852 seconds
+
+
+1000 transitions using 10 leapfrog steps per transition would take 318.52 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.033641 seconds
+1000 transitions using 10 leapfrog steps per transition would take 336.41 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.024113 seconds
+1000 transitions using 10 leapfrog steps per transition would take 241.13 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 106.217 seconds (Warm-up)
+               88.5201 seconds (Sampling)
+               194.737 seconds (Total)
+
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 128.534 seconds (Warm-up)
+               90.032 seconds (Sampling)
+               218.566 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 142.088 seconds (Warm-up)
+               91.5274 seconds (Sampling)
+               233.615 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 173.405 seconds (Warm-up)
+               79.9681 seconds (Sampling)
+               253.373 seconds (Total)
+
+WARNING:pystan:n_eff / iter below 0.001 indicates that the effective sample size has likely been overestimated
+WARNING:pystan:Rhat above 1.1 or below 0.9 indicates that the chains very likely have not mixed
+WARNING:pystan:234 of 4000 iterations ended with a divergence (5.85 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+WARNING:pystan:Chain 1: E-BFMI = 3.96e-05
+WARNING:pystan:Chain 2: E-BFMI = 5.31e-05
+WARNING:pystan:Chain 3: E-BFMI = 4.23e-05
+WARNING:pystan:Chain 4: E-BFMI = 3.5e-05
+WARNING:pystan:E-BFMI below 0.2 indicates you may need to reparameterize your model
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_5e631c4ed1b31431dd39e21b366640ec NOW.
+Inference for Stan model: anon_model_1f34252ef0955376700404091d805bfe.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+          mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+a[1]      2.39    0.51   0.72   1.47   1.71   2.35   3.08    3.4      2 3581.4
+a[2]      0.88    0.46   0.65   0.45   0.48   0.53   1.34    2.0      2 6190.2
+a[3]      1.27    0.65   0.92   0.17   0.34   1.28   2.19   2.33      2 3081.4
+a[4]      1.75    0.85    1.2   0.23   0.58   1.78   2.93   3.23      2  4.2e5
+b[1]       2.2    1.21   1.71   0.27   0.49   2.16   3.92   4.21      2  2.0e6
+b[2]      1.91    1.32   1.87   0.21   0.23   1.34    3.7   4.74      2  1.6e6
+b[3]      2.37    1.05   1.48   0.47   1.01   2.27   3.76   4.48      2  4.7e5
+b[4]      2.05    1.11   1.57   0.34   0.53   1.86   3.61   4.16      2  7.5e5
+c[1]      0.85    0.24   0.34   0.45   0.59   0.78   1.12   1.39      2  2.7e5
+c[2]      0.55     0.2   0.28   0.21    0.3   0.53   0.81   0.96      2  2.3e6
+c[3]      0.56    0.33   0.46   0.14   0.21   0.38   0.95   1.33      2  1.8e6
+c[4]      0.48    0.23   0.33   0.23   0.25   0.33   0.75   1.05      2  9.3e5
+sigma_a   0.63    0.42    0.6   0.16   0.22   0.35   1.09   1.65      2  1.4e6
+sigma_b   3.23    1.29   1.82   0.28   1.71   3.72   4.67   5.22      2  1.2e6
+sigma_c   3.14    0.95   1.35   1.65   1.93   2.86    4.4   5.19      2  6.2e5
+lp__     5.8e5   4.6e4  1.3e5  3.3e5  4.8e5  5.8e5  6.6e5  8.1e5      8   2.19
+
+Samples were drawn using NUTS at Mon Aug  8 19:57:13 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_hosp
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.053183 seconds
+1000 transitions using 10 leapfrog steps per transition would take 531.83 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.053239 seconds
+1000 transitions using 10 leapfrog steps per transition would take 532.39 seconds.
+Adjust your expectations accordingly!
+
+
+
+Gradient evaluation took 0.070245 seconds
+1000 transitions using 10 leapfrog steps per transition would take 702.45 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.072176 seconds
+1000 transitions using 10 leapfrog steps per transition would take 721.76 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 398.53 seconds (Warm-up)
+               296.467 seconds (Sampling)
+               694.997 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 406.82 seconds (Warm-up)
+               295.783 seconds (Sampling)
+               702.602 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 413.777 seconds (Warm-up)
+               318.006 seconds (Sampling)
+               731.783 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 450.731 seconds (Warm-up)
+               282.649 seconds (Sampling)
+               733.38 seconds (Total)
+
+WARNING:pystan:n_eff / iter below 0.001 indicates that the effective sample size has likely been overestimated
+WARNING:pystan:Rhat above 1.1 or below 0.9 indicates that the chains very likely have not mixed
+WARNING:pystan:218 of 4000 iterations ended with a divergence (5.45 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+WARNING:pystan:Chain 1: E-BFMI = 3.87e-05
+WARNING:pystan:Chain 2: E-BFMI = 4.8e-05
+WARNING:pystan:Chain 3: E-BFMI = 5.04e-05
+WARNING:pystan:Chain 4: E-BFMI = 3.65e-05
+WARNING:pystan:E-BFMI below 0.2 indicates you may need to reparameterize your model
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_8f9dc0e6ab271bb19a6c7825b029a370 NOW.
+Inference for Stan model: anon_model_5e631c4ed1b31431dd39e21b366640ec.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+          mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+a[1]      1.91    0.67   0.95    0.8    1.1   1.74   2.76   3.38      2 1727.3
+a[2]      1.01    0.43   0.61    0.5   0.52   0.77   1.55   2.01      2 1415.1
+a[3]      1.52    0.84   1.19   0.17   0.34   1.43   2.71   3.04      2  5.1e5
+a[4]      1.59    0.72   1.02   0.23   0.57   1.76   2.58   2.63      2  8.5e4
+b[1]       1.8    1.08   1.53   0.27   0.49   1.36   3.21   4.24      2  1.3e6
+b[2]      2.02    1.34    1.9   0.21   0.22   1.59   3.91    4.7      2  1.3e6
+b[3]      2.36    1.05   1.48   0.46    1.0   2.24   3.73   4.48      2  2.7e5
+b[4]      2.05    1.11   1.57   0.33   0.52   1.85   3.61   4.16      2  6.5e5
+c[1]      0.85    0.25   0.35   0.43   0.59   0.79   1.14    1.4      2  7.1e4
+c[2]      0.55    0.18   0.26   0.23   0.32   0.53   0.79   0.92      2  7.9e5
+c[3]      0.53    0.33   0.47   0.14   0.21   0.32   0.89   1.33      2  6.6e5
+c[4]       0.5    0.25   0.35   0.23   0.25   0.33   0.78   1.09      2  6.4e5
+sigma_a   0.62    0.42    0.6   0.16    0.2   0.34   1.09   1.65      2  5.8e5
+sigma_b   3.25    1.29   1.82   0.29   1.74   3.75   4.66   5.22      2  6.4e5
+sigma_c   3.14    0.95   1.35   1.65   1.93   2.86    4.4   5.19      2  3.9e5
+lp__     5.7e5   4.3e4  1.2e5  3.4e5  4.9e5  5.7e5  6.5e5  8.0e5      8   2.17
+
+Samples were drawn using NUTS at Mon Aug  8 20:11:09 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+onset_death
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.029368 seconds
+1000 transitions using 10 leapfrog steps per transition would take 293.68 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.030401 seconds
+1000 transitions using 10 leapfrog steps per transition would take 304.01 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.030256 seconds
+1000 transitions using 10 leapfrog steps per transition would take 302.56 seconds.
+Adjust your expectations accordingly!
+
+
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+Rejecting initial value:
+  Log probability evaluates to log(0), i.e. negative infinity.
+  Stan can't start sampling from this initial value.
+
+Gradient evaluation took 0.029477 seconds
+1000 transitions using 10 leapfrog steps per transition would take 294.77 seconds.
+Adjust your expectations accordingly!
+
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 32)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Iteration:    1 / 2000 [  0%]  (Warmup)
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Informational Message: The current Metropolis proposal is about to be rejected because of the following issue:
+Exception: normal_lpdf: Scale parameter is 0, but must be > 0!  (in 'unknown file name' at line 31)
+
+If this warning occurs sporadically, such as for highly constrained variable types like covariance matrices, then the sampler is fine,
+but if this warning occurs often then your model may be either severely ill-conditioned or misspecified.
+
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  200 / 2000 [ 10%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  400 / 2000 [ 20%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  600 / 2000 [ 30%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration:  800 / 2000 [ 40%]  (Warmup)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 138.2 seconds (Warm-up)
+               96.1013 seconds (Sampling)
+               234.301 seconds (Total)
+
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 152.864 seconds (Warm-up)
+               93.1628 seconds (Sampling)
+               246.026 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 152.957 seconds (Warm-up)
+               103.095 seconds (Sampling)
+               256.052 seconds (Total)
+
+Iteration: 2000 / 2000 [100%]  (Sampling)
+
+ Elapsed Time: 154.911 seconds (Warm-up)
+               102.886 seconds (Sampling)
+               257.797 seconds (Total)
+
+WARNING:pystan:n_eff / iter below 0.001 indicates that the effective sample size has likely been overestimated
+WARNING:pystan:Rhat above 1.1 or below 0.9 indicates that the chains very likely have not mixed
+WARNING:pystan:217 of 4000 iterations ended with a divergence (5.42 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+WARNING:pystan:Chain 1: E-BFMI = 4.49e-05
+WARNING:pystan:Chain 2: E-BFMI = 6.75e-05
+WARNING:pystan:Chain 3: E-BFMI = 4.24e-05
+WARNING:pystan:Chain 4: E-BFMI = 3.03e-05
+WARNING:pystan:E-BFMI below 0.2 indicates you may need to reparameterize your model
+Inference for Stan model: anon_model_8f9dc0e6ab271bb19a6c7825b029a370.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+          mean se_mean     sd   2.5%    25%    50%    75%  97.5%  n_eff   Rhat
+a[1]       2.2    0.51   0.72   1.43   1.69    2.0   2.76   3.38      2 8238.8
+a[2]      0.88    0.46   0.65   0.46   0.49   0.53   1.34    2.0      2  1.2e4
+a[3]      1.74    1.03   1.46   0.18   0.35   1.48   3.18   3.81      2  2.4e6
+a[4]      1.77    0.87   1.22   0.23   0.58   1.76   2.97   3.34      2  1.9e6
+b[1]       2.0    1.06    1.5   0.27   0.49   2.07    3.5   3.59      2  2.9e6
+b[2]      1.93    1.33   1.88   0.21   0.22   1.36   3.74   4.77      2  4.6e6
+b[3]       2.3    1.04   1.47   0.46    1.0   2.13   3.63   4.48      2  2.7e6
+b[4]      2.05    1.11   1.57   0.33   0.53   1.86   3.61   4.15      2  3.8e6
+c[1]      0.85    0.25   0.36   0.41   0.57   0.79   1.13   1.41      2  2.0e6
+c[2]      0.55    0.19   0.27   0.21    0.3   0.53    0.8   0.94      2  4.7e6
+c[3]      0.56    0.33   0.46   0.15   0.21   0.38   0.95   1.34      2  4.1e6
+c[4]      0.49    0.24   0.33   0.23   0.25   0.33   0.76   1.05      2  2.0e6
+sigma_a   0.64    0.42   0.59   0.16   0.24   0.37   1.09   1.65      2  1.9e6
+sigma_b   3.28    1.29   1.83   0.28   1.78    3.8   4.66   5.22      2  3.3e6
+sigma_c   3.12    0.96   1.35   1.64   1.91   2.83   4.39   5.18      2  2.1e6
+lp__     5.9e5   4.8e4  1.3e5  3.4e5  4.9e5  5.7e5  6.8e5  8.2e5      8   2.16
+
+Samples were drawn using NUTS at Mon Aug  8 20:16:51 2022.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).
+Gamma model fits done
+Time elapsed:  223.4  minutes
