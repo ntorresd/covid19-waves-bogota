@@ -2,10 +2,4 @@
 .ipynb_checkpoints
 
 # Data files
-data/
-=======
-# Jupyter checkpoints
-.ipynb_checkpoints
-
-# Data files
 data/*
