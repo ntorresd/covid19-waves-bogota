@@ -146,30 +146,3 @@ group_variant_epiweek <- function(df_genomas_recod, initial_date){
   rm(df_aux, df_aux_tot)
   return(df_grouped)
 }
-
-
-#### PLOTTING FUNCTIONS ####
-plot_prevalence_histogram <- function(df_grouped,
-                                      download_date = Fecha_GISAID,
-                                      title = "Prevalencia",
-                                      pallete = "Thomas"){
-  plot_prevalence <- ggplot(df_grouped, aes (x = as.factor(date), fill = lineage)) +
-    ggtitle(title) +
-    geom_bar(aes (y = PointEst), stat = "identity", alpha=0.6, colour = "black")+
-    geom_text(aes (y=1.035, label = n_seq_tot), hjust=0.5, alpha = 0.8, angle = 90) +
-    geom_text(aes(y = PointEst, label = n_seq_var), position = position_stack(vjust = 0.5), angle = 90) +
-    labs (caption=paste0("Corte al ", download_date,",\t epiweek = ", epiweek(download_date)),
-          fill ="variant", 
-          x = "Collection date", 
-          y= "Prevalence per variant / Viral lineage") +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5))+
-    theme(legend.position="bottom",
-          axis.text.y = element_text(margin = margin(r = 0)),
-          panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-          panel.background = element_blank()) +
-    scale_y_continuous(limits=c(0.045, 1.03), oob=rescale_none)+
-    scale_fill_manual(values = met.brewer(pallete, n = length(unique(df_grouped$lineage))))
-  # df_grouped <- df_grouped[(df_grouped$n_seq_tot>=Secuencias_min),]
-  # df_grouped$date <- as.Date(df_grouped$date)
-  return (plot_prevalence)
-}
