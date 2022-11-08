@@ -10,11 +10,11 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 
-config_path = open('../../config.json')
+config_path = open('config.json')
 config = json.load(config_path)
 DATA_PATH = config['PATHS']['DATA_PATH']
-OUT_PATH = config['PATHS']['OUT_PATH']
-FIG_PATH = config['PATHS']['FIG_PATH']
+OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'genomics')
+FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'genomics')
 
 plt.style.use(config['PLOTS']['PLOT_STYLE'])
 prop_cycle = plt.rcParams['axes.prop_cycle']
@@ -84,8 +84,6 @@ def plot1():
     ax.set_xlabel('Week')
     ax.set_ylabel('Prevalence per variant')
     fig.legend(loc = 'center right')
-    
-    fig.show()
     fig.savefig(FIG_PATH + 'Variants_multinomial.png', dpi = 100)
     return fig, ax
 

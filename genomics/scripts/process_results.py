@@ -6,9 +6,14 @@ Created on Fri Oct 21 2022
 @author: cwhittaker
 @author: ntorres
 """
+import json
 import pandas as pd
-DATA_PATH = '../../data/'
-OUT_PATH = '../results/'
+
+config_path = open('config.json')
+config = json.load(config_path)
+DATA_PATH = config['PATHS']['DATA_PATH']
+OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'genomics')
+FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'genomics')
 
 # Load raw fitting data
 df_fit_raw = pd.read_csv(OUT_PATH + 'fit_raw.csv')

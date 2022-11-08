@@ -6,17 +6,22 @@ Created on Fri Oct 21 2022
 @author: cwhittaker
 @author: ntorres
 """
+import json
 import pandas as pd
 import pystan
 import time
 
-t0 = time.time()
+config_path = open('config.json')
+config = json.load(config_path)
+DATA_PATH = config['PATHS']['DATA_PATH']
+OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'genomics')
+FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'genomics')
 
-DATA_PATH = '../../data/'
-OUT_PATH = '../results/'
-SEED = 4321
-ITER = 2000
-CHAINS = 4
+SEED = config['MODELS']['SEED']
+ITER = config['MODELS']['ITER']
+CHAINS = config['MODELS']['CHAINS']
+
+t0 = time.time()
 
 # Prepare data
 df_variants = pd.read_csv(DATA_PATH + 'variants_pivot.csv')
