@@ -1,5 +1,8 @@
 # Jupyter checkpoints
 .ipynb_checkpoints
 
+# Byte-compiled
+__pycache__/
+
 # Data files
 data/*
