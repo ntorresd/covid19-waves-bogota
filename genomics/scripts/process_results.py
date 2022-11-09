@@ -16,6 +16,7 @@ config = cfg["default"]
 DATA_PATH = config['PATHS']['DATA_PATH']
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'genomics')
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'genomics')
+DATE_GENOMICS = config['UPDATE_DATES']['GENOMICS']
 
 # Load raw fitting data
 df_fit_raw = pd.read_csv(OUT_PATH + 'fit_raw.csv')
