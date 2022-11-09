@@ -1,6 +1,9 @@
 # Jupyter checkpoints
 .ipynb_checkpoints
 
+# R histories
+*.Rhistory
+
 # Byte-compiled
 __pycache__/
 
