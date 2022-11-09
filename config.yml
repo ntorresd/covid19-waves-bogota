@@ -12,3 +12,5 @@ default:
     SEED : 4321
     ITER : 2000
     CHAINS : 4
+  UPDATE_DATES:
+    GENOMICS : "20220802"
