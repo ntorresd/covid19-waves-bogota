@@ -6,13 +6,15 @@ Created on Fri Oct 21 2022
 @author: cwhittaker
 @author: ntorres
 """
-import json
+import yaml
 import pandas as pd
 import pystan
 import time
 
-config_path = open('config.json')
-config = json.load(config_path)
+ymlfile = open("config.yml", "r")
+cfg = yaml.load(ymlfile)
+config = cfg['default']
+
 DATA_PATH = config['PATHS']['DATA_PATH']
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'genomics')
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'genomics')
