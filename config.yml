@@ -1,0 +1,14 @@
+default:
+  extensions: 
+    - ".csv"
+    - ".xlsx"
+    - ".xlsx"
+    - ".txt"
+  PATHS:
+    DATA_PATH : "./data/"
+    OUT_PATH : "./{dir}/outputs/"
+    FIG_PATH : "./{dir}/figures/"
+  MODELS:
+    SEED : 4321
+    ITER : 2000
+    CHAINS : 4
