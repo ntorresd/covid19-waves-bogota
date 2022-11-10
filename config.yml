@@ -8,6 +8,8 @@ default:
     DATA_PATH : "./data/"
     OUT_PATH : "./{dir}/outputs/"
     FIG_PATH : "./{dir}/figures/"
+  PLOTS:
+    PLOT_STYLE : "./plot_scripts/plot_style.mplstyle"
   MODELS:
     SEED : 4321
     ITER : 2000
