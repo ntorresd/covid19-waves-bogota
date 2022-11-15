@@ -9,9 +9,21 @@ default:
     OUT_PATH : "./{dir}/outputs/"
     FIG_PATH : "./{dir}/figures/"
     SCRIPTS_PATH : "./{dir}/scripts/"
+    UTILS_PATH : "./{dir}/scripts/"
   MODELS:
     SEED : 4321
     ITER : 2000
     CHAINS : 4
+  WAVES:
+    ROOTS: 
+      - 1
+      - 3
+      - 6
+      - 8
+      - 8
+      - 10
+      - 11
+      - 13
+    GAUSSIAN_KERNEL: 10
   UPDATE_DATES:
     GENOMICS : "20220802"
