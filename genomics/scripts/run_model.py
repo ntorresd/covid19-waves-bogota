@@ -18,6 +18,7 @@ config = cfg['default']
 DATA_PATH = config['PATHS']['DATA_PATH']
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'genomics')
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'genomics')
+SCRIPTS_PATH = config['PATHS']['SCRIPTS_PATH'].format(dir = 'genomics')
 
 SEED = config['MODELS']['SEED']
 ITER = config['MODELS']['ITER']
@@ -33,7 +34,7 @@ for col in variants_counts.columns:
 time_vect = df_variants.t.to_list()
 
 # Load and run model
-multinomial_model = pystan.StanModel(file = 'multinomial_model.stan')
+multinomial_model = pystan.StanModel(file = SCRIPTS_PATH + 'multinomial_model.stan')
 stan_data = {'K': len(variants_counts.columns),
              'N': len(time_vect),
              'y': variants_counts.values,
