@@ -6,7 +6,6 @@ library(here)
 #### PATHS ####
 setwd(here())
 DATA_PATH = "data/"
-OUT_PATH = "genomics/outputs/"
 
 #### LOAD FUNCTIONS ####
 source("genomics/scripts/genomics_functions.R")
@@ -17,7 +16,7 @@ source("genomics/scripts/genomics_functions.R")
 initial_date = as.Date("2021-03-22") 
 
 #### READ DATA ####
-
+# data not available online due to GISAID policy
 df_genomes_bog <- read_csv(paste0(DATA_PATH,'genomes_bog_raw.csv'))
 
 df_genomes_bog$date <- df_genomes_bog$date %>% as.Date()
@@ -36,7 +35,7 @@ df_grouped <- df_grouped %>%
   mutate(lineage=factor(lineage, levels = c("Alpha", "Gamma", "Mu", "Other", "Delta", "Omicron"))) %>% 
   arrange(date, lineage)
 
-write.csv(df_grouped, paste0(OUT_PATH, "/variants-ic-bog.csv"), row.names = FALSE)
+write.csv(df_grouped, paste0(DATA_PATH, "/variants-ic-bog.csv"), row.names = FALSE)
 
 unique(df_genomes_bog[(df_genomes_bog$lineage_recod=="Other") & (df_genomes_bog$date >="2021-12-16"),]$lineage)
 unique(df_genomes_bog[(df_genomes_bog$lineage_recod=="Omicron"),]$lineage)
