@@ -22,7 +22,7 @@ UTILS_PATH = config['PATHS']['UTILS_PATH'].format(dir = 'waves')
 # and set by default in config.yml
 b = config['WAVES']['GAUSSIAN_KERNEL'] 
 
-plt.style.use(config['PLOTS']['PLOT_STYLE'])
+plt.style.use(config['PATHS']['PLOT_STYLE'])
 prop_cycle = plt.rcParams['axes.prop_cycle']
 colors = prop_cycle.by_key()['color']
 
@@ -59,9 +59,9 @@ def plot1(panel = None):
 
     # First difference plot
     ax2 = ax1.twinx()
-    ax2.axhline(y = 0, color = 'black', alpha = 0.8, ls = '--')
     ln3 = ax2.plot(df_counts['date'],df_counts['cases_gs_diff'],colors[1],label = 'Diff(Confirmed cases)')
     ln4 = ax2.plot(df_counts['date'],df_counts['cases_gs_diff_gs'],colors[2], ls = '--', label = 'Gaussian smoothing')
+    ax2.axhline(y = 0, color = 'black', alpha = 0.8, ls = '--')
     ax2.set_ylabel('Diff(Confirmed cases)')
     ax2.spines.right.set_visible(True) #This was set as False by default in the .mpstyle file
 
