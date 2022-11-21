@@ -8,6 +8,7 @@ Created on Tue Nov 15 2022
 import sys
 import yaml
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
 ymlfile = open("config.yml", "r")
@@ -29,22 +30,26 @@ colors = prop_cycle.by_key()['color']
 sys.path.append(UTILS_PATH)
 import utilities as ut
 
-# Confirmed cases
+# Read confirmed cases and waves information
 df_confirmed_bogota = pd.read_csv(DATA_PATH + 'confirmed_cases.csv')
 df_confirmed_bogota['onset'] = pd.to_datetime(df_confirmed_bogota['onset'], errors='coerce')
+
 df_waves = pd.read_csv(OUT_PATH + 'waves.csv')
 df_waves['start_date'] = pd.to_datetime(df_waves['start_date'], errors='coerce')
 df_waves['end_date'] = pd.to_datetime(df_waves['end_date'], errors='coerce')
 
+df_roots = pd.read_csv(OUT_PATH + 'roots_confirmed_cases.csv')
+df_roots['date'] = pd.to_datetime(df_roots['date'])
 
-def plot1(panel = None):
-    df_counts = ut.counts('onset',df_confirmed_bogota)
-    df_counts['cases_gs'] = ut.gaussian_smoothing(df_counts, 'cases', 'date', b)
-    df_counts['cases_gs_diff'] = df_counts.cases_gs.diff()  
-    df_counts = df_counts[df_counts.cases_gs_diff.notnull()]
-    df_counts['cases_gs_diff_gs'] = ut.gaussian_smoothing(df_counts, 'cases_gs_diff', 'date', b)
+# Calculate counts
+df_counts = ut.counts('onset',df_confirmed_bogota)
+df_counts['cases_gs'] = ut.gaussian_smoothing(df_counts, 'cases', 'date', b)
+df_counts['cases_gs_diff'] = df_counts.cases_gs.diff()  
+df_counts = df_counts[df_counts.cases_gs_diff.notnull()]
+df_counts['cases_gs_diff_gs'] = ut.gaussian_smoothing(df_counts, 'cases_gs_diff', 'date', b)
 
-    # Plot roots
+# Function to plot waves figure
+def plot_waves(panel = None):
     fig, ax1 = plt.subplots(figsize = (15,5))
 
     # Confirmed cases curve
@@ -73,4 +78,36 @@ def plot1(panel = None):
     plt.savefig(FIG_PATH + 'waves.png')
     return fig, ax1
 
-plot1()
+plot_waves()
+
+# Function to generate roots plot
+def plot_roots(panel = None):
+    fig, ax1 = plt.subplots(figsize = (15,5))
+
+    # Confirmed cases curve
+    ln1 = ax1.plot(df_counts['date'], df_counts['cases'], color = colors[0], label = 'Confirmed cases')
+    ln2 = ax1.plot(df_counts['date'], df_counts['cases_gs'], color= colors[2], ls = '--')
+    ax1.set_ylabel('Confirmed cases')
+    date_no_dup = []
+    for d in range(len(df_roots)):
+            ax1.axvline(x = df_roots['date'].iloc[d], color = 'black', alpha = 0.8, ls = '--')
+            date_no_dup.append(d)
+
+    # First difference plot
+    ax2 = ax1.twinx()
+    ln3 = ax2.plot(df_counts['date'],df_counts['cases_gs_diff'],colors[1],label = 'Diff(Confirmed cases)')
+    ln4 = ax2.plot(df_counts['date'],df_counts['cases_gs_diff_gs'],colors[2], ls = '--', label = 'Gaussian smoothing')
+    ln5 = ax2.plot(df_roots['date'], np.zeros(len(df_roots['date'])), marker = "o", ls = "", color = 'black', ms = 4, label = 'Roots')
+    ax2.axhline(y = 0, color = 'black', alpha = 0.8, ls = '--')
+    ax2.set_ylabel('Diff(Confirmed cases)')
+    ax2.spines.right.set_visible(True) #This was set as False by default in the .mpstyle file
+
+    ##Legend
+    lns = ln1 + ln2 + ln3 + ln4 + ln5
+    labs = [l.get_label() for l in lns]
+    legend = ax1.legend(lns, labs, loc = 0)
+
+    plt.savefig(FIG_PATH + 'roots_confirmed_cases.png')
+    return fig, ax1
+
+# plot_roots()
