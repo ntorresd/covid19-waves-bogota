@@ -14,15 +14,14 @@ import datetime as dt
 import matplotlib.pyplot as plt
 
 # Load configuration
-os.chdir("../../.")
 ymlfile = open("config.yml", "r")
 cfg = yaml.load(ymlfile)
 config = cfg["default"]
 
 # Paths
 DATA_PATH = config['PATHS']['DATA_PATH']
-OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'severity_outcomes')
-FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'severity_outcomes')
+OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'severe_outcomes')
+FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'severe_outcomes')
 
 # Plot style
 plt.style.use(config['PATHS']['PLOT_STYLE'])
