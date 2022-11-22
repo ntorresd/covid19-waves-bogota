@@ -129,7 +129,7 @@ def fit_partial_pooling(df, col, model, params, priors, n_strats, strat_name,):
     posterior_df = posterior_df.loc[:,params_columns]
     return posterior_df
 
-def get_posteriors_pooling(all_dfs, columns, model, param_list, priors, n_strats, strat_name):
+def get_posteriors_pooling(all_dfs, columns, model, model_name, param_list, priors, n_strats, strat_name):
     for i in range(len(columns)):
         df = all_dfs[i]
         col = columns[i]
@@ -140,5 +140,5 @@ def get_posteriors_pooling(all_dfs, columns, model, param_list, priors, n_strats
         posterior = pd.concat([posterior, priors[col]], axis = 1, sort = False)
         posteriors_pooling.update({col: posterior})
         # save the output
-        posterior.to_csv(OUT_PATH + col + f'-samples-exponential.csv', index = False)
+        posterior.to_csv(OUT_PATH + col + f'-samples-{model_name}.csv', index = False)
         posteriors_pooling.update({col: posterior})

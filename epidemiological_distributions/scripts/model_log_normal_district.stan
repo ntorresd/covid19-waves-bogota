@@ -6,9 +6,11 @@ data {
     vector[N] y;
 }
 parameters {
-    real<lower=0> beta;
+    real<lower=0> mu;
+    real<lower=0> sigma;
 }
 model {
-    beta ~ normal(1,1);
-    y ~ exponential(beta);
+    mu ~ normal(0,1);
+    sigma ~ normal(0,1);
+    y ~ lognormal(mu, sigma);
 }

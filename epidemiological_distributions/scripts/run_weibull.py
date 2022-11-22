@@ -35,20 +35,20 @@ MAX_VAL = config['MODELS']['MAX_VAL']
 # Model variables
 strat_name = 'wave'
 n_strats = 4
-params = ['beta']
+params = ['alpha' ,'sigma']
 
 # 1. Prepare the data
 all_dfs, columns = ut.prepare_confirmed_cases_data()
 
 # 2. Load stan district-level model
-model_district = pystan.StanModel(file = SCRIPTS_PATH + 'model_exponential_district.stan')
+model_district = pystan.StanModel(file = SCRIPTS_PATH + 'model_weibull_district.stan')
 # 3. Run district-level model
 district_posteriors = ut.get_posteriors_district(params, columns, all_dfs, model_district)
 
 # 4. Load partial-pooling model
-model = pystan.StanModel(file = SCRIPTS_PATH + 'model_exponential_pool.stan')
+model = pystan.StanModel(file = SCRIPTS_PATH + 'model_weibull_pool.stan')
 # 5. Run model
-ut.get_posteriors_pooling(all_dfs, columns, model, 'exponential', params, district_posteriors, n_strats, strat_name)
+ut.get_posteriors_pooling(all_dfs, columns, model, 'weibull', params, district_posteriors, n_strats, strat_name)
 
-print('Exponential model fits done')
+print('Weibull model fits done')
 print('Time elapsed: ', round((time.time()-t0)/60,1), ' minutes')

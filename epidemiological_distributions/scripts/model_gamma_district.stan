@@ -6,9 +6,11 @@ data {
     vector[N] y;
 }
 parameters {
+    real<lower=0> alpha;
     real<lower=0> beta;
 }
 model {
-    beta ~ normal(1,1);
-    y ~ exponential(beta);
+    alpha ~ normal(0,1);
+    beta ~ normal(0,1);
+    y ~ gamma(alpha, beta);
 }
