@@ -11,7 +11,7 @@ library(ggplot2)
 library(scales)
 import::from(scales, rescale_none)
 
-#### DICTIONARY FUNCTIONS #####
+# dictionary functions
 load_filters <- function(){
   ## Alpha ##
   filter_alpha <<- c("B.1.1.7", "^Q.")
@@ -96,7 +96,7 @@ generate_dictionary <- function(Base_genomas){
   return(dic_variants)
 }
 
-#### CODIFICATION FUNCTIONS AND GENOMES AGGRUPATIONS ####
+# codification and genomes aggrupation
 filter_genomes <- function(df_genomas,
                             Variable_filtros = "Lugar",
                             filter_list){
