@@ -4,12 +4,11 @@ Created on Tue Nov 17 2022
 @author: dsquevedo
 @author: ntorresd
 """     
-import sys, os
+import sys
 import yaml
 import pandas as pd
 import matplotlib.pyplot as plt
 
-os.chdir('../../.')
 ymlfile = open("config.yml", "r")
 cfg = yaml.load(ymlfile)
 config = cfg["default"]
@@ -20,7 +19,7 @@ OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'rt')
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'rt')
 
 # Plot style
-plt.style.use(config['PLOTS']['PLOT_STYLE'])
+plt.style.use(config['PATHS']['PLOT_STYLE'])
 prop_cycle = plt.rcParams['axes.prop_cycle']
 colors = prop_cycle.by_key()['color']
 
