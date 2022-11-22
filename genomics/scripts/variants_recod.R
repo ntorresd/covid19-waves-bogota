@@ -3,21 +3,27 @@ rm(list= ls()) ## Borra los objetos anteriores
 library(configr)
 library(here)
 
-#### PATHS ####
+# set the working directory
 setwd(here())
-DATA_PATH = "data/"
 
-#### LOAD FUNCTIONS ####
+# paths 
+DATA_PATH = config::get('PATHS')$DATA_PATH
+
+# dates
+initial_date <- as.Date("2021-03-22")
+genomics_date <- config::get('UPDATE_DATES')$GENOMICS
+
+# load functions
 source("genomics/scripts/genomics_functions.R")
 `%!in%` <- Negate(`%in%`)
 
 
-#### DATES ####
+# dates
 initial_date = as.Date("2021-03-22") 
 
-#### READ DATA ####
+# read data
 # data not available online due to GISAID policy
-df_genomes_bog <- read_csv(paste0(DATA_PATH,'genomes_bog_raw.csv'))
+df_genomes_bog <- read_csv(paste0(DATA_PATH,'genomes_', genomics_date, '.csv'))
 
 df_genomes_bog$date <- df_genomes_bog$date %>% as.Date()
 df_genomes_bog <- df_genomes_bog[df_genomes_bog$date >= initial_date, ]
@@ -28,7 +34,7 @@ dic_var_bog <- generate_dictionary(df_genomes_bog)
 rm(list = ls(pat = "^filtro"))
 df_genomes_bog <- lineage_codification(df_genomas = df_genomes_bog, dic_variants=dic_var_bog)
 
-#### HISTOGRAM VARIANTS BOGOTÁ ####
+# grouping the data by variant
 
 df_grouped <- group_variant_epiweek(df_genomas_recod = df_genomes_bog, initial_date = initial_date)
 df_grouped <- df_grouped %>% 
