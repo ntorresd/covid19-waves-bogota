@@ -3,21 +3,27 @@ rm(list= ls()) ## Borra los objetos anteriores
 library(configr)
 library(here)
 
-#### PATHS ####
+# set the working directory
 setwd(here())
-DATA_PATH = "data/"
 
-#### LOAD FUNCTIONS ####
+# paths 
+DATA_PATH = config::get('PATHS')$DATA_PATH
+
+# dates
+initial_date <- as.Date("2021-03-22")
+genomics_date <- config::get('UPDATE_DATES')$GENOMICS
+
+# load functions
 source("genomics/scripts/genomics_functions.R")
 `%!in%` <- Negate(`%in%`)
 
 
-#### DATES ####
+#dates
 initial_date = as.Date("2021-03-22") 
 
 #### READ DATA ####
 # data not available online due to GISAID policy
-df_genomes_bog <- read_csv(paste0(DATA_PATH,'genomes_bog_raw.csv'))
+df_genomes_bog <- read_csv(paste0(DATA_PATH,'genomes_', genomics_date, '.csv'))
 
 df_genomes_bog$date <- df_genomes_bog$date %>% as.Date()
 df_genomes_bog <- df_genomes_bog[df_genomes_bog$date >= initial_date, ]

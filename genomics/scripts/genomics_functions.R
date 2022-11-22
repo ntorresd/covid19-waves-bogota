@@ -47,10 +47,10 @@ generate_dictionary <- function(Base_genomas){
   dic_variants <- data.frame(label = character(),
                               lineage = character())
   
-  # dic_variants <- add_variant_dictionary (dic_variants = dic_variants,
-  #                                    list_lineages = list_lineages,
-  #                                    variant = "Alpha",
-  #                                    filter_variant = filter_alpha)
+  dic_variants <- add_variant_dictionary (dic_variants = dic_variants,
+                                     list_lineages = list_lineages,
+                                     variant = "Alpha",
+                                     filter_variant = filter_alpha)
   
   # dic_variants <- add_variant_dictionary (dic_variants = dic_variants,
   #                                        list_lineages = list_lineages,
