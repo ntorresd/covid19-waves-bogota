@@ -85,8 +85,6 @@ def prepare_confirmed_cases_data(strat = 'wave'):
     
     return all_dfs, columns
 
-
-
 def fit_district(values, list_of_params, model):
     stdata = values
     stan_data = {'N': len(stdata), 'y': stdata}
@@ -97,7 +95,7 @@ def fit_district(values, list_of_params, model):
     df = df[list_of_params]
     return df
 
-def get_posteriors_district(param_list, columns, all_dfs):
+def get_posteriors_district(param_list, columns, all_dfs, model):
     district_posteriors = {}
     for i in range(len(columns)):
         df = all_dfs[i]
@@ -106,7 +104,41 @@ def get_posteriors_district(param_list, columns, all_dfs):
         vals = df[col].values
         # watch out here!!! we're shifting the data!!!!
         vals = vals + 0.5
-        posterior = fit_district(vals, param_list)
+        posterior = fit_district(vals, param_list, model)
         district_posteriors.update({col: posterior})  
         
     return district_posteriors
+
+def fit_partial_pooling(df, col, model, params, priors, n_strats, strat_name,):
+    stan_pp_data = {'K' : n_strats, 
+                    'N' : df.shape[0], 
+                    'X' : df[col].values + 0.5,
+                    strat_name : df[strat_name+'_id'].values}
+    for param in params:
+        param_mean = priors[col][param].mean()
+        stan_pp_data.update({param + '_prior': param_mean})
+    fit = model.sampling(data = stan_pp_data, 
+                         iter = ITER,
+                         seed = SEED, 
+                         chains=CHAINS, n_jobs=-1,
+                         control={'adapt_delta': 0.8})
+    print(fit)
+    posterior_df = fit.to_dataframe()
+    params_columns = posterior_df.columns.str.startswith(tuple(params))\
+                   + posterior_df.columns.str.startswith('sigma_')
+    posterior_df = posterior_df.loc[:,params_columns]
+    return posterior_df
+
+def get_posteriors_pooling(all_dfs, columns, model, param_list, priors, n_strats, strat_name):
+    for i in range(len(columns)):
+        df = all_dfs[i]
+        col = columns[i]
+        print(col)
+        posteriors_pooling = {}
+        posterior = fit_partial_pooling(df, col, model, param_list, priors, n_strats, strat_name)
+        # add national estimates
+        posterior = pd.concat([posterior, priors[col]], axis = 1, sort = False)
+        posteriors_pooling.update({col: posterior})
+        # save the output
+        posterior.to_csv(OUT_PATH + col + f'-samples-exponential.csv', index = False)
+        posteriors_pooling.update({col: posterior})
