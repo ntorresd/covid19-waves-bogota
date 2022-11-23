@@ -7,6 +7,8 @@ Created on Sun Nov 20 2022
 """
 import yaml
 import pandas as pd
+import numpy as np
+from scipy import stats, special, integrate
 ymlfile = open("config.yml", "r")
 cfg = yaml.load(ymlfile)
 config = cfg["default"]
@@ -142,3 +144,58 @@ def get_posteriors_pooling(all_dfs, columns, model, model_name, param_list, prio
         # save the output
         posterior.to_csv(OUT_PATH + col + f'-samples-{model_name}.csv', index = False)
         posteriors_pooling.update({col: posterior})
+    
+def gln_pdf(x, mu, sigma, g):
+    """PDF of the generalised log-normal distribution"""
+    k = g / (2**((g+1)/g) * sigma * special.gamma(1/g))
+    return k/x * np.exp(-0.5 * np.abs((np.log(x)-mu)/sigma)**g)
+
+def gln_lpdf(x, mu, sigma, g):
+    """Log-PDF of the generalised log-normal distribution"""
+    logk = np.log(g) - ( ((g+1)/g)*np.log(2) + np.log(sigma) + np.log(special.gamma(1/g)))
+    return logk - np.log(x) - 0.5 * np.abs((np.log(x)-mu)/sigma)**g
+
+def gln_cdf_help(x, mu, sigma, g):
+    """CDF of the generalised log-normal distribution"""
+    m = x
+    result = integrate.quad(lambda x: gln_pdf(x,2,0.5,2.5), 0, m)
+    tmp = result[0]
+    return tmp
+    
+def gln_cdf(x, mu, sigma, g):
+    c = np.vectorize(gln_cdf_help)
+    return c(x, mu, sigma, g)
+
+def LogLaplaceCovariance(posterior, col):
+    result = 1/2 * len(posterior[col]['mu']) * np.log(2*np.pi) 
+    result += 1/2 * np.log(np.linalg.det(posterior[col]['cov']))
+    result += posterior[col]['Logf']
+    return result
+
+def q025(x):
+    return x.quantile(0.025)
+
+def q975(x):
+    return x.quantile(0.95)
+
+def best_model():
+    ep_distributions  = {'icu_stay':{},
+                        'hosp_stay':{},
+                        'onset_icu':{},
+                        'onset_hosp':{},
+                        'onset_death':{}
+                        }
+    best_models = pd.DataFrame({})
+
+    for dist in ep_distributions.keys():
+        df = pd.read_csv(OUT_PATH + 'bf_'+dist+'.csv')
+        df = df.set_index(df.columns[0])
+        ep_distributions[dist].update({'bf' : df,
+                                       'best model' : df[ df >= 0].dropna()})
+        best_models = pd.concat([best_models, ep_distributions[dist]['best model']])
+    cols = ['Epidemilogical distribution'] + best_models.columns.tolist()
+    best_models['Epidemilogical distribution'] = list(ep_distributions.keys()) 
+    best_models = best_models[cols]
+    best_models = best_models.set_index('Epidemilogical distribution')
+
+    best_models.to_csv(OUT_PATH + 'best_models.csv')
