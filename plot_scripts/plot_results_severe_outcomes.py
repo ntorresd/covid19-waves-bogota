@@ -6,7 +6,7 @@ Adapted from: https://github.com/mrc-ide/Brazil_COVID19_distributions
 @author: dsquevedo
 @author: ntorresd
 """
-# %%
+
 import yaml
 import pandas as pd
 import numpy as np
@@ -65,7 +65,6 @@ def plot_percentage():
     fig.savefig(FIG_PATH+'hosp_icu_death_percentages.png')
     return fig, ax
 
-# %%
 # Wave counts by age group
 def plot_counts():
     wave_list = df_hosp_perc['wave'].unique()
@@ -87,13 +86,11 @@ def plot_counts():
     fig.savefig(FIG_PATH+'hosp_icu_death_counts.png')
     return fig, ax
 
-# %%
-
 # Stacked histogram of cases by wave and age group
 from met_brewer import met_brew
 #  Package installation : https://github.com/BlakeRMills/MetBrewer
 
-def plot_stacked(df, ax, strat='wave', group_var='age_group', vary='counts', pallete='VanGogh1', title=None): 
+def plot_stacked_histogram(df, ax, strat='wave', group_var='age_group', vary='counts', pallete='VanGogh1', title=None): 
     strat_list = df[strat].unique()
     group_list = df[group_var].unique()
     color_list = met_brew(pallete, n=len(group_list), brew_type='continuous')
@@ -113,9 +110,9 @@ def plot_counts_hist():
 
     strat = 'wave'
     vary = 'counts'
-    plot_stacked(df = df_hosp_perc, ax=ax[0], title='a.')
-    plot_stacked(df = df_icu_perc, ax=ax[1], title='b.')
-    plot_stacked(df = df_death_perc, ax=ax[2], title='c.')
+    plot_stacked_histogram(df = df_hosp_perc, ax=ax[0], title='a.')
+    plot_stacked_histogram(df = df_icu_perc, ax=ax[1], title='b.')
+    plot_stacked_histogram(df = df_death_perc, ax=ax[2], title='c.')
 
     for axi in ax:
         axi.set_ylabel(vary)
@@ -161,4 +158,3 @@ plot_counts_hist()
 # fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(wave_list))    
 # fig.show()
 # fig.savefig(FIG_PATH+'hosp_icu_death_percentages_counts.png')
-# %%
