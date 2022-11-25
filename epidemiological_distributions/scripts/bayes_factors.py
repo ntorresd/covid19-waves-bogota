@@ -49,23 +49,6 @@ for df in all_dfs:
     col = str(df.columns[4])
     print(col, len(df[col].index), df[col].min(), '-', df[col].max())
     
-
-##############################################################################
-columns_order = [0,1]
-columns_ordered = columns#[columns[i] for i in columns_order]
-number_samples = pd.DataFrame(columns = columns_ordered, index = strat_name)
-
-for df in all_dfs:
-    count = df[strat+'_id'].value_counts().to_dict()
-    col = df.columns[4]
-    number_samples[col] = number_samples.index.map(count)
-    
-number_samples.fillna(0, inplace=True)
-number_samples.to_csv(OUT_PATH + 'number_of_samples.csv')
-
-number_samples_trans = number_samples.transpose()
-number_samples_trans.to_csv(OUT_PATH + 'number_of_samples_wide.csv')
-
 ##############################################################################
 # load the samples (models fits)
 

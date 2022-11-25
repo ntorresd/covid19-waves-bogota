@@ -26,7 +26,7 @@ df_best_models = df_best_models.set_index(df_best_models.columns[0]).transpose()
 # 1. Prepare the data
 all_dfs, columns = ut.prepare_confirmed_cases_data()
 
-stat = ['mean', ut.q95, ut.q05]
+stat = ['mean', ut.q975, ut.q025]
 ##############################################################################
 # print n samples and range of data
 for df in all_dfs:
