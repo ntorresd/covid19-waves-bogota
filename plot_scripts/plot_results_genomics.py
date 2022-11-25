@@ -20,13 +20,13 @@ OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'genomics')
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'genomics')
 DATE_GENOMICS = config['UPDATE_DATES']['GENOMICS']
 
-plt.style.use(config['PLOTS']['PLOT_STYLE'])
+plt.style.use(config['PATHS']['PLOT_STYLE'])
 prop_cycle = plt.rcParams['axes.prop_cycle']
 colors = prop_cycle.by_key()['color']
 
 # Load data
 ## Variants
-df_variants = pd.read_csv(DATA_PATH + 'variants-ic-bog_' + DATE_GENOMICS + '.csv')
+df_variants = pd.read_csv(DATA_PATH + 'variants-ic-bog_'+ DATE_GENOMICS + '.csv')
 df_variants['date'] = pd.to_datetime(df_variants['date'])
 ## Results from multinomial analysis
 df_results = pd.read_csv(OUT_PATH + 'theta.csv')
@@ -124,7 +124,7 @@ def plot2(panel = None):
 
         sns.move_legend(variants_hist, 'lower right', bbox_to_anchor = (0.97, 1.02), title = 'Variants', ncol = 3)
         #fig.show()
-        fig.savefig(FIG_PATH + 'variants_prevalence.png')
+        fig.savefig(FIG_PATH + 'variants_prevalence_' + DATE_GENOMICS + '.png')
         return fig, ax
 
 plot1()
