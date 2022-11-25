@@ -14,6 +14,8 @@ default:
     SEED : 4321
     ITER : 2000
     CHAINS : 4
+    MIN_VAL : 0
+    MAX_VAL: 130
   WAVES:
     ROOTS: 
       - 1
