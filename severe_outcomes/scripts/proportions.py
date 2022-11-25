@@ -91,6 +91,7 @@ death_60p_err = proportion_confint(count=death_60p, nobs=cases_all, alpha=alpha)
 
 # Constructing the dataframes with the results
 data_all = {
+    'wave':df_waves['wave'],
     'cases':cases_all, 
     'hosp':hosp_all, 
     'hosp_lower':hosp_all_err[0].tolist(), 
@@ -106,6 +107,7 @@ df_counts_all = pd.DataFrame(data=data_all, dtype=float)
 df_counts_all.to_csv(OUT_PATH + 'counts_all.csv',index = False)
 
 data_60p = {
+    'wave':df_waves['wave'],
     'cases':cases_60p, 
     'hosp':hosp_60p, 
     'hosp_lower':hosp_60p_err[0].tolist(), 
@@ -120,3 +122,5 @@ data_60p = {
 df_counts_60p = pd.DataFrame(data=data_60p, dtype=float)
 df_counts_60p.to_csv(OUT_PATH + 'counts_60p.csv',index = False)
 
+
+# %%
