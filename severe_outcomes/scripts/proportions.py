@@ -12,7 +12,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load configuration
-ymlfile = open("config.yml", "r")
+ymlfile = open("config.yml", "r") 
 cfg = yaml.load(ymlfile)
 config = cfg["default"]
 
@@ -79,7 +79,7 @@ death_60p = ut.size_by_strat(df_death[df_death['age_group']=='60+'], strat=strat
 
 # Computing the confidence interval as a binomial proportion
 from statsmodels.stats.proportion import proportion_confint
-alpha = 0.9 #significance level
+alpha = 0.05 #significance level
 
 hosp_all_err = proportion_confint(count=hosp_all, nobs=cases_all, alpha=alpha)
 icu_all_err = proportion_confint(count=icu_all, nobs=cases_all, alpha=alpha)
@@ -93,34 +93,34 @@ death_60p_err = proportion_confint(count=death_60p, nobs=cases_all, alpha=alpha)
 data_all = {
     'wave':df_waves['wave'],
     'cases':cases_all, 
-    'hosp':hosp_all, 
+    'hosp':hosp_all/cases_all, 
     'hosp_lower':hosp_all_err[0].tolist(), 
     'hosp_upper':hosp_all_err[1].tolist(),
-    'icu':icu_all, 
+    'icu':icu_all/cases_all, 
     'icu_lower':icu_all_err[0].tolist(), 
     'icu_upper':icu_all_err[1].tolist(),
-    'death':death_all, 
+    'death':death_all/cases_all, 
     'death_lower':death_all_err[0].tolist(), 
     'death_upper':death_all_err[1].tolist()
     }
 df_counts_all = pd.DataFrame(data=data_all, dtype=float)
-df_counts_all.to_csv(OUT_PATH + 'counts_all.csv',index = False)
+df_counts_all.to_csv(OUT_PATH + 'proportions_all.csv',index = False)
 
 data_60p = {
     'wave':df_waves['wave'],
     'cases':cases_60p, 
-    'hosp':hosp_60p, 
+    'hosp':hosp_60p/cases_60p, 
     'hosp_lower':hosp_60p_err[0].tolist(), 
     'hosp_upper':hosp_60p_err[1].tolist(),
-    'icu':icu_60p, 
+    'icu':icu_60p/cases_60p, 
     'icu_lower':icu_60p_err[0].tolist(), 
     'icu_upper':icu_60p_err[1].tolist(),
-    'death':death_60p, 
+    'death':death_60p/cases_60p, 
     'death_lower':death_60p_err[0].tolist(), 
     'death_upper':death_60p_err[1].tolist()
     }
 df_counts_60p = pd.DataFrame(data=data_60p, dtype=float)
-df_counts_60p.to_csv(OUT_PATH + 'counts_60p.csv',index = False)
+df_counts_60p.to_csv(OUT_PATH + 'proportions_60p.csv',index = False)
 
 
 # %%

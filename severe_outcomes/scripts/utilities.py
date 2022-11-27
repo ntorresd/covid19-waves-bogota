@@ -39,9 +39,9 @@ def age_group_60(df,var,var_unit):
 
 
 def size_by_strat(df, strat='wave'):
-    strat_list = df[strat].unique()
+    strat_list = sorted(df[strat].unique())
     data = []
     for strat_ in strat_list:
         size = len(df[df[strat]==strat_].index)
         data.append(size)
-    return data
+    return np.array(data)
