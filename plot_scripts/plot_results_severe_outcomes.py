@@ -30,15 +30,18 @@ colors = prop_cycle.by_key()['color']
 
 # Read data 
 strat = 'wave'
-
+# percentages
 df_hosp_perc = pd.read_csv(OUT_PATH + 'hosp_percentages.csv')
 df_icu_perc = pd.read_csv(OUT_PATH + 'icu_percentages.csv')
 df_death_perc = pd.read_csv(OUT_PATH + 'deaths_percentages.csv')
-
 df_hosp_perc['wave'] = df_hosp_perc['wave'].astype(int)
 df_icu_perc['wave'] = df_icu_perc['wave'].astype(int)
 df_death_perc['wave'] = df_death_perc['wave'].astype(int)
+# proportions
+df_proportions_all = pd.read_csv(OUT_PATH+'proportions_all.csv')
+df_proportions_60p = pd.read_csv(OUT_PATH+'proportions_60p.csv')
 
+# Auxiliar plot function
 def plot_xyvar(df, ax, n_strat, varx='age_group', vary='percentage', title=None):
     data = df.loc[df[strat]==n_strat]
     ax.plot(data[varx], data[vary], label=strat+str(n_strat), linestyle='-', marker='o')
@@ -64,7 +67,7 @@ def plot_percentage():
     fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(wave_list))    
     fig.savefig(FIG_PATH+'hosp_icu_death_percentages.png')
     return fig, ax
-
+plot_percentage()
 # Wave counts by age group
 def plot_counts():
     wave_list = df_hosp_perc['wave'].unique()
@@ -85,7 +88,7 @@ def plot_counts():
     fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(wave_list))    
     fig.savefig(FIG_PATH+'hosp_icu_death_counts.png')
     return fig, ax
-
+plot_counts()
 # Stacked histogram of cases by wave and age group
 from met_brewer import met_brew
 #  Package installation : https://github.com/BlakeRMills/MetBrewer
@@ -123,38 +126,40 @@ def plot_counts_hist():
     fig.savefig(FIG_PATH+'hosp_icu_death_counts_hist.png') 
 
     return fig, ax
-
-plot_percentage()
-# plot_counts()
 plot_counts_hist()
-
-# Percentages and counts
-# wave_list = df_hosp_perc['wave'].unique()
-# fig, ax = plt.subplots(2, 3, figsize=(15, 10))
-
-# vary = 'percentage'
-# for axi in ax[0]:
-#     axi.tick_params(axis='x', labelrotation=90)
-#     axi.set_ylabel(vary)
-#     axi.set_xlabel('age group')
-
-# for wave in wave_list:
-#     plot_xyvar(df_hosp_perc, ax=ax[0][0], n_strat=wave, vary=vary, title='a.')
-#     plot_xyvar(df_icu_perc, ax=ax[0][1], n_strat=wave, vary=vary, title='b.')
-#     plot_xyvar(df_death_perc, ax=ax[0][2], n_strat=wave, vary=vary, title='c.')
-
-# vary = 'counts'
-# for axi in ax[1]:
-#     axi.tick_params(axis='x', labelrotation=90)
-#     axi.set_ylabel(vary)
-#     axi.set_xlabel('age group')
-
-# for wave in wave_list:
-#     plot_xyvar(df_hosp_perc, ax=ax[1][0], n_strat=wave, vary=vary, title='d.')
-#     plot_xyvar(df_icu_perc, ax=ax[1][1], n_strat=wave, vary=vary, title='e.')
-#     plot_xyvar(df_death_perc, ax=ax[1][2], n_strat=wave, vary=vary, title='f.')    
+# Proportion histogram with binomial confidence interval
+# Auxiliar plot function
+def plot_proportions_histogram(df, ax, outcome_var, prop_lower, prop_upper, total_var='cases', strat='wave', side='center', width=0.3):
+    proportions = df[outcome_var].values
+    yerr_lower = df[prop_lower].values
+    yerr_upper = df[prop_upper].values
+    yerr = [yerr_lower, yerr_upper]
+    if side=='center':
+        ax.bar(df[strat], proportions, yerr=yerr, width=width)
+    elif side=='left':
+        ax.bar(df[strat]-width/2, proportions, yerr=yerr, width=width)
+    elif side=='right':
+        ax.bar(df[strat]+width/2, proportions, yerr=yerr, width=width)
     
-# handles, labels = ax[0][0].get_legend_handles_labels()
-# fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(wave_list))    
-# fig.show()
-# fig.savefig(FIG_PATH+'hosp_icu_death_percentages_counts.png')
+def plot_proportions_hist():
+    fig, ax = plt.subplots(1, 3, figsize=(15, 5), sharey=False)
+
+    plot_proportions_histogram(df_proportions_all, ax[0], 
+                        outcome_var='hosp', prop_lower='hosp_lower', prop_upper='hosp_upper', side='left')
+    plot_proportions_histogram(df_proportions_60p, ax[0], 
+                        outcome_var='hosp', prop_lower='hosp_lower', prop_upper='hosp_upper', side='right')
+
+    plot_proportions_histogram(df_proportions_all, ax[1], 
+                        outcome_var='icu', prop_lower='icu_lower', prop_upper='icu_upper', side='left')
+    plot_proportions_histogram(df_proportions_60p, ax[1], 
+                        outcome_var='icu', prop_lower='icu_lower', prop_upper='icu_upper', side='right')
+
+    plot_proportions_histogram(df_proportions_all, ax[2], 
+                        outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='left')
+    plot_proportions_histogram(df_proportions_60p, ax[2], 
+                        outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='right')
+    
+    fig.savefig(FIG_PATH+'hosp_icu_death_proportions_hist.png')
+
+    return fig, ax 
+plot_proportions_hist()
