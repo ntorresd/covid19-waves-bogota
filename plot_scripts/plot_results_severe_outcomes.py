@@ -131,8 +131,8 @@ plot_counts_hist()
 # Auxiliar plot function
 def plot_proportions_histogram(df, ax, outcome_var, prop_lower, prop_upper, total_var='cases', strat='wave', side='center', width=0.3):
     proportions = df[outcome_var].values
-    yerr_lower = df[prop_lower].values
-    yerr_upper = df[prop_upper].values
+    yerr_lower = proportions - df[prop_lower].values
+    yerr_upper = df[prop_upper].values - proportions
     yerr = [yerr_lower, yerr_upper]
     if side=='center':
         ax.bar(df[strat], proportions, yerr=yerr, width=width)

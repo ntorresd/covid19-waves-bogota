@@ -57,7 +57,8 @@ df_hosp = df_hosp.replace({'age_group':age_group_dic})
 df_icu = df_icu.replace({'age_group':age_group_dic})
 df_death = df_death.replace({'age_group':age_group_dic})
 
-df_confirmed_bogota = ut.get_wave(df_confirmed_bogota, start_date='onset', waves=df_waves)
+# df_confirmed_bogota = ut.get_wave(df_confirmed_bogota, start_date='onset', waves=df_waves)
+# %%
 df_confirmed_bogota = ut.age_group_60(df=df_confirmed_bogota, var='age', var_unit='age_unit')
 df_confirmed_bogota.dropna(subset=['wave'], inplace=True)
 
@@ -85,9 +86,9 @@ hosp_all_err = proportion_confint(count=hosp_all, nobs=cases_all, alpha=alpha)
 icu_all_err = proportion_confint(count=icu_all, nobs=cases_all, alpha=alpha)
 death_all_err = proportion_confint(count=death_all, nobs=cases_all, alpha=alpha)
 
-hosp_60p_err = proportion_confint(count=hosp_60p, nobs=cases_all, alpha=alpha)
-icu_60p_err = proportion_confint(count=icu_60p, nobs=cases_all, alpha=alpha)
-death_60p_err = proportion_confint(count=death_60p, nobs=cases_all, alpha=alpha)
+hosp_60p_err = proportion_confint(count=hosp_60p, nobs=cases_60p, alpha=alpha)
+icu_60p_err = proportion_confint(count=icu_60p, nobs=cases_60p, alpha=alpha)
+death_60p_err = proportion_confint(count=death_60p, nobs=cases_60p, alpha=alpha)
 
 # Constructing the dataframes with the results
 data_all = {
@@ -121,6 +122,3 @@ data_60p = {
     }
 df_counts_60p = pd.DataFrame(data=data_60p, dtype=float)
 df_counts_60p.to_csv(OUT_PATH + 'proportions_60p.csv',index = False)
-
-
-# %%
