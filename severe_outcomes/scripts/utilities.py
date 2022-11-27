@@ -5,6 +5,7 @@ Created on Thr Jul 06 2022
 @author: dsquevedo
 @author: ntorresd
 """
+import numpy as np
 
 # calculate counts and percentages by wave and age_group
 def calculate_percentage(df, strat='wave', group='age_group', print_sum=False):
@@ -17,3 +18,30 @@ def calculate_percentage(df, strat='wave', group='age_group', print_sum=False):
         if print_sum:
             print('The sum over the percentages gives: ', df_percentage.loc[mask ,'percentage'].sum())
     return df_percentage
+
+def get_pp_wave(ref_dt, waves):
+    df_wave=waves[(waves['start_date']<=ref_dt)&(waves['end_date']>ref_dt)]
+    if len(df_wave)>0:
+        wave=df_wave.wave.iloc[0]
+    else:
+        wave=np.nan
+    return wave
+
+def get_wave(df, start_date, waves):
+    df['wave']=df[start_date].apply(lambda x: get_pp_wave(x, waves=waves))
+    return df
+
+def age_group_60(df,var,var_unit): 
+    conditions=[((df[var]<60) & (df[var_unit]==1))|(df[var_unit].isin([2,3]))] + [(df[var]>=60) & (df[var_unit]==1)]
+    choices=['<60', '60+']
+    df['age_group']=np.select(conditions,choices,default=np.nan)
+    return df  
+
+
+def size_by_strat(df, strat='wave'):
+    strat_list = sorted(df[strat].unique())
+    data = []
+    for strat_ in strat_list:
+        size = len(df[df[strat]==strat_].index)
+        data.append(size)
+    return np.array(data)

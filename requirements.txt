@@ -1,3 +1,4 @@
 pyyaml==5.4.1
 pystan==2.19.1.1
-# metbrewer==1.0 # Package installation : https://github.com/BlakeRMills/MetBrewer
+statsmodels==0.14.0 # https://www.statsmodels.org/devel/install.html
+# metbrewer==1.0 # https://github.com/BlakeRMills/MetBrewer
