@@ -37,3 +37,6 @@ savefig.dpi:  100
 savefig.bbox: tight
 savefig.transparent: False
 savefig.facecolor: white
+
+#Error bars
+errorbar.capsize: 5
