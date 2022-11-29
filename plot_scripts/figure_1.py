@@ -13,7 +13,6 @@ ymlfile = open("config.yml", "r")
 cfg = yaml.load(ymlfile)
 config = cfg["default"]
 
-
 SCRIPTS_PATH = config['PATHS']['PLOT_PATH']
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'plot_scripts')
 sys.path.append(SCRIPTS_PATH)
