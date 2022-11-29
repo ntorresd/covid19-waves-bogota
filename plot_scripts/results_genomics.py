@@ -98,15 +98,14 @@ def plot1(panel = None):
         fig.savefig(FIG_PATH + 'Variants_multinomial.png')
         return fig, ax
 
-def plot2(panel = None):
-        # prevalence histogram
+# Prevalence histogram
+def plot_prevalence(ax, savefig=False):
         agg_df = df_variants.pivot_table(index = 'date', 
                                         columns = 'lineage', 
                                         values = 'PointEst', 
                                         aggfunc = 'max').reset_index()
         agg_df['date'] = agg_df['date'].dt.date
-        panel = None
-        fig, ax = plt.subplots()
+
         initial_date = min(df_variants['date'])
         final_date = max(df_variants['date'])
         bins = len(df_variants['date'].unique())
@@ -117,15 +116,13 @@ def plot2(panel = None):
         ax.set_xticks(pd.date_range(start = min(df_variants['date']), end = final_date, freq = "M"))
         ax.set_xlim(left = min(df_variants['date']), right = final_date)
         ax.tick_params(axis = 'x', rotation = 90)
-        if panel is not None:
-                ax.set_title(panel)
+
         ax.set_xlabel('')
         ax.set_ylabel('Prevalence per variant')
 
-        sns.move_legend(variants_hist, 'lower right', bbox_to_anchor = (0.97, 1.02), title = 'Variants', ncol = 3)
-        #fig.show()
-        fig.savefig(FIG_PATH + 'variants_prevalence_' + DATE_GENOMICS + '.png')
-        return fig, ax
+        sns.move_legend(variants_hist, 'lower right', bbox_to_anchor = (0.90, 0.95), ncol = 3, title=None)
+        if savefig:
+                fig.savefig(FIG_PATH + 'variants_prevalence_' + DATE_GENOMICS + '.png')
 
-plot1()
-plot2()
+# plot1()
+# plot_prevalence()
