@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thr Jul 31 2022
-Adapted from: https://github.com/mrc-ide/Brazil_COVID19_distributions
 
 @author: dsquevedo
 @author: ntorresd
@@ -161,3 +160,50 @@ def plot_proportions_hist():
 # plot_counts()
 # plot_counts_hist()
 # plot_proportions_hist()
+plot_proportions_hist()
+
+# Rates
+def plot_rates(df, ax, var, var_name):
+    for wave in range(1,5):
+        df_temp = df[df['wave'] == wave]
+        ax.plot(df_temp['age_group'], df_temp[var], marker = 'o', label = wave, color = colors[wave-1])
+    ax.set_xlabel('Age group')
+    ax.set_ylabel(var_name)
+    handles, labels = ax.get_legend_handles_labels()
+    ax.legend(handles, labels, loc='upper left',numpoints=1)
+    return ax
+
+# CFR
+fig, ax = plt.subplots()
+var = 'CFR'
+var_name = 'CFR'
+plot_rates(df_rates, ax, var, var_name)
+fig.savefig(FIG_PATH + f'{var}.png')
+
+# HCR
+fig, ax = plt.subplots()
+var = 'HCR'
+var_name = 'HCR'
+plot_rates(df_rates, ax, var, var_name)
+fig.savefig(FIG_PATH + f'{var}.png')
+
+# HCR - I
+fig, ax = plt.subplots()
+var = 'HCR_I'
+var_name = 'HCR - ICU'
+plot_rates(df_rates, ax, var, var_name)
+fig.savefig(FIG_PATH + f'{var}.png')
+
+# HFR - I
+fig, ax = plt.subplots()
+var = 'HFR'
+var_name = 'HFR'
+plot_rates(df_rates, ax, var, var_name)
+fig.savefig(FIG_PATH + f'{var}.png')
+
+# HFR - I
+fig, ax = plt.subplots()
+var = 'HFR_I'
+var_name = 'HFR - ICU'
+plot_rates(df_rates, ax, var, var_name)
+fig.savefig(FIG_PATH + f'{var}.png')
