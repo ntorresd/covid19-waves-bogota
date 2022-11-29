@@ -37,6 +37,11 @@ def age_group_60(df,var,var_unit):
     df['age_group']=np.select(conditions,choices,default=np.nan)
     return df  
 
+def age_group_dec(df,var,var_unit,dic): 
+    conditions=[(df[var]<10)|(df[var_unit].isin([2,3]))] + [(df[var]>= dic[ge][0]) & (df[var] <= dic[ge][1]) for ge in list(dic.keys())[1:]]
+    choices=[ge for ge in list(dic.keys())]
+    df['age_group']=np.select(conditions,choices,default=np.nan)
+    return df  
 
 def size_by_strat(df, strat='wave'):
     strat_list = sorted(df[strat].unique())
