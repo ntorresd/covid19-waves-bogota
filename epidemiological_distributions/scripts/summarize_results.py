@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Oct 12 2022
+Adapted from: https://github.com/mrc-ide/Brazil_COVID19_distributions
 
 @author: dsquevedo
 @author: ntorres
@@ -26,43 +27,78 @@ df_best_models = df_best_models.set_index(df_best_models.columns[0]).transpose()
 # 1. Prepare the data
 all_dfs, columns = ut.prepare_confirmed_cases_data()
 
-stat = ['mean', ut.q975, ut.q025]
-##############################################################################
-# print n samples and range of data
-for df in all_dfs:
-    col = str(df.columns[4])
-    print(col, len(df[col].index), df[col].min(), '-', df[col].max())
-##############################################################################
-# load the samples (models fits for every epidemiological distribution)
+stats = ['mean', ut.q975, ut.q025]
+dist_posteriors = ut.load_samples(stats)
 
-dist_posteriors  = {'icu_stay':{},
-                    'hosp_stay':{},
-                    'onset_icu':{},
-                    'onset_hosp':{},
-                    'onset_death':{}
-                   }
 
-for col in columns:
-    dist_posteriors[col].update({'Gamma': pd.read_csv(OUT_PATH + col +'-samples-gamma.csv').agg(stat)})
-    dist_posteriors[col].update({'Lognormal': pd.read_csv(OUT_PATH + col +'-samples-log_normal.csv').agg(stat)})
-    dist_posteriors[col].update({'Weibull': pd.read_csv(OUT_PATH + col +'-samples-weibull.csv').agg(stat)})
-    dist_posteriors[col].update({'Exponential': pd.read_csv(OUT_PATH + col +'-samples-exponential.csv').agg(stat)})
-    dist_posteriors[col].update({'Gen Lognormal': pd.read_csv(OUT_PATH + col +'-samples-gln.csv').agg(stat)})
-    
-df_res = pd.DataFrame({})
-for dist in dist_posteriors:
+def get_mean_best(dist, df_best_models):
     best = df_best_models[df_best_models[dist] == 0].index[0]
     df_temp = dist_posteriors[dist][best]
-    df_temp = df_temp.reset_index()
-    df_temp = df_temp.rename(columns = {'index':'stat'})
-    cols = ['t', 'best', 'stat'] + [col for col in df_temp.columns.tolist() if 'mu' in col]
-    df_temp['t'] = dist
-    df_temp['best'] = best
-    df_temp = df_temp[cols]
-    df_res = pd.concat([df_res, df_temp])
+
+    df_result = {'stat' : df_temp.index.tolist(),
+                 'dist' : [dist]*len(df_temp.index.tolist())
+                 }
+    for wave in range(1,5):
+        wave_mean = []
+        for stat in df_result['stat']:
+            if best == 'Gamma':
+                alpha = df_temp[f'alpha[{wave}]'][stat]
+                beta = df_temp[f'beta[{wave}]'][stat]
+                mn = ut.mean_gamma(alpha, beta)
+                wave_mean.append(mn)
+            if best == 'Exponential':
+                beta = df_temp[f'beta[{wave}]'][stat]
+                mn = ut.mean_exponential(beta)
+                wave_mean.append(mn)
+            if best == 'Weibull':
+                alpha = df_temp[f'alpha[{wave}]'][stat]
+                sigma = df_temp[f'sigma[{wave}]'][stat]
+                mn = ut.mean_weibull(alpha, sigma)
+                wave_mean.append(mn)
+            if best == 'Lognormal':
+                mu = df_temp[f'mu[{wave}]'][stat]
+                sigma = df_temp[f'sigma[{wave}]'][stat]
+                mn = ut.mean_log_normal(mu, sigma)
+                wave_mean.append(mn)
+            if best == 'Gen Lognormal':
+                print('Entró')
+                mu = df_temp[f'mu[{wave}]'][stat]
+                sigma = df_temp[f'sigma[{wave}]'][stat]
+                g = df_temp[f'g[{wave}]'][stat]
+                mn = ut.mean_gln(mu, sigma, g)
+                wave_mean.append(mn)
+        df_result.update({'wave_' + str(wave) : wave_mean})
+
+    return pd.DataFrame(df_result)
+
+def get_mean_observed(all_dfs, dist):
+    dist_di = {'icu_stay' : 0,
+               'hosp_stay' : 1,
+               'onset_icu' : 2,
+               'onset_hosp' : 3,
+               'onset_death' : 4,
+               }
+    df_result = {'stat' : ['observed'],
+                 'dist' : [dist]
+                 }
     
-for col in df_res.columns:
-    if 'mu' in col:
-        df_res[col] = np.exp(df_res[col]).round(1)
+    df_dist = all_dfs[dist_di[dist]]
+    for wave in range(1,5):
+        df_temp = df_dist[df_dist['wave'] == wave]
+        wave_mean = df_temp[dist].mean()
+        df_result.update({'wave_' + str(wave) : [wave_mean]})
+    return pd.DataFrame(df_result)
+    
+df_res = pd.DataFrame({})
+dist = 'hosp_stay'
+df_res = pd.concat([df_res, get_mean_best(dist, df_best_models), get_mean_observed(all_dfs, dist)])
+dist = 'icu_stay'
+df_res = pd.concat([df_res, get_mean_best(dist, df_best_models), get_mean_observed(all_dfs, dist)])
+dist = 'onset_hosp'
+df_res = pd.concat([df_res, get_mean_best(dist, df_best_models), get_mean_observed(all_dfs, dist)])
+dist = 'onset_icu'
+df_res = pd.concat([df_res, get_mean_best(dist, df_best_models), get_mean_observed(all_dfs, dist)])
+dist = 'onset_death'
+df_res = pd.concat([df_res, get_mean_best(dist, df_best_models), get_mean_observed(all_dfs, dist)])
         
 df_res.to_csv(OUT_PATH + 'best_fit_summary.csv', index = False)

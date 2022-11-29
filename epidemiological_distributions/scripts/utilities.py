@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Nov 20 2022
+Adapted from: https://github.com/mrc-ide/Brazil_COVID19_distributions
 
 @author: dsquevedo
 @author: ntorres
@@ -24,6 +25,9 @@ CHAINS = config['MODELS']['CHAINS']
 MIN_VAL = config['MODELS']['MIN_VAL']
 MAX_VAL = config['MODELS']['MAX_VAL']
 
+######################################################################################
+######################################################################################
+# Data processing functions 
 def prepare_confirmed_cases_data(strat = 'wave'):
     drop_columns = ['Start_date', 'End_date']
 
@@ -87,6 +91,25 @@ def prepare_confirmed_cases_data(strat = 'wave'):
     
     return all_dfs, columns
 
+def load_samples(stat = 'mean'):
+    samp_posteriors  = {'icu_stay':{},
+                        'hosp_stay':{},
+                        'onset_icu':{},
+                        'onset_hosp':{},
+                        'onset_death':{}
+                    }
+
+    for col in list(samp_posteriors.keys()):
+        samp_posteriors[col].update({'Gamma': pd.read_csv(OUT_PATH + col +'-samples-gamma.csv').agg(stat)})
+        samp_posteriors[col].update({'Lognormal': pd.read_csv(OUT_PATH + col +'-samples-log_normal.csv').agg(stat)})
+        samp_posteriors[col].update({'Weibull': pd.read_csv(OUT_PATH + col +'-samples-weibull.csv').agg(stat)})
+        samp_posteriors[col].update({'Exponential': pd.read_csv(OUT_PATH + col +'-samples-exponential.csv').agg(stat)})
+        samp_posteriors[col].update({'Gen Lognormal': pd.read_csv(OUT_PATH + col +'-samples-gln.csv').agg(stat)})
+    return samp_posteriors
+
+######################################################################################
+######################################################################################
+# Fit functions - Bayes inference
 def fit_district(values, list_of_params, model):
     stdata = values
     stan_data = {'N': len(stdata), 'y': stdata}
@@ -144,7 +167,10 @@ def get_posteriors_pooling(all_dfs, columns, model, model_name, param_list, prio
         # save the output
         posterior.to_csv(OUT_PATH + col + f'-samples-{model_name}.csv', index = False)
         posteriors_pooling.update({col: posterior})
-    
+
+######################################################################################
+######################################################################################
+# Statistical functions    
 def gln_pdf(x, mu, sigma, g):
     """PDF of the generalised log-normal distribution"""
     k = g / (2**((g+1)/g) * sigma * special.gamma(1/g))
@@ -172,6 +198,34 @@ def LogLaplaceCovariance(posterior, col):
     result += posterior[col]['Logf']
     return result
 
+def mean_exponential(beta):
+    return beta
+
+def mean_gamma(alpha, beta):
+    return alpha/beta
+
+def mean_weibull(alpha, sigma):
+    return sigma * special.gamma(1+(1/alpha))
+
+def mean_log_normal(mu, sigma):
+    return np.exp(mu+0.5*sigma**2)
+
+def sum_term_gln(r, mu, sigma, g, inf):
+    sum = 0
+    s_k = 0
+    for j in range(1, inf): 
+        s_k = (r * sigma)**j
+        s_k = s_k * (1 + (-1)**j) * 2**(j/g)
+        s_k = s_k * (special.gamma((j+1)/g) / special.gamma(j+1))
+        s_k = s_k * 1/2 * 1/special.gamma(1/g)
+        sum += s_k
+    if s_k >=  0.0000001:
+        return np.nan
+    return sum
+
+def mean_gln(mu, sigma, g, inf = 150):
+    return np.exp(mu)*(1 + sum_term_gln(r = 1, mu = mu, sigma = sigma, g = g, inf = inf))
+
 def q025(x):
     return x.quantile(0.025)
 
@@ -197,5 +251,4 @@ def best_model():
     best_models['Epidemilogical distribution'] = list(ep_distributions.keys()) 
     best_models = best_models[cols]
     best_models = best_models.set_index('Epidemilogical distribution')
-
     best_models.to_csv(OUT_PATH + 'best_models.csv')
