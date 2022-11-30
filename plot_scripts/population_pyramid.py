@@ -58,8 +58,8 @@ def plot_pyramid(ax):
                                 columns=df_confirmed_bogota['sex'],
                                 normalize="index")*100
 
-    hist_f = ax.barh(df_female['age_group'], -df_female['counts'], align='center', label='Female')
-    hist_m = ax.barh(df_male['age_group'], df_male['counts'], align='center', label='Male')
+    hist_f = ax.barh(df_female['age_group'], -df_female['counts'], align='center', label='female')
+    hist_m = ax.barh(df_male['age_group'], df_male['counts'], align='center', label='male')
 
     ax.bar_label(hist_m, labels=['{:.1f}%'.format(prop) for prop in df_prop['M'].round(1)], label_type='edge')
     ax.bar_label(hist_f, labels=['{:.1f}%'.format(prop) for prop in df_prop['F'].round(1)], label_type='edge')
@@ -73,5 +73,5 @@ ax.set_xlim(left=-260000)
 ax.set_xlabel('Cases')
 ax.set_ylabel('Age group')
 ax.legend()     
-fig.show()   
 fig.savefig(FIG_PATH + 'population_pyramid.png')
+# fig.show() 
