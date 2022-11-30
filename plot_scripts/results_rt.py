@@ -33,18 +33,20 @@ df_rt_60p['window_start'] = pd.to_datetime(df_rt_60p['window_start'])
 df_rt_60p['window_end'] = pd.to_datetime(df_rt_60p['window_end'])
 
 # Instantaneous reproduction number R(t) plot
-def plot_rt(ax, savefig=False):    
+def plot_rt(ax):    
     ln1 = ax.plot(df_rt_all['window_end'], df_rt_all['Mean(R)'], color=colors[4], label = 'all')
     ln2 = ax.plot(df_rt_60p['window_end'], df_rt_60p['Mean(R)'], color=colors[1], label = '60+')
-    hline = ax.axhline(y=1, color='black', linestyle='--', linewidth=3)
-    
-    ax.set_ylabel('R(t)') 
-    ax.set_ylim(top=2.3)
-    
+    ax.axhline(y=1, color='black', linestyle='--', linewidth=3)
+
     lns = ln1 + ln2
     labs = [l.get_label() for l in lns]
-    legend = ax.legend(lns, labs, loc = 0)
-    if savefig:
-        plt.savefig(FIG_PATH + 'rt.png')
+    ax.legend(lns, labs, loc = 0)
 
-# plot_rt()
+fig, ax = plt.subplots()
+plot_rt(ax)
+ax.set_xlabel('')
+ax.set_ylabel('R(t)') 
+ax.set_ylim(top=2.3)
+ax.tick_params(axis='x', rotation=45)
+fig.savefig(FIG_PATH + 'rt.png')
+# fig.show()

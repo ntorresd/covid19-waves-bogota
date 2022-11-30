@@ -33,9 +33,7 @@ df_results = pd.read_csv(OUT_PATH + 'theta.csv')
 
 stat = "mean"
 
-def plot1(panel = None):
-        fig, ax = plt.subplots()
-        
+def plot_multinomial(ax):
         n = 0 
         variant = 'Alpha'
         mask = (df_results.stat == stat) & (df_results.variant == variant)
@@ -90,22 +88,21 @@ def plot1(panel = None):
                 color  = colors[n], marker = '*', linestyle = '')
         ax.fill_between(df_results[mask].week, df_results[mask1].theta, df_results[mask2].theta,
                         color  = colors[n], alpha = 0.2)
-        if panel is not None:
-                ax.set_title(panel)
-        ax.set_xlabel('Week')
-        ax.set_ylabel('Prevalence per variant')
-        fig.legend(loc = 'center right')
-        fig.savefig(FIG_PATH + 'Variants_multinomial.png')
-        return fig, ax
+
+fig, ax = plt.subplots()
+plot_multinomial(ax)
+ax.set_xlabel('week')
+ax.set_ylabel('prevalence')
+fig.legend(loc = 'center right')
+fig.savefig(FIG_PATH + 'variants_multinomial.png')
+# fig.show()
 
 # Prevalence histogram
-def plot_prevalence(ax, savefig=False):
+def plot_prevalence(ax):
         agg_df = df_variants.pivot_table(index = 'date', 
                                         columns = 'lineage', 
                                         values = 'PointEst', 
                                         aggfunc = 'max').reset_index()
-        agg_df['date'] = agg_df['date'].dt.date
-
         initial_date = min(df_variants['date'])
         final_date = max(df_variants['date'])
         bins = len(df_variants['date'].unique())
@@ -115,14 +112,12 @@ def plot_prevalence(ax, savefig=False):
                                      legend = True)
         ax.set_xticks(pd.date_range(start = min(df_variants['date']), end = final_date, freq = "M"))
         ax.set_xlim(left = min(df_variants['date']), right = final_date)
-        ax.tick_params(axis = 'x', rotation = 90)
-
-        ax.set_xlabel('')
-        ax.set_ylabel('Prevalence per variant')
-
         sns.move_legend(variants_hist, 'lower right', bbox_to_anchor = (0.90, 0.95), ncol = 3, title=None)
-        if savefig:
-                fig.savefig(FIG_PATH + 'variants_prevalence_' + DATE_GENOMICS + '.png')
 
-# plot1()
-# plot_prevalence()
+fig, ax = plt.subplots(figsize = (7.5,5))
+plot_prevalence(ax)
+ax.set_xlabel('')
+ax.set_ylabel('prevalence')
+ax.tick_params(axis = 'x', rotation = 45)
+fig.savefig(FIG_PATH + 'variants_prevalence_' + DATE_GENOMICS + '.png')
+# fig.show()

@@ -49,7 +49,7 @@ age_group_dic={
 df_confirmed_bogota=age_group_dec(df_confirmed_bogota,'age','age_unit', age_group_dic)
 
 # Population pyramid plot
-def plot_pyramid(ax, savefig=False):
+def plot_pyramid(ax):
     df_counts = df_confirmed_bogota.groupby(by=['age_group', 'sex']).size().reset_index(name='counts')
 
     df_female = df_counts[df_counts['sex']=='F']
@@ -58,8 +58,8 @@ def plot_pyramid(ax, savefig=False):
                                 columns=df_confirmed_bogota['sex'],
                                 normalize="index")*100
 
-    hist_f = ax.barh(df_female['age_group'], -df_female['counts'], align='center', label='Female')
-    hist_m = ax.barh(df_male['age_group'], df_male['counts'], align='center', label='Male')
+    hist_f = ax.barh(df_female['age_group'], -df_female['counts'], align='center', label='female')
+    hist_m = ax.barh(df_male['age_group'], df_male['counts'], align='center', label='male')
 
     ax.bar_label(hist_m, labels=['{:.1f}%'.format(prop) for prop in df_prop['M'].round(1)], label_type='edge')
     ax.bar_label(hist_f, labels=['{:.1f}%'.format(prop) for prop in df_prop['F'].round(1)], label_type='edge')
@@ -67,11 +67,11 @@ def plot_pyramid(ax, savefig=False):
     ticks =  ax.get_xticks()
     ax.set_xticklabels([int(abs(tick)) for tick in ticks])
 
-    ax.set_xlabel('Cases')
-    ax.set_ylabel('Age group')
-
-    ax.legend()
-    if savefig:
-        plt.savefig(FIG_PATH + 'population_pyramid.png')
-
-# plot_pyramid()
+fig, ax = plt.subplots(figsize=(7.5, 5))
+plot_pyramid(ax)
+ax.set_xlim(left=-260000)
+ax.set_xlabel('Cases')
+ax.set_ylabel('Age group')
+ax.legend()     
+fig.savefig(FIG_PATH + 'population_pyramid.png')
+# fig.show() 
