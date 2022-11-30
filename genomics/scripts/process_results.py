@@ -8,6 +8,7 @@ Created on Fri Oct 21 2022
 """
 import yaml
 import pandas as pd
+import numpy as np
 
 ymlfile = open("config.yml", "r")
 cfg = yaml.load(ymlfile)
@@ -29,7 +30,10 @@ def q025(x):
 def q975(x):
     return x.quantile(0.975)
 
+#################################################################################################
 # Prepare results
+#################################################################################################
+#################################################################################################
 #theta
 variants_dict = {'1' : 'Alpha',
                  '2' : 'Delta',
@@ -48,14 +52,58 @@ df_theta_mean[['trash1','week_var']] = df_theta_mean['variable'].str.split('[', 
 df_theta_mean[['week','variant']] = df_theta_mean['week_var'].str.split(',', 1, expand = True)
 df_theta_mean[['variant', 'thash2']] = df_theta_mean['variant'].str.split(']', 1, expand = True)
 df_theta_mean = df_theta_mean[['week','variant','stat','theta']]
-df_theta_mean['week'] = df_theta_mean['week'].astype(int) - 1
+df_theta_mean['week'] = df_theta_mean['week'].astype(int) - 1 #Shifting weeks by -1 to make them coherent with the variant counts
 df_theta_mean.replace({"variant": variants_dict}, inplace = True)
 
 # Variant counts - week
 df_variants['weekly_count_variants'] = df_variants['Alpha'] + df_variants['Delta'] + df_variants['Gamma'] + df_variants['Mu'] + df_variants['Omicron']
 df_variants['t'] = df_variants['t'].astype(int)
-
 df_theta_mean = df_theta_mean.merge(df_variants, how = 'left', right_on = 't', left_on = 'week')
 del(df_theta_mean['t'])
 df_theta_mean.sort_values(by = ['variant', 'week'], inplace = True)
 df_theta_mean.to_csv(OUT_PATH + 'theta.csv', index = False)
+
+#################################################################################################
+#################################################################################################
+#beta
+beta_cols = [col for col in df_fit_raw.columns if 'beta[' in col]
+df_beta = df_fit_raw[beta_cols]
+df_beta_mean =  df_beta.agg(['mean', q025, q975])
+cols = list(variants_dict.values())
+df_beta_mean.columns = cols
+# Notice that these beta's are the advantage of variants 2-5 with respect to variant 1 (which is the pivot). In order to get the advantage
+# between the others, we should divide them
+
+def calculate_relative_advantage(stat):
+    list_adv = df_beta_mean.loc[stat].transpose().tolist()
+    list_adv[0] = 1
+    print(list_adv)
+
+    for var in list(variants_dict.keys()):
+        if var == '1':
+            df = pd.DataFrame([[variants_dict[var]] + list_adv], columns = ['pivot_variant'] + cols)
+        else: 
+            df_temp = pd.DataFrame([[variants_dict[var]] + list(np.array(list_adv)/list_adv[int(var) - 1])], columns = ['pivot_variant'] + cols)
+            df = pd.concat([df, df_temp])
+
+    return df.round(2).reset_index(drop = True)
+
+df_mean = calculate_relative_advantage('mean')
+df_025 = calculate_relative_advantage('q025')
+df_975 = calculate_relative_advantage('q975')
+
+df_min = pd.DataFrame({})
+df_max = pd.DataFrame({})
+df_res = pd.DataFrame({})
+
+for col in df_mean.columns.to_list():
+    if col == 'pivot_variant':
+        df_res[col] = df_mean[col]
+    else:
+        df_min[col] = np.where(df_025[col] < df_975[col], df_025[col], df_975[col])
+        df_min.reset_index(drop = True, inplace = True)
+        df_max[col] = np.where(df_025[col] > df_975[col], df_025[col], df_975[col])
+        df_max.reset_index(drop = True, inplace = True)
+        df_res[col] = df_mean[col].astype(str) + ' (' + df_min[col].astype(str) + ', ' + df_max[col].astype(str) + ')'
+
+df_res.to_csv(OUT_PATH + 'advantage.csv', index = False)
