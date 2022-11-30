@@ -48,46 +48,46 @@ def plot_xyvar(df, ax, n_strat, varx='age_group', vary='percentage'):
     ax.plot(data[varx], data[vary], label=strat+str(n_strat), linestyle='-', marker='o')
 
 # Wave cases percentage distribution by age group
-def plot_percentage(ax, savefig=False):
+def plot_percentage(ax):
     vary = 'percentage'
     strat_list = df_hosp_perc[strat].unique()
+    for n_strat in strat_list:
+        plot_xyvar(df_hosp_perc, ax=ax[0], n_strat=n_strat, vary=vary)
+        plot_xyvar(df_icu_perc, ax=ax[1], n_strat=n_strat, vary=vary)
+        plot_xyvar(df_death_perc, ax=ax[2], n_strat=n_strat, vary=vary)
 
-    for axi in ax:
-        axi.tick_params(axis='x', labelrotation=90)
-        axi.set_ylabel(vary)
-        axi.set_xlabel('age group')
-
-    for wave in strat_list:
-        plot_xyvar(df_hosp_perc, ax=ax[0], n_strat=wave, vary=vary)
-        plot_xyvar(df_icu_perc, ax=ax[1], n_strat=wave, vary=vary)
-        plot_xyvar(df_death_perc, ax=ax[2], n_strat=wave, vary=vary)
-
-    # handles, labels = ax[1].get_legend_handles_labels()
-    # ax[1].legend(handles, labels, loc='lower center', ncol = len(strat_list))   
-
-    if savefig:
-        fig.savefig(FIG_PATH+'hosp_icu_death_percentages.png')
+fig, ax = plt.subplots(1, 3, figsize=(15, 5))
+plot_percentage(ax)
+ax[0].set_ylabel('hospitalization percentage by age')
+ax[1].set_ylabel('icu percentage by age')
+ax[2].set_ylabel('death percentage by age')
+for axi in ax:
+    axi.tick_params(axis='x', labelrotation=90)
+    axi.set_xlabel('age group')
+handles, labels = ax[2].get_legend_handles_labels()
+ax[2].legend(handles, labels, loc='upper left')
+# fig.savefig(FIG_PATH+'hosp_icu_death_percentages.png')
+# fig.show()
 
 # Wave counts by age group
-def plot_counts():
+def plot_counts(ax):
     strat_list = df_hosp_perc[strat].unique()
-    fig, ax = plt.subplots(1, 3, figsize=(15, 5))
-
     vary = 'counts'
     for axi in ax:
         axi.tick_params(axis='x', labelrotation=90)
         axi.set_ylabel(vary)
         axi.set_xlabel('age group')
-
     for wave in strat_list:
         plot_xyvar(df_hosp_perc, ax=ax[0], n_strat=wave, vary=vary)
         plot_xyvar(df_icu_perc, ax=ax[1], n_strat=wave, vary=vary)
         plot_xyvar(df_death_perc, ax=ax[2], n_strat=wave, vary=vary)
 
-    handles, labels = ax[0].get_legend_handles_labels()
-    fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(strat_list))    
-    fig.savefig(FIG_PATH+'hosp_icu_death_counts.png')
-    return fig, ax
+fig, ax = plt.subplots(1, 3, figsize=(15, 5))
+plot_counts(ax)
+handles, labels = ax[0].get_legend_handles_labels()
+fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(labels)) 
+fig.savefig(FIG_PATH+'hosp_icu_death_counts.png')
+# fig.show()
 
 # Stacked histogram of cases by wave and age group
 from met_brewer import met_brew
@@ -107,18 +107,23 @@ def plot_stacked_histogram(df, ax, strat=strat, group_var='age_group', vary='cou
         y_offset = y_offset + counts_list 
         counter+=1
 
-def plot_counts_hist(ax, strat=strat, vary = 'counts', savefig=False):
+def plot_counts_histograms(ax, strat=strat, vary='counts'):
 
     plot_stacked_histogram(df = df_hosp_perc, ax=ax[0])
     plot_stacked_histogram(df = df_icu_perc, ax=ax[1])
     plot_stacked_histogram(df = df_death_perc, ax=ax[2])
 
-    for axi in ax:
-        axi.set_ylabel(vary)
-        axi.set_xlabel(strat)
 
-    if savefig:
-        fig.savefig(FIG_PATH+'hosp_icu_death_counts_hist.png') 
+vary='counts'
+fig, ax = plt.subplots(1, 3, figsize=(15,5))
+for axi in ax:
+    axi.set_xlabel(strat)
+ax[0].set_ylabel('hospitalization counts by age')
+ax[1].set_ylabel('icu counts by age')
+ax[2].set_ylabel('death counts by age')
+plot_counts_histograms(ax)
+fig.savefig(FIG_PATH+'hosp_icu_death_counts_hist.png') 
+# fig.show()
 
 # Proportion histogram with binomial confidence interval
 # Auxiliar plot function
@@ -134,9 +139,7 @@ def plot_proportions_histogram(df, ax, outcome_var, prop_lower, prop_upper, tota
     elif side=='right':
         ax.bar(df[strat]+width/2, proportions, yerr=yerr, width=width)
     
-def plot_proportions_hist():
-    fig, ax = plt.subplots(1, 3, figsize=(15, 5), sharey=False)
-
+def plot_proportions_hist(ax):
     plot_proportions_histogram(df_proportions_all, ax[0], 
                         outcome_var='hosp', prop_lower='hosp_lower', prop_upper='hosp_upper', side='left')
     plot_proportions_histogram(df_proportions_60p, ax[0], 
@@ -151,21 +154,16 @@ def plot_proportions_hist():
                         outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='left')
     plot_proportions_histogram(df_proportions_60p, ax[2], 
                         outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='right')
-    
-    fig.savefig(FIG_PATH+'hosp_icu_death_proportions_hist.png')
-
-    return fig, ax 
 
 # Rates
 def plot_rates(df, ax, var, var_name):
     for wave in range(1,5):
         df_temp = df[df['wave'] == wave]
         ax.plot(df_temp['age_group'], df_temp[var], marker = 'o', label = wave, color = colors[wave-1])
-    ax.set_xlabel('Age group')
+    ax.set_xlabel('age group')
     ax.set_ylabel(var_name)
     handles, labels = ax.get_legend_handles_labels()
     ax.legend(handles, labels, loc='upper left',numpoints=1)
-    return ax
 
 # CFR
 fig, ax = plt.subplots()
