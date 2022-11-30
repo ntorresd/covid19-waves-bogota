@@ -32,15 +32,15 @@ def q975(x):
 
 #################################################################################################
 # Prepare results
-#################################################################################################
-#################################################################################################
-#theta
 variants_dict = {'1' : 'Alpha',
                  '2' : 'Delta',
                  '3' : 'Gamma',
                  '4' : 'Mu',
                  '5' : 'Omicron'
             }
+#################################################################################################
+#################################################################################################
+#theta
 theta_cols = [col for col in df_fit_raw.columns if 'theta' in col]
 df_theta = df_fit_raw[theta_cols]
 df_theta_mean =  df_theta.agg(['mean', q025, q975])
@@ -75,35 +75,29 @@ df_beta_mean.columns = cols
 # between the others, we should divide them
 
 def calculate_relative_advantage(stat):
-    list_adv = df_beta_mean.loc[stat].transpose().tolist()
-    list_adv[0] = 1
-    print(list_adv)
+    df_beta_cp = df_beta.copy()
+    df_beta_cp['beta[1]'] = 1
+    df_result = pd.DataFrame({})
+    for piv_var in list(variants_dict.keys()):  
+        advantage_list =[variants_dict[piv_var]]
+        for var in list(variants_dict.keys()):
+            advantage = df_beta_cp[f'beta[{var}]']/df_beta_cp[f'beta[{piv_var}]']
+            adv = advantage.agg(stat)
+            advantage_list.append(adv)
+        df_temp = pd.DataFrame([advantage_list], columns = ['pivot_variant'] + cols)
+        df_result = pd.concat([df_result, df_temp])
 
-    for var in list(variants_dict.keys()):
-        if var == '1':
-            df = pd.DataFrame([[variants_dict[var]] + list_adv], columns = ['pivot_variant'] + cols)
-        else: 
-            df_temp = pd.DataFrame([[variants_dict[var]] + list(np.array(list_adv)/list_adv[int(var) - 1])], columns = ['pivot_variant'] + cols)
-            df = pd.concat([df, df_temp])
-
-    return df.round(2).reset_index(drop = True)
+    return df_result.round(2).reset_index(drop = True)
 
 df_mean = calculate_relative_advantage('mean')
-df_025 = calculate_relative_advantage('q025')
-df_975 = calculate_relative_advantage('q975')
+df_025 = calculate_relative_advantage(q025)
+df_975 = calculate_relative_advantage(q975)
 
-df_min = pd.DataFrame({})
-df_max = pd.DataFrame({})
 df_res = pd.DataFrame({})
-
 for col in df_mean.columns.to_list():
     if col == 'pivot_variant':
         df_res[col] = df_mean[col]
     else:
-        df_min[col] = np.where(df_025[col] < df_975[col], df_025[col], df_975[col])
-        df_min.reset_index(drop = True, inplace = True)
-        df_max[col] = np.where(df_025[col] > df_975[col], df_025[col], df_975[col])
-        df_max.reset_index(drop = True, inplace = True)
-        df_res[col] = df_mean[col].astype(str) + ' (' + df_min[col].astype(str) + ', ' + df_max[col].astype(str) + ')'
+        df_res[col] = df_mean[col].astype(str) + ' (' + df_025[col].astype(str) + ', ' + df_975[col].astype(str) + ')'
 
 df_res.to_csv(OUT_PATH + 'advantage.csv', index = False)
