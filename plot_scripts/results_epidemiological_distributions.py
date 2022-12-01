@@ -29,7 +29,7 @@ import utilities as ut
 plt.style.use(config['PATHS']['PLOT_STYLE'])
 prop_cycle = plt.rcParams['axes.prop_cycle']
 colors = prop_cycle.by_key()['color']
-
+"""
 df_best_models = pd.read_csv(OUT_PATH + 'best_models.csv')
 df_best_models = df_best_models.set_index(df_best_models.columns[0]).transpose()
 
@@ -40,7 +40,7 @@ all_dfs, columns = ut.prepare_confirmed_cases_data()
 ##############################################################################
 # load the samples (models fits for every epidemiological distribution)
 dist_posteriors = ut.load_samples()
-
+"""
 ########################################################################
 # Plot CDFs
 def plot_cdf(df, epi_dist, max_val, ax, cdf_null_hyp, n, n_subset = None, subset = 'wave'):
@@ -146,34 +146,9 @@ def plot_dist(df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
     ax.set_ylabel('Probability')
     ax.set_title(title)
     return ax
-
-########################################################################
-# Plot best model
-def plot_best_model(dist, ax, n):
-    df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
-    df_dist = df_best_models_sum[df_best_models_sum.dist == dist]
-    df_dist = df_dist.set_index('stat')
-    name = dist.replace('_', ' ')
-    mean = np.array([df_dist['wave_1']['mean'], df_dist['wave_2']['mean'], 
-                     df_dist['wave_3']['mean'], df_dist['wave_4']['mean']])
-    err = np.array([[df_dist['wave_1']['mean'] - df_dist['wave_1']['q025'], 
-                     df_dist['wave_2']['mean'] - df_dist['wave_2']['q025'], 
-                     df_dist['wave_3']['mean'] - df_dist['wave_3']['q025'], 
-                     df_dist['wave_4']['mean'] - df_dist['wave_4']['q025']],
-                    [df_dist['wave_1']['q975'] - df_dist['wave_1']['mean'], 
-                     df_dist['wave_2']['q975'] - df_dist['wave_2']['mean'], 
-                     df_dist['wave_3']['q975'] - df_dist['wave_3']['mean'], 
-                     df_dist['wave_4']['q975'] - df_dist['wave_4']['mean']]])
-    ax.errorbar(['1', '2', '3', '4'], mean, err, 
-                ls = '-', marker = 'o', 
-                color = colors[n],
-                label = name)
-    ax.set_xlabel('Wave')
-    ax.set_ylabel('Days')
-    return ax
-
 ########################################################################
 # Plot epi distributions
+"""
 dist_list = ['Gamma', 'Lognormal', 'Weibull', 'Exponential', 'Gen Lognormal']
 max_val_plot=60
 
@@ -269,24 +244,53 @@ plot_dist(df, epi_dist = var, max_val = max_val_plot,
 handles, labels = ax[0][0].get_legend_handles_labels()
 fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(dist_list))
 fig.savefig(FIG_PATH + 'onset_distributions.png')
+"""
 
 ########################################################################
 ########################################################################
-# Plot best distributions
-fig, ax = plt.subplots(figsize = (10, 10))
-dist = 'icu_stay'
-plot_best_model(dist, ax, 0)
-dist = 'hosp_stay'
-plot_best_model(dist, ax, 1)
-dist = 'onset_hosp'
-plot_best_model(dist, ax, 2)
-dist = 'onset_icu'
-plot_best_model(dist, ax, 3)
-dist = 'onset_death'
-plot_best_model(dist, ax, 4)
-handles, labels = ax.get_legend_handles_labels()
-# remove the errorbars
-handles = [h[0] for h in handles]
-# use them in the legend
-ax.legend(handles, labels, loc='upper right',numpoints=1)
-fig.savefig(FIG_PATH + 'best_models.png')
+########################################################################
+# Plot best model
+def plot_best_model_line(dist, ax, n, title):
+    df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
+    df_dist = df_best_models_sum[df_best_models_sum.dist == dist]
+    df_dist = df_dist.set_index('stat')
+    name = dist.replace('_', ' ')
+    mean = np.array([df_dist['wave_1']['mean'], df_dist['wave_2']['mean'], 
+                     df_dist['wave_3']['mean'], df_dist['wave_4']['mean']])
+    err = abs(np.array([[df_dist['wave_1']['mean'] - df_dist['wave_1']['q025'], 
+                     df_dist['wave_2']['mean'] - df_dist['wave_2']['q025'], 
+                     df_dist['wave_3']['mean'] - df_dist['wave_3']['q025'], 
+                     df_dist['wave_4']['mean'] - df_dist['wave_4']['q025']],
+                    [df_dist['wave_1']['q975'] - df_dist['wave_1']['mean'], 
+                     df_dist['wave_2']['q975'] - df_dist['wave_2']['mean'], 
+                     df_dist['wave_3']['q975'] - df_dist['wave_3']['mean'], 
+                     df_dist['wave_4']['q975'] - df_dist['wave_4']['mean']]]))
+    ax.errorbar(['1', '2', '3', '4'], mean, err, 
+                ls = '-', marker = 'o', 
+                color = colors[n],
+                label = name)
+    ax.set_xlabel('Wave')
+    ax.set_ylabel('Days')
+    ax.set_title(title)
+    return ax
+
+def plot_best_model_bar(dist, ax, n, name_y, title):
+    df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
+    df_dist = df_best_models_sum[df_best_models_sum.dist == dist]
+    df_dist = df_dist.set_index('stat')
+    name = dist.replace('_', ' ')
+    mean = np.array([df_dist['wave_1']['mean'], df_dist['wave_2']['mean'], 
+                     df_dist['wave_3']['mean'], df_dist['wave_4']['mean']])
+    err = abs(np.array([[df_dist['wave_1']['mean'] - df_dist['wave_1']['q025'], 
+                     df_dist['wave_2']['mean'] - df_dist['wave_2']['q025'], 
+                     df_dist['wave_3']['mean'] - df_dist['wave_3']['q025'], 
+                     df_dist['wave_4']['mean'] - df_dist['wave_4']['q025']],
+                    [df_dist['wave_1']['q975'] - df_dist['wave_1']['mean'], 
+                     df_dist['wave_2']['q975'] - df_dist['wave_2']['mean'], 
+                     df_dist['wave_3']['q975'] - df_dist['wave_3']['mean'], 
+                     df_dist['wave_4']['q975'] - df_dist['wave_4']['mean']]]))
+    ax.bar(['1', '2', '3', '4'], mean, yerr = err,
+    color = colors[n], label = name)
+    ax.set_xlabel('Wave')
+    ax.set_ylabel(name_y)
+    ax.set_title(title)
