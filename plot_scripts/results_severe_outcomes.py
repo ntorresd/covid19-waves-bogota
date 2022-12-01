@@ -107,11 +107,11 @@ def plot_stacked_histogram(df, ax, strat=strat, group_var='age_group', vary='cou
         y_offset = y_offset + counts_list 
         counter+=1
 
-def plot_counts_histograms(ax, strat=strat, vary='counts'):
+def plot_counts_histograms(ax, strat=strat, group_var='age_group', vary='counts'):
 
-    plot_stacked_histogram(df = df_hosp_perc, ax=ax[0])
-    plot_stacked_histogram(df = df_icu_perc, ax=ax[1])
-    plot_stacked_histogram(df = df_death_perc, ax=ax[2])
+    plot_stacked_histogram(df = df_hosp_perc, ax=ax[0], strat=strat, group_var=group_var, vary=vary)
+    plot_stacked_histogram(df = df_icu_perc, ax=ax[1], strat=strat, group_var=group_var, vary=vary)
+    plot_stacked_histogram(df = df_death_perc, ax=ax[2], strat=strat, group_var=group_var, vary=vary)
 
 
 vary='counts'
@@ -156,9 +156,9 @@ def plot_proportions_hist(ax):
                         outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='right')
 
 # Rates
-def plot_rates(df, ax, var, var_name):
+def plot_rates(ax, var, var_name):
     for wave in range(1,5):
-        df_temp = df[df['wave'] == wave]
+        df_temp = df_rates[df_rates['wave'] == wave]
         ax.plot(df_temp['age_group'], df_temp[var], marker = 'o', label = wave, color = colors[wave-1])
     ax.set_xlabel('age group')
     ax.set_ylabel(var_name)
@@ -169,33 +169,33 @@ def plot_rates(df, ax, var, var_name):
 fig, ax = plt.subplots()
 var = 'CFR'
 var_name = 'CFR'
-plot_rates(df_rates, ax, var, var_name)
+plot_rates(ax, var, var_name)
 fig.savefig(FIG_PATH + f'{var}.png')
 
 # HCR
 fig, ax = plt.subplots()
 var = 'HCR'
 var_name = 'HCR'
-plot_rates(df_rates, ax, var, var_name)
+plot_rates(ax, var, var_name)
 fig.savefig(FIG_PATH + f'{var}.png')
 
 # HCR - I
 fig, ax = plt.subplots()
 var = 'HCR_I'
 var_name = 'HCR - ICU'
-plot_rates(df_rates, ax, var, var_name)
+plot_rates(ax, var, var_name)
 fig.savefig(FIG_PATH + f'{var}.png')
 
 # HFR - I
 fig, ax = plt.subplots()
 var = 'HFR'
 var_name = 'HFR'
-plot_rates(df_rates, ax, var, var_name)
+plot_rates(ax, var, var_name)
 fig.savefig(FIG_PATH + f'{var}.png')
 
 # HFR - I
 fig, ax = plt.subplots()
 var = 'HFR_I'
 var_name = 'HFR - ICU'
-plot_rates(df_rates, ax, var, var_name)
+plot_rates(ax, var, var_name)
 fig.savefig(FIG_PATH + f'{var}.png')
