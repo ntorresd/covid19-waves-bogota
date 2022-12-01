@@ -107,11 +107,11 @@ def plot_stacked_histogram(df, ax, strat=strat, group_var='age_group', vary='cou
         y_offset = y_offset + counts_list 
         counter+=1
 
-def plot_counts_histograms(ax, strat=strat, vary='counts'):
+def plot_counts_histograms(ax, strat=strat, group_var='age_group', vary='counts'):
 
-    plot_stacked_histogram(df = df_hosp_perc, ax=ax[0])
-    plot_stacked_histogram(df = df_icu_perc, ax=ax[1])
-    plot_stacked_histogram(df = df_death_perc, ax=ax[2])
+    plot_stacked_histogram(df = df_hosp_perc, ax=ax[0], strat=strat, group_var=group_var, vary=vary)
+    plot_stacked_histogram(df = df_icu_perc, ax=ax[1], strat=strat, group_var=group_var, vary=vary)
+    plot_stacked_histogram(df = df_death_perc, ax=ax[2], strat=strat, group_var=group_var, vary=vary)
 
 
 vary='counts'
@@ -127,75 +127,82 @@ fig.savefig(FIG_PATH+'hosp_icu_death_counts_hist.png')
 
 # Proportion histogram with binomial confidence interval
 # Auxiliar plot function
-def plot_proportions_histogram(df, ax, outcome_var, prop_lower, prop_upper, total_var='cases', strat=strat, side='center', width=0.3):
+def plot_proportions_histogram(df, ax, outcome_var, prop_lower, prop_upper, strat=strat, group='all',side='center', width=0.3):
     proportions = df[outcome_var].values
     yerr_lower = proportions - df[prop_lower].values
     yerr_upper = df[prop_upper].values - proportions
     yerr = [yerr_lower, yerr_upper]
     if side=='center':
-        ax.bar(df[strat], proportions, yerr=yerr, width=width)
+        ax.bar(df[strat], proportions, yerr=yerr, width=width, label=group)
     elif side=='left':
-        ax.bar(df[strat]-width/2, proportions, yerr=yerr, width=width)
+        ax.bar(df[strat]-width/2, proportions, yerr=yerr, width=width, label=group)
     elif side=='right':
-        ax.bar(df[strat]+width/2, proportions, yerr=yerr, width=width)
+        ax.bar(df[strat]+width/2, proportions, yerr=yerr, width=width, label=group)
     
 def plot_proportions_hist(ax):
     plot_proportions_histogram(df_proportions_all, ax[0], 
-                        outcome_var='hosp', prop_lower='hosp_lower', prop_upper='hosp_upper', side='left')
+                        outcome_var='hosp', prop_lower='hosp_lower', prop_upper='hosp_upper', side='left', group='all')
     plot_proportions_histogram(df_proportions_60p, ax[0], 
-                        outcome_var='hosp', prop_lower='hosp_lower', prop_upper='hosp_upper', side='right')
+                        outcome_var='hosp', prop_lower='hosp_lower', prop_upper='hosp_upper', side='right', group='60+')
 
     plot_proportions_histogram(df_proportions_all, ax[1], 
-                        outcome_var='icu', prop_lower='icu_lower', prop_upper='icu_upper', side='left')
+                        outcome_var='icu', prop_lower='icu_lower', prop_upper='icu_upper', side='left', group='all')
     plot_proportions_histogram(df_proportions_60p, ax[1], 
-                        outcome_var='icu', prop_lower='icu_lower', prop_upper='icu_upper', side='right')
+                        outcome_var='icu', prop_lower='icu_lower', prop_upper='icu_upper', side='right', group='60+')
 
     plot_proportions_histogram(df_proportions_all, ax[2], 
-                        outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='left')
+                        outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='left', group='all')
     plot_proportions_histogram(df_proportions_60p, ax[2], 
-                        outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='right')
+                        outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='right', group='60+')
 
 # Rates
-def plot_rates(df, ax, var, var_name):
+def plot_rates(ax, var, var_name):
     for wave in range(1,5):
-        df_temp = df[df['wave'] == wave]
-        ax.plot(df_temp['age_group'], df_temp[var], marker = 'o', label = wave, color = colors[wave-1])
+        df_temp = df_rates[df_rates['wave'] == wave]
+        ax.plot(df_temp['age_group'], df_temp[var], marker = 'o', label = 'wave '+str(wave), color = colors[wave-1])
     ax.set_xlabel('age group')
     ax.set_ylabel(var_name)
-    handles, labels = ax.get_legend_handles_labels()
-    ax.legend(handles, labels, loc='upper left',numpoints=1)
-
 # CFR
 fig, ax = plt.subplots()
 var = 'CFR'
 var_name = 'CFR'
-plot_rates(df_rates, ax, var, var_name)
+plot_rates(ax, var, var_name)
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles, labels, loc='upper left',numpoints=1)
 fig.savefig(FIG_PATH + f'{var}.png')
 
 # HCR
 fig, ax = plt.subplots()
 var = 'HCR'
 var_name = 'HCR'
-plot_rates(df_rates, ax, var, var_name)
+plot_rates(ax, var, var_name)
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles, labels, loc='upper left',numpoints=1)
 fig.savefig(FIG_PATH + f'{var}.png')
 
 # HCR - I
 fig, ax = plt.subplots()
 var = 'HCR_I'
 var_name = 'HCR - ICU'
-plot_rates(df_rates, ax, var, var_name)
+plot_rates(ax, var, var_name)
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles, labels, loc='upper left',numpoints=1)
 fig.savefig(FIG_PATH + f'{var}.png')
 
 # HFR - I
 fig, ax = plt.subplots()
 var = 'HFR'
 var_name = 'HFR'
-plot_rates(df_rates, ax, var, var_name)
+plot_rates(ax, var, var_name)
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles, labels, loc='upper left',numpoints=1)
 fig.savefig(FIG_PATH + f'{var}.png')
 
 # HFR - I
 fig, ax = plt.subplots()
 var = 'HFR_I'
 var_name = 'HFR - ICU'
-plot_rates(df_rates, ax, var, var_name)
+plot_rates(ax, var, var_name)
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles, labels, loc='upper left',numpoints=1)
 fig.savefig(FIG_PATH + f'{var}.png')
