@@ -98,6 +98,6 @@ for col in df_mean.columns.to_list():
     if col == 'pivot_variant':
         df_res[col] = df_mean[col]
     else:
-        df_res[col] = df_mean[col].astype(str) + ' (' + df_025[col].astype(str) + ', ' + df_975[col].astype(str) + ')'
+        df_res[col] = df_mean[col].astype(str)+ ' ' + df_025[col].astype(str) + ' ' + df_975[col].astype(str) 
 
 df_res.to_csv(OUT_PATH + 'advantage.csv', index = False)

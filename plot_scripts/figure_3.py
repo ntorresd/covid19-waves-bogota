@@ -18,35 +18,23 @@ sys.path.append(SCRIPTS_PATH)
 
 import results_epidemiological_distributions as red
 
-fig, ax = plt.subplots(1,5, figsize = (50, 10))
+fig, ax = plt.subplots(2,5, figsize = (50, 10))
 dist = 'hosp_stay'
-red.plot_best_model_bar(dist, ax[0], 0, 'Hospital stay (days)', 'a.')
+red.plot_best_model_bar(dist, ax[0][0], 0, 'Hospital stay (days)', 'a.')
+red.plot_violin(dist, 'Hospital stay (days)', 'f.', ax[1][0])
 dist = 'icu_stay'
-red.plot_best_model_bar(dist, ax[1], 0, 'ICU stay (days)', 'b.')
+red.plot_best_model_bar(dist, ax[0][1], 1, 'ICU stay (days)', 'b.')
+red.plot_violin(dist, 'ICU stay (days)', 'g.', ax[1][1])
 dist = 'onset_hosp'
-red.plot_best_model_bar(dist, ax[2], 0, 'Onset to hospitalization (days)', 'c.')
+red.plot_best_model_bar(dist, ax[0][2], 2, 'Onset to hospitalization (days)', 'c.')
+red.plot_violin(dist, 'Onset to hospitalization (days)', 'h.', ax[1][2])
 dist = 'onset_icu'
-red.plot_best_model_bar(dist, ax[3], 0, 'Onset to ICU entrance (days)', 'd.')
+red.plot_best_model_bar(dist, ax[0][3], 3, 'Onset to ICU entrance (days)', 'd.')
+red.plot_violin(dist, 'Onset to ICU entrance (days)', 'i.', ax[1][3])
 dist = 'onset_death'
-red.plot_best_model_bar(dist, ax[4], 0, 'Onset to death (days)', 'e.')
+red.plot_best_model_bar(dist, ax[0][4], 4, 'Onset to death (days)', 'e.')
+red.plot_violin(dist, 'Onset to death (days)', 'j.', ax[1][4])
 fig.savefig(FIG_PATH + 'Figure_3.png')
 
 
-# Plot best distributions
-fig, ax = plt.subplots(figsize = (10, 10))
-dist = 'icu_stay'
-red.plot_best_model_line(dist, ax, 0)
-dist = 'hosp_stay'
-red.plot_best_model_line(dist, ax, 1)
-dist = 'onset_hosp'
-red.plot_best_model_line(dist, ax, 2)
-dist = 'onset_icu'
-red.plot_best_model_line(dist, ax, 3)
-dist = 'onset_death'
-red.plot_best_model_line(dist, ax, 4)
-handles, labels = ax.get_legend_handles_labels()
-# remove the errorbars
-handles = [h[0] for h in handles]
-# use them in the legend
-ax.legend(handles, labels, loc='upper right',numpoints=1)
-fig.savefig(FIG_PATH + 'best_models.png')
+fig.show()

@@ -29,7 +29,7 @@ import utilities as ut
 plt.style.use(config['PATHS']['PLOT_STYLE'])
 prop_cycle = plt.rcParams['axes.prop_cycle']
 colors = prop_cycle.by_key()['color']
-"""
+
 df_best_models = pd.read_csv(OUT_PATH + 'best_models.csv')
 df_best_models = df_best_models.set_index(df_best_models.columns[0]).transpose()
 
@@ -40,7 +40,7 @@ all_dfs, columns = ut.prepare_confirmed_cases_data()
 ##############################################################################
 # load the samples (models fits for every epidemiological distribution)
 dist_posteriors = ut.load_samples()
-"""
+
 ########################################################################
 # Plot CDFs
 def plot_cdf(df, epi_dist, max_val, ax, cdf_null_hyp, n, n_subset = None, subset = 'wave'):
@@ -148,7 +148,7 @@ def plot_dist(df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
     return ax
 ########################################################################
 # Plot epi distributions
-"""
+
 dist_list = ['Gamma', 'Lognormal', 'Weibull', 'Exponential', 'Gen Lognormal']
 max_val_plot=60
 
@@ -189,7 +189,7 @@ plot_dist(df, epi_dist = var, max_val = max_val_plot,
           bin_unit = 1, title='h.')
 handles, labels = ax[0][0].get_legend_handles_labels()
 fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(dist_list))
-fig.savefig(FIG_PATH + 'icu_hosp_distributions.png')
+#fig.savefig(FIG_PATH + 'icu_hosp_distributions.png')
 
 ########################################################################
 ########################################################################
@@ -243,8 +243,7 @@ plot_dist(df, epi_dist = var, max_val = max_val_plot,
 
 handles, labels = ax[0][0].get_legend_handles_labels()
 fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(dist_list))
-fig.savefig(FIG_PATH + 'onset_distributions.png')
-"""
+#fig.savefig(FIG_PATH + 'onset_distributions.png')
 
 ########################################################################
 ########################################################################
@@ -290,7 +289,47 @@ def plot_best_model_bar(dist, ax, n, name_y, title):
                      df_dist['wave_3']['q975'] - df_dist['wave_3']['mean'], 
                      df_dist['wave_4']['q975'] - df_dist['wave_4']['mean']]]))
     ax.bar(['1', '2', '3', '4'], mean, yerr = err,
-    color = colors[n], label = name)
+    color = colors, label = name)
     ax.set_xlabel('Wave')
     ax.set_ylabel(name_y)
     ax.set_title(title)
+
+def plot_violin(var, name_y, title, ax):
+    if var == 'icu_stay':
+        n = 0
+    if var == 'hosp_stay':
+        n = 1
+    if var == 'onset_icu':
+        n = 2
+    if var == 'onset_hosp':
+        n = 3
+    if var == 'onset_death':
+        n = 4
+    df = all_dfs[n]
+    #df = df[(df[var] > 0) & (df[var] <= 50)]
+    df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
+    df_dist = df_best_models_sum[df_best_models_sum.dist == var]
+    df_dist = df_dist.set_index('stat')
+    name = var.replace('_', ' ')
+    mean = np.array([df_dist['wave_1']['mean'], df_dist['wave_2']['mean'], 
+                     df_dist['wave_3']['mean'], df_dist['wave_4']['mean']])
+    err = abs(np.array([[df_dist['wave_1']['mean'] - df_dist['wave_1']['q025'], 
+                     df_dist['wave_2']['mean'] - df_dist['wave_2']['q025'], 
+                     df_dist['wave_3']['mean'] - df_dist['wave_3']['q025'], 
+                     df_dist['wave_4']['mean'] - df_dist['wave_4']['q025']],
+                    [df_dist['wave_1']['q975'] - df_dist['wave_1']['mean'], 
+                     df_dist['wave_2']['q975'] - df_dist['wave_2']['mean'], 
+                     df_dist['wave_3']['q975'] - df_dist['wave_3']['mean'], 
+                     df_dist['wave_4']['q975'] - df_dist['wave_4']['mean']]]))
+    ax.errorbar(['1', '2', '3', '4'], mean, err, 
+                ls = '', marker = '_', 
+                color = 'black',
+                label = name)
+    #ax.set_yscale('log')
+    ax.set_xlabel('Wave')
+    ax.set_ylabel(name_y)
+    ax.set_title(title)
+
+    sns.violinplot(data=df, x="wave", y=var, dodge=False, ax= ax)
+
+

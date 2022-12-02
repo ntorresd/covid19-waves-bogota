@@ -14,8 +14,8 @@ config = cfg["default"]
 
 SCRIPTS_PATH = config['PATHS']['PLOT_PATH']
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'plot_scripts')
+OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'genomics')
 sys.path.append(SCRIPTS_PATH)
-
 import results_genomics as rg
 
 fig, ax = plt.subplots(1,2, figsize = (20, 10))
@@ -24,7 +24,6 @@ rg.plot_multinomial(axi)
 axi.set_xlabel('Week')
 axi.set_ylabel('Prevalence')
 axi.set_title('a.')
-
 axi = ax[1]
 rg.plot_heatmap(axi, n = 200)
 axi.set_title('b.')
