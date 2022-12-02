@@ -8,7 +8,6 @@ Created on Tue Nov 15 2022
 import sys
 import yaml
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 
 ymlfile = open("config.yml", "r")
