@@ -10,6 +10,7 @@ import yaml
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from met_brewer import met_brew
 
 ymlfile = open("config.yml", "r")
 cfg = yaml.load(ymlfile)
@@ -88,6 +89,7 @@ def plot_multinomial(ax):
                 color  = colors[n], marker = '*', linestyle = '')
         ax.fill_between(df_results[mask].week, df_results[mask1].theta, df_results[mask2].theta,
                         color  = colors[n], alpha = 0.2)
+        ax.legend(loc = 'center right')
 
 fig, ax = plt.subplots()
 plot_multinomial(ax)
@@ -121,3 +123,23 @@ ax.set_ylabel('prevalence')
 ax.tick_params(axis = 'x', rotation = 45)
 fig.savefig(FIG_PATH + 'variants_prevalence_' + DATE_GENOMICS + '.png')
 # fig.show()
+
+# Advantage heatmap
+
+fig, ax = plt.subplots()
+def plot_heatmap(ax, n):
+        df_adv = pd.read_csv(OUT_PATH + 'advantage.csv')
+        df_mean = pd.DataFrame({})
+        df_mean['pivot_variant'] = df_adv['pivot_variant']
+        for col in df_adv.columns.to_list()[1:]:
+                df_mean[[col,'trash']] = df_adv[col].str.split(' ', 1, expand = True)
+                df_mean[col] = df_mean[col].astype(float)
+                del(df_mean['trash'])
+        df_adv = df_adv.set_index('pivot_variant')
+        df_mean = df_mean.set_index('pivot_variant')
+        df_mean = df_mean.replace(1,0)
+        
+        color_list = met_brew('VanGogh1', n = n, brew_type='continuous')
+
+        sns.heatmap(data = df_mean, annot = True, cmap = color_list, ax = ax)
+        ax.set_ylabel('')
