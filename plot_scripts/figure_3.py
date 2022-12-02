@@ -34,7 +34,4 @@ red.plot_violin(dist, 'Onset to ICU entrance (days)', 'i.', ax[1][3])
 dist = 'onset_death'
 red.plot_best_model_bar(dist, ax[0][4], 4, 'Onset to death (days)', 'e.')
 red.plot_violin(dist, 'Onset to death (days)', 'j.', ax[1][4])
-fig.savefig(FIG_PATH + 'Figure_3.png')
-
-
-fig.show()
+fig.savefig(FIG_PATH + 'figure_3.png')
