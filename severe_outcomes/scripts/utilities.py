@@ -50,3 +50,17 @@ def size_by_strat(df, strat='wave'):
         size = len(df[df[strat]==strat_].index)
         data.append(size)
     return np.array(data)
+
+# Count of confirmed cases for epidemic curve
+def counts(df, var='onset', columns=['date', 'counts']):
+    df_counts = df[var].value_counts().reset_index()
+    df_counts.columns = columns
+    df_counts = df_counts.sort_values(by=columns[0])
+    return df_counts
+
+def cumulative(df, var='onset', columns=['date', 'counts']):
+    df_counts = df[var].value_counts().reset_index()
+    df_counts.columns = columns
+    df_counts = df_counts.sort_values(by=columns[0])
+
+    df_cum = df_counts.cumsum()

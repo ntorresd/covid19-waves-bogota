@@ -4,7 +4,7 @@ Created on Tue Nov 17 2022
 @author: dsquevedo
 @author: ntorresd
 """     
-import sys
+
 import yaml
 import pandas as pd
 import matplotlib.pyplot as plt

@@ -22,8 +22,8 @@ sys.path.append(SCRIPTS_PATH)
 
 import results_rt as results_rt
 import results_genomics as results_genomics
-import results_waves as results_waves
-import population_pyramid as population_pyramid
+# import results_waves as results_waves
+import overview as overview
 
 fig, ax = plt.subplots(2,2, figsize=(15,10))
 
@@ -35,15 +35,14 @@ axi.set_ylim(top=2.3)
 axi.tick_params(axis='x', rotation=45)
 
 axi = ax[0][1]
-population_pyramid.plot_pyramid(ax=axi)
+overview.plot_pyramid(ax=axi)
 axi.set_xlim(left=-260000)
 axi.set_xlabel('cases')
 axi.set_ylabel('age group')
 axi.legend()  
 
 axi = ax[1][0]
-results_waves.plot_waves(ax=axi)
-axi.tick_params(axis='x', rotation=45)
+overview.plot_cases_death_cum(ax=axi)
 
 axi = ax[1][1]
 results_genomics.plot_prevalence(ax=axi)
