@@ -11,6 +11,7 @@ import numpy as np
 from scipy import stats
 import scipy as scipy
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 import seaborn as sns
 
 ymlfile = open("config.yml", "r")
@@ -249,7 +250,7 @@ fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(dist_list)
 ########################################################################
 ########################################################################
 # Plot best model
-def plot_best_model_line(dist, ax, n, title):
+def get_best_error(dist):
     df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
     df_dist = df_best_models_sum[df_best_models_sum.dist == dist]
     df_dist = df_dist.set_index('stat')
@@ -264,6 +265,16 @@ def plot_best_model_line(dist, ax, n, title):
                      df_dist['wave_2']['q975'] - df_dist['wave_2']['mean'], 
                      df_dist['wave_3']['q975'] - df_dist['wave_3']['mean'], 
                      df_dist['wave_4']['q975'] - df_dist['wave_4']['mean']]]))
+    return mean, err
+
+def plot_best_model_line(dist, ax, n, title):
+    df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
+    df_dist = df_best_models_sum[df_best_models_sum.dist == dist]
+    df_dist = df_dist.set_index('stat')
+    name = dist.replace('_', ' ')
+    
+    mean, err = get_best_error(dist)
+    
     ax.errorbar(['1', '2', '3', '4'], mean, err, 
                 ls = '-', marker = 'o', 
                 color = colors[n],
@@ -278,16 +289,9 @@ def plot_best_model_bar(dist, ax, n, name_y, title):
     df_dist = df_best_models_sum[df_best_models_sum.dist == dist]
     df_dist = df_dist.set_index('stat')
     name = dist.replace('_', ' ')
-    mean = np.array([df_dist['wave_1']['mean'], df_dist['wave_2']['mean'], 
-                     df_dist['wave_3']['mean'], df_dist['wave_4']['mean']])
-    err = abs(np.array([[df_dist['wave_1']['mean'] - df_dist['wave_1']['q025'], 
-                     df_dist['wave_2']['mean'] - df_dist['wave_2']['q025'], 
-                     df_dist['wave_3']['mean'] - df_dist['wave_3']['q025'], 
-                     df_dist['wave_4']['mean'] - df_dist['wave_4']['q025']],
-                    [df_dist['wave_1']['q975'] - df_dist['wave_1']['mean'], 
-                     df_dist['wave_2']['q975'] - df_dist['wave_2']['mean'], 
-                     df_dist['wave_3']['q975'] - df_dist['wave_3']['mean'], 
-                     df_dist['wave_4']['q975'] - df_dist['wave_4']['mean']]]))
+    
+    mean, err = get_best_error(dist)
+    
     ax.bar(['1', '2', '3', '4'], mean, yerr = err,
     color = colors, label = name)
     ax.set_xlabel('Wave')
@@ -306,30 +310,30 @@ def plot_violin(var, name_y, title, ax):
     if var == 'onset_death':
         n = 4
     df = all_dfs[n]
-    #df = df[(df[var] > 0) & (df[var] <= 50)]
+    df = df[(df[var] > 0) & (df[var] <= 50)]
     df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
     df_dist = df_best_models_sum[df_best_models_sum.dist == var]
     df_dist = df_dist.set_index('stat')
     name = var.replace('_', ' ')
-    mean = np.array([df_dist['wave_1']['mean'], df_dist['wave_2']['mean'], 
-                     df_dist['wave_3']['mean'], df_dist['wave_4']['mean']])
-    err = abs(np.array([[df_dist['wave_1']['mean'] - df_dist['wave_1']['q025'], 
-                     df_dist['wave_2']['mean'] - df_dist['wave_2']['q025'], 
-                     df_dist['wave_3']['mean'] - df_dist['wave_3']['q025'], 
-                     df_dist['wave_4']['mean'] - df_dist['wave_4']['q025']],
-                    [df_dist['wave_1']['q975'] - df_dist['wave_1']['mean'], 
-                     df_dist['wave_2']['q975'] - df_dist['wave_2']['mean'], 
-                     df_dist['wave_3']['q975'] - df_dist['wave_3']['mean'], 
-                     df_dist['wave_4']['q975'] - df_dist['wave_4']['mean']]]))
-    ax.errorbar(['1', '2', '3', '4'], mean, err, 
-                ls = '', marker = '_', 
-                color = 'black',
-                label = name)
+    
+    mean, err = get_best_error(var)
+    
+    #ax.errorbar([1, 2, 3, 4], mean, 
+    #           ls = '', marker = '_', 
+    #            color = 'black')
     #ax.set_yscale('log')
+    df['wave'] = df['wave'].astype(int)
+    sns.violinplot(data=df, x="wave", y=var, dodge=False, ax= ax, color = colors[n])
     ax.set_xlabel('Wave')
     ax.set_ylabel(name_y)
     ax.set_title(title)
+    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
 
-    sns.violinplot(data=df, x="wave", y=var, dodge=False, ax= ax)
-
-
+def plot_best_model_bar_all(dist, ax, w, n, title, wt=0.1):
+    mean, err = get_best_error(dist)
+    ax.bar([1+w, 2+w, 3+w, 4+w], mean, yerr = err, 
+           width = abs(wt), 
+           color = colors[n])
+    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+    ax.set_title(title)
+    ax.set_ylabel('Days')
