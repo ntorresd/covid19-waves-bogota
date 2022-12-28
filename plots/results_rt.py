@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Nov 17 2022
-@author: dsquevedo
+@author: davidsantiagoquevedo
 @author: ntorresd
 """     
 
@@ -9,14 +9,11 @@ import yaml
 import pandas as pd
 import matplotlib.pyplot as plt
 
-ymlfile = open("config.yml", "r")
-cfg = yaml.load(ymlfile)
-config = cfg["default"]
+config = yaml.load(open("config.yml", "r"))["default"]
 
 # Paths
 DATA_PATH = config['PATHS']['DATA_PATH']
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'rt')
-FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'rt')
 
 # Plot style
 plt.style.use(config['PATHS']['PLOT_STYLE'])
@@ -41,12 +38,3 @@ def plot_rt(ax):
     lns = ln1 + ln2
     labs = [l.get_label() for l in lns]
     ax.legend(lns, labs, loc = 0)
-
-fig, ax = plt.subplots()
-plot_rt(ax)
-ax.set_xlabel('')
-ax.set_ylabel('R(t)') 
-ax.set_ylim(top=2.3)
-ax.tick_params(axis='x', rotation=45)
-fig.savefig(FIG_PATH + 'rt.png')
-# fig.show()

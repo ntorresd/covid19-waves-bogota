@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Nov 22 2022
-
-@author: dsquevedo
+@author: davidsantiagoquevedo
 @author: ntorresd
 """ 
 
@@ -11,13 +10,10 @@ import yaml
 import pandas as pd
 import matplotlib.pyplot as plt
 
-ymlfile = open("config.yml", "r")
-cfg = yaml.load(ymlfile)
-config = cfg["default"]
+config = yaml.load(open("config.yml", "r"))["default"]
 
 #Paths 
 DATA_PATH = config['PATHS']['DATA_PATH']
-FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'plot_scripts')
 # WE NEED TO UNIFY THE UTILITIES
 UTILS_PATH = config['PATHS']['UTILS_PATH'].format(dir = 'severe_outcomes')
 
@@ -28,7 +24,7 @@ colors = prop_cycle.by_key()['color']
 
 # Import useful functions
 sys.path.append(UTILS_PATH)
-import utilities as ut
+import utilities_severity as ut
 
 # Read data
 df_confirmed_bogota = pd.read_csv(DATA_PATH + 'confirmed_cases.csv')
@@ -67,16 +63,7 @@ def plot_pyramid(ax):
     ticks =  ax.get_xticks()
     ax.set_xticklabels([int(abs(tick)) for tick in ticks])
 
-fig, ax = plt.subplots(figsize=(7.5, 5))
-plot_pyramid(ax)
-ax.set_xlim(left=-260000)
-ax.set_xlabel('Cases')
-ax.set_ylabel('Age group')
-ax.legend()     
-fig.savefig(FIG_PATH + 'population_pyramid.png')
-# fig.show() 
-
-# Incidences plot
+# Incidences 
 df = df_confirmed_bogota
 df = ut.age_group_60(df,'age','age_unit')
 df.dropna(subset=['age_group'], inplace=True)
@@ -95,7 +82,6 @@ df_deaths_60p = ut.counts(df[mask_death & mask_60p], var='death',columns=['date'
 df_deaths_60p['deaths_cum'] = df_deaths_60p['deaths'].cumsum().values
 
 def plot_cases_death_cum(ax):
-
     ln1 = ax.plot(df_cases_all['date'], df_cases_all['cases'], label='cases all')
     ln2 = ax.plot(df_cases_60p['date'], df_cases_60p['cases'], label='cases 60+')
 
@@ -109,14 +95,9 @@ def plot_cases_death_cum(ax):
     labs = [l.get_label() for l in lns]
 
     ax.tick_params(axis='x', rotation=45)
-    ax.set_ylabel('confirmed cases')
+    ax.set_ylabel('Confirmed cases')
 
     ax_twin.legend(lns, labs, loc='upper left', frameon=False, fontsize=12)
     ax_twin.spines.right.set_visible(True) #This was set as False by default in the .mpstyle file
     ax_twin.tick_params(axis='x', rotation=45)
-    ax_twin.set_ylabel('deaths')
-
-fig, ax = plt.subplots(figsize=(7.5, 5))
-plot_cases_death_cum(ax)
-fig.savefig(FIG_PATH + 'cases_death_cum.png')
-# fig.show()
+    ax_twin.set_ylabel('Deaths')

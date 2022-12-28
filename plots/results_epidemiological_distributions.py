@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Nov 25 2022
-
-@author: dsquevedo
-@author: ntorres
+@author: davidsantiagoquevedo
+@author: ntorresd
 """
+
 import yaml
 import pandas as pd
 import numpy as np
@@ -14,18 +14,16 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 import seaborn as sns
 
-ymlfile = open("config.yml", "r")
-cfg = yaml.load(ymlfile)
-config = cfg["default"]
+config = yaml.load(open("config.yml", "r"))["default"]
 
 DATA_PATH = config['PATHS']['DATA_PATH']
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'epidemiological_distributions')
-FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'epidemiological_distributions')
+FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'plots')
 UTILS_PATH = config['PATHS']['UTILS_PATH'].format(dir = 'epidemiological_distributions')
 
 import sys
 sys.path.append(UTILS_PATH)
-import utilities as ut
+import utilities_epi_dist as ut
 
 plt.style.use(config['PATHS']['PLOT_STYLE'])
 prop_cycle = plt.rcParams['axes.prop_cycle']
@@ -76,9 +74,10 @@ def plot_cdf(df, epi_dist, max_val, ax, cdf_null_hyp, n, n_subset = None, subset
     
 ########################################################################
 # Plot function (PDFs and CDFs)
-def plot_dist(df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
+def plot_dist(n_df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
               dist_list = ['gamma', 'lognormal', 'weibull', 'exponential'],
               bin_unit = 1, title=None):
+    df = all_dfs[n_df]
     prop_cycle = plt.rcParams['axes.prop_cycle']
     colors = prop_cycle.by_key()['color']
     best = df_best_models[df_best_models[epi_dist] == 0].index[0]
@@ -106,7 +105,7 @@ def plot_dist(df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
             fit_stan = stats.gamma.pdf(xx, a = a, scale = 1/b, loc = 0)
             if dist == best:
                 cdf_null_hyp = [stats.gamma.cdf(x, a = a, scale = 1/b, loc = 0) for x in data_sorted]
-                plot_cdf(df, epi_dist = var, max_val = max_val_plot,
+                plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
                          ax = ax, cdf_null_hyp = cdf_null_hyp, n = n, n_subset = n_subset)
         elif dist == 'Lognormal':
             s = params[dist]['sigma'+ext]
@@ -114,7 +113,7 @@ def plot_dist(df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
             fit_stan = stats.lognorm.pdf(xx, s = s, scale = np.exp(mu))
             if dist == best:
                 cdf_null_hyp = [stats.lognorm.cdf(x, s = s, scale = np.exp(mu)) for x in data_sorted]
-                plot_cdf(df, epi_dist = var, max_val = max_val_plot,
+                plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
                          ax = ax, cdf_null_hyp = cdf_null_hyp, n = n, n_subset = n_subset)
         elif dist == 'Weibull':
             a = params[dist]['alpha'+ext]
@@ -122,14 +121,14 @@ def plot_dist(df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
             fit_stan = stats.weibull_min.pdf(xx, c = a, scale = s)
             if dist == best:
                 cdf_null_hyp = [stats.weibull_min.cdf(x, c = a, scale = s) for x in data_sorted]
-                plot_cdf(df, epi_dist = var, max_val = max_val_plot,
+                plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
                          ax = ax, cdf_null_hyp = cdf_null_hyp, n=n, n_subset = n_subset)
         elif dist == 'Exponential':
             b = params[dist]['beta'+ext]
             fit_stan = stats.expon.pdf(xx, loc = 0, scale = 1/b)
             if dist == best:
                 cdf_null_hyp = [stats.expon.cdf(x, loc = 0 , scale = 1/b) for x in data_sorted]
-                plot_cdf(df, epi_dist = var, max_val = max_val_plot,
+                plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
                          ax = ax, cdf_null_hyp = cdf_null_hyp, n = n, n_subset = n_subset)
         elif dist == 'Gen Lognormal':
             mu = params[dist]['mu'+ext]
@@ -138,7 +137,7 @@ def plot_dist(df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
             fit_stan = ut.gln_pdf(xx, mu = mu, sigma = s, g = g)
             if dist == best:
                 cdf_null_hyp = [ut.gln_cdf(x, mu = mu, sigma = s, g = g) for x in data_sorted]
-                plot_cdf(df, epi_dist = var, max_val = max_val_plot,
+                plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
                          ax = ax, cdf_null_hyp = cdf_null_hyp, n = n, n_subset = n_subset)
         #Fit
         ax.plot(xx, fit_stan, label = dist, color = colors[n])        
@@ -147,104 +146,6 @@ def plot_dist(df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
     ax.set_ylabel('Probability')
     ax.set_title(title)
     return ax
-########################################################################
-# Plot epi distributions
-
-dist_list = ['Gamma', 'Lognormal', 'Weibull', 'Exponential', 'Gen Lognormal']
-max_val_plot=60
-
-########################################################################
-########################################################################
-# Hospital stay (general hospital bed and ICU bed)
-fig, ax = plt.subplots(2, 4, figsize = (15, 7.5))
-#ICU stay
-var = 'icu_stay'
-df = all_dfs[0] #df_icu_stay
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[0][0], n_subset = 1, dist_list = dist_list,
-          bin_unit = 1, title='a.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[0][1], n_subset = 2, dist_list = dist_list,
-          bin_unit = 1, title='b.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[0][2], n_subset = 3, dist_list = dist_list,
-          bin_unit = 1, title='c.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[0][3], n_subset = 4, dist_list = dist_list,
-          bin_unit = 1, title='d.')
-
-#HOSP stay
-var = 'hosp_stay'
-df = all_dfs[1] #df_hosp_stay
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[1][0], n_subset = 1, dist_list = dist_list,
-          bin_unit = 1, title='e.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[1][1], n_subset = 2, dist_list = dist_list,
-          bin_unit = 1, title='f.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[1][2], n_subset = 3, dist_list = dist_list,
-          bin_unit = 1, title='g.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[1][3], n_subset = 4, dist_list = dist_list,
-          bin_unit = 1, title='h.')
-handles, labels = ax[0][0].get_legend_handles_labels()
-fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(dist_list))
-#fig.savefig(FIG_PATH + 'icu_hosp_distributions.png')
-
-########################################################################
-########################################################################
-# Onset to several outcomes
-fig, ax = plt.subplots(3,4,figsize=(15, 10))
-#ONSET HOSP
-var = 'onset_hosp'
-df = all_dfs[3] #df_onset_hosp
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[0][0], n_subset = 1, dist_list = dist_list,
-          bin_unit = 1, title='a.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[0][1], n_subset = 2, dist_list = dist_list,
-          bin_unit = 1, title='b.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[0][2], n_subset = 3, dist_list = dist_list,
-          bin_unit = 1, title='c.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[0][3], n_subset = 4, dist_list = dist_list,
-          bin_unit = 1, title='d.')
-#ONSET ICU
-var = 'onset_icu'
-df = all_dfs[2] #df_onset_icu
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[1][0], n_subset = 1, dist_list = dist_list,
-          bin_unit = 1, title='e.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[1][1], n_subset = 2, dist_list = dist_list,
-          bin_unit = 1, title='f.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[1][2], n_subset = 3, dist_list = dist_list,
-          bin_unit = 1, title='g.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[1][3], n_subset = 4, dist_list = dist_list,
-          bin_unit = 1, title='h.')
-#ONSET DEATH
-var = 'onset_death'
-df = all_dfs[4] #df_onset_death
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[2][0], n_subset = 1, dist_list = dist_list,
-          bin_unit = 1, title='i.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[2][1], n_subset = 2, dist_list = dist_list,
-          bin_unit = 1, title='j.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[2][2], n_subset = 3, dist_list = dist_list,
-          bin_unit = 1, title='k.')
-plot_dist(df, epi_dist = var, max_val = max_val_plot, 
-          ax = ax[2][3], n_subset = 4, dist_list = dist_list,
-          bin_unit = 1, title='l.')
-
-handles, labels = ax[0][0].get_legend_handles_labels()
-fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(dist_list))
-#fig.savefig(FIG_PATH + 'onset_distributions.png')
 
 ########################################################################
 ########################################################################
@@ -293,7 +194,7 @@ def plot_best_model_bar(dist, ax, n, name_y, title):
     mean, err = get_best_error(dist)
     
     ax.bar(['1', '2', '3', '4'], mean, yerr = err,
-    color = colors, label = name)
+    color = colors[n], label = name)
     ax.set_xlabel('Wave')
     ax.set_ylabel(name_y)
     ax.set_title(title)
@@ -310,7 +211,7 @@ def plot_violin(var, name_y, title, ax):
     if var == 'onset_death':
         n = 4
     df = all_dfs[n]
-    df = df[(df[var] > 0) & (df[var] <= 50)]
+    df = df[(df[var] > 0) & (df[var] <= 80)]
     df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
     df_dist = df_best_models_sum[df_best_models_sum.dist == var]
     df_dist = df_dist.set_index('stat')

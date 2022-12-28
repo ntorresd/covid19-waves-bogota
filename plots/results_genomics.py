@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Oct 21 2022
-
-@author: dsquevedo
-@author: cwhittaker
-@author: ntorres
+@author: davidsantiagoquevedo
+@author: ntorresd
 """     
 import yaml
 import pandas as pd
@@ -12,13 +10,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from met_brewer import met_brew
 
-ymlfile = open("config.yml", "r")
-cfg = yaml.load(ymlfile)
-config = cfg["default"]
+config = yaml.load(open("config.yml", "r"))["default"]
 
 DATA_PATH = config['PATHS']['DATA_PATH']
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'genomics')
-FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'genomics')
 DATE_GENOMICS = config['UPDATE_DATES']['GENOMICS']
 
 plt.style.use(config['PATHS']['PLOT_STYLE'])
@@ -32,9 +27,8 @@ df_variants['date'] = pd.to_datetime(df_variants['date'])
 ## Results from multinomial analysis
 df_results = pd.read_csv(OUT_PATH + 'theta.csv')
 
-stat = "mean"
-
 def plot_multinomial(ax):
+        stat = "mean"
         n = 0 
         variant = 'Alpha'
         mask = (df_results.stat == stat) & (df_results.variant == variant)
@@ -89,15 +83,6 @@ def plot_multinomial(ax):
                 color  = colors[n], marker = '*', linestyle = '')
         ax.fill_between(df_results[mask].week, df_results[mask1].theta, df_results[mask2].theta,
                         color  = colors[n], alpha = 0.2)
-        ax.legend(loc = 'center right')
-
-fig, ax = plt.subplots()
-plot_multinomial(ax)
-ax.set_xlabel('week')
-ax.set_ylabel('prevalence')
-fig.legend(loc = 'center right')
-fig.savefig(FIG_PATH + 'variants_multinomial.png')
-# fig.show()
 
 # Prevalence histogram
 def plot_prevalence(ax):
@@ -114,19 +99,9 @@ def plot_prevalence(ax):
                                      legend = True)
         ax.set_xticks(pd.date_range(start = min(df_variants['date']), end = final_date, freq = "M"))
         ax.set_xlim(left = min(df_variants['date']), right = final_date)
-        sns.move_legend(variants_hist, 'lower right', bbox_to_anchor = (0.90, 0.95), ncol = 3, title=None)
-
-fig, ax = plt.subplots(figsize = (7.5,5))
-plot_prevalence(ax)
-ax.set_xlabel('')
-ax.set_ylabel('prevalence')
-ax.tick_params(axis = 'x', rotation = 45)
-fig.savefig(FIG_PATH + 'variants_prevalence_' + DATE_GENOMICS + '.png')
-# fig.show()
+        sns.move_legend(variants_hist, 'lower right', bbox_to_anchor = (0.92, 0.95), ncol = 3, title=None)
 
 # Advantage heatmap
-
-fig, ax = plt.subplots()
 def plot_heatmap(ax, n):
         df_adv = pd.read_csv(OUT_PATH + 'advantage.csv')
         df_mean = pd.DataFrame({})
@@ -138,8 +113,6 @@ def plot_heatmap(ax, n):
         df_adv = df_adv.set_index('pivot_variant')
         df_mean = df_mean.set_index('pivot_variant')
         df_mean = df_mean.replace(1,0)
-        
         color_list = met_brew('VanGogh1', n = n, brew_type='continuous')
-
         sns.heatmap(data = df_mean, annot = True, cmap = color_list, ax = ax)
         ax.set_ylabel('')

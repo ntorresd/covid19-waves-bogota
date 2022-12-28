@@ -39,4 +39,4 @@ savefig.transparent: False
 savefig.facecolor: white
 
 #Error bars
-errorbar.capsize: 5
+errorbar.capsize: 9
