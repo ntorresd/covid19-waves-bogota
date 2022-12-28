@@ -27,7 +27,7 @@ UTILS_PATH = config['PATHS']['UTILS_PATH'].format(dir = 'epidemiological_distrib
 
 import sys
 sys.path.append(UTILS_PATH)
-import utilities as ut
+import utilities_epi_dist as ut
 SEED = config['MODELS']['SEED']
 ITER = config['MODELS']['ITER']
 CHAINS = config['MODELS']['CHAINS']

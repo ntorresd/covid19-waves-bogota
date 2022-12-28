@@ -2,24 +2,21 @@
 """
 Created on Wed Oct 12 2022
 Adapted from: https://github.com/mrc-ide/Brazil_COVID19_distributions
-
-@author: dsquevedo
-@author: ntorres
+@author: davidsantiagoquevedo
+@author: ntorresd
 """
 import yaml
 import pandas as pd
 import numpy as np
 
-ymlfile = open("config.yml", "r")
-cfg = yaml.load(ymlfile)
-config = cfg["default"]
+config = yaml.load(open("config.yml", "r"))["default"]
 
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'epidemiological_distributions')
 UTILS_PATH = config['PATHS']['UTILS_PATH'].format(dir = 'epidemiological_distributions')
 
 import sys
 sys.path.append(UTILS_PATH)
-import utilities as ut
+import utilities_epi_dist as ut
 
 df_best_models = pd.read_csv(OUT_PATH + 'best_models.csv')
 df_best_models = df_best_models.set_index(df_best_models.columns[0]).transpose()
