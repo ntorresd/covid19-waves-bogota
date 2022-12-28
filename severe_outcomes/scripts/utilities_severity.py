@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thr Jul 06 2022
-
-@author: dsquevedo
+@author: davidsantiagoquevedo
 @author: ntorresd
 """
 import numpy as np
