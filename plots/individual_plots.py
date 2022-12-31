@@ -185,32 +185,39 @@ fig.savefig(FIG_PATH + 'distributions.png')
 #################################### ####################################
 import results_severe_outcomes as results_severe_outcomes
 
-fig, ax = plt.subplots(1, 3, figsize=(15, 5))
+fig, ax = plt.subplots(1, 3, figsize=(12, 4))
 results_severe_outcomes.plot_percentage(ax)
-ax[0].set_ylabel('hospitalization percentage by age')
-ax[1].set_ylabel('icu percentage by age')
-ax[2].set_ylabel('death percentage by age')
+ax[0].set_ylabel('Hospitalization percentage by age')
+ax[1].set_ylabel('ICU percentage by age')
+ax[2].set_ylabel('Death percentage by age')
+ax[0].set_title('a.')
+ax[1].set_title('b.')
+ax[2].set_title('c.')
 for axi in ax:
     axi.tick_params(axis='x', labelrotation=90)
-    axi.set_xlabel('age group')
+    axi.set_xlabel('Age group')
 handles, labels = ax[2].get_legend_handles_labels()
 ax[2].legend(handles, labels, loc='upper left')
 fig.savefig(FIG_PATH+'hosp_icu_death_percentages.png')
 
-fig, ax = plt.subplots(1, 3, figsize=(15, 5))
+fig, ax = plt.subplots(1, 3, figsize=(12, 4))
 results_severe_outcomes.plot_counts(ax)
 handles, labels = ax[0].get_legend_handles_labels()
+ax[0].set_title('a.')
+ax[1].set_title('b.')
+ax[2].set_title('c.')
 fig.legend(handles, labels, bbox_to_anchor = (0.8, -0.03), ncol = len(labels)) 
 fig.savefig(FIG_PATH+'hosp_icu_death_counts.png')
 
-vary='counts'
-strat = 'wave'
-fig, ax = plt.subplots(1, 3, figsize=(15,5))
+fig, ax = plt.subplots(1, 3, figsize=(12, 4))
 for axi in ax:
-    axi.set_xlabel(strat)
-ax[0].set_ylabel('hospitalization counts by age')
-ax[1].set_ylabel('icu counts by age')
-ax[2].set_ylabel('death counts by age')
+    axi.set_xlabel('Wave')
+ax[0].set_ylabel('Hospitalization counts by age')
+ax[1].set_ylabel('ICU counts by age')
+ax[2].set_ylabel('Death counts by age')
+ax[0].set_title('a.')
+ax[1].set_title('b.')
+ax[2].set_title('c.')
 results_severe_outcomes.plot_counts_histograms(ax)
 fig.savefig(FIG_PATH+'hosp_icu_death_counts_hist.png') 
 
