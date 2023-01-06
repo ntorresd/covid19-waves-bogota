@@ -2,9 +2,8 @@
 """
 Created on Sun Nov 20 2022
 Adapted from: https://github.com/mrc-ide/Brazil_COVID19_distributions
-
-@author: dsquevedo
-@author: ntorres
+@author: davidsantiagoquevedo
+@author: ntorresd
 """
 import yaml
 import pandas as pd
@@ -168,6 +167,27 @@ def get_posteriors_pooling(all_dfs, columns, model, model_name, param_list, prio
         posterior.to_csv(OUT_PATH + col + f'-samples-{model_name}.csv', index = False)
         posteriors_pooling.update({col: posterior})
 
+def best_model():
+    ep_distributions  = {'icu_stay':{},
+                        'hosp_stay':{},
+                        'onset_icu':{},
+                        'onset_hosp':{},
+                        'onset_death':{}
+                        }
+    best_models = pd.DataFrame({})
+
+    for dist in ep_distributions.keys():
+        df = pd.read_csv(OUT_PATH + 'bf_'+dist+'.csv')
+        df = df.set_index(df.columns[0])
+        ep_distributions[dist].update({'bf' : df,
+                                       'best model' : df[ df >= 0].dropna()})
+        best_models = pd.concat([best_models, ep_distributions[dist]['best model']])
+    cols = ['Epidemilogical distribution'] + best_models.columns.tolist()
+    best_models['Epidemilogical distribution'] = list(ep_distributions.keys()) 
+    best_models = best_models[cols]
+    best_models = best_models.set_index('Epidemilogical distribution')
+    return best_models
+
 ######################################################################################
 ######################################################################################
 # Statistical functions    
@@ -201,14 +221,27 @@ def LogLaplaceCovariance(posterior, col):
 def mean_exponential(beta):
     return beta
 
+def var_exponential(beta):
+    return beta**2
+
 def mean_gamma(alpha, beta):
     return alpha/beta
+
+def var_gamma(alpha, beta):
+    return alpha/(beta**2)
 
 def mean_weibull(alpha, sigma):
     return sigma * special.gamma(1+(1/alpha))
 
+def var_weibull(alpha, sigma):
+    return special.gamma(1+(2/alpha)) - (special.gamma(1+(1/alpha)))**2
+
 def mean_log_normal(mu, sigma):
     return np.exp(mu+0.5*sigma**2)
+
+def var_log_normal(mu, sigma):
+    return (np.exp(sigma**2)-1)*np.exp(2*mu + sigma**2)
+
 
 def sum_term_gln(r, mu, sigma, g, inf):
     sum = 0
@@ -226,29 +259,12 @@ def sum_term_gln(r, mu, sigma, g, inf):
 def mean_gln(mu, sigma, g, inf = 150):
     return np.exp(mu)*(1 + sum_term_gln(r = 1, mu = mu, sigma = sigma, g = g, inf = inf))
 
+def var_gln(mu, sigma, g, inf = 150):
+    return np.exp(2*mu)*(1 + sum_term_gln(r = 2, mu = mu, sigma = sigma, g = g, inf = inf)) - mean_gln(mu, sigma, g, inf = 150)
+
 def q025(x):
     return x.quantile(0.025)
 
 def q975(x):
-    return x.quantile(0.95)
+    return x.quantile(0.975)
 
-def best_model():
-    ep_distributions  = {'icu_stay':{},
-                        'hosp_stay':{},
-                        'onset_icu':{},
-                        'onset_hosp':{},
-                        'onset_death':{}
-                        }
-    best_models = pd.DataFrame({})
-
-    for dist in ep_distributions.keys():
-        df = pd.read_csv(OUT_PATH + 'bf_'+dist+'.csv')
-        df = df.set_index(df.columns[0])
-        ep_distributions[dist].update({'bf' : df,
-                                       'best model' : df[ df >= 0].dropna()})
-        best_models = pd.concat([best_models, ep_distributions[dist]['best model']])
-    cols = ['Epidemilogical distribution'] + best_models.columns.tolist()
-    best_models['Epidemilogical distribution'] = list(ep_distributions.keys()) 
-    best_models = best_models[cols]
-    best_models = best_models.set_index('Epidemilogical distribution')
-    best_models.to_csv(OUT_PATH + 'best_models.csv')

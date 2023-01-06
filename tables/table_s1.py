@@ -13,13 +13,10 @@ import pandas as pd
 
 config = yaml.load(open("config.yml", "r"))["default"]
 
-SCRIPTS_PATH = config['PATHS']['PLOT_PATH']
-FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'plots')
 DATA_PATH = config['PATHS']['DATA_PATH']
 WAVES_PATH = config['PATHS']['OUT_PATH'].format(dir = 'waves')
 RT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'rt')
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'tables')
-sys.path.append(SCRIPTS_PATH)
 
 # Waves information
 df_waves = pd.read_csv(WAVES_PATH + "waves.csv")

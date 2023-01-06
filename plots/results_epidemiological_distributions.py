@@ -29,9 +29,6 @@ plt.style.use(config['PATHS']['PLOT_STYLE'])
 prop_cycle = plt.rcParams['axes.prop_cycle']
 colors = prop_cycle.by_key()['color']
 
-df_best_models = pd.read_csv(OUT_PATH + 'best_models.csv')
-df_best_models = df_best_models.set_index(df_best_models.columns[0]).transpose()
-
 ##############################################################################
 # 1. Prepare the data
 all_dfs, columns = ut.prepare_confirmed_cases_data()
@@ -39,6 +36,10 @@ all_dfs, columns = ut.prepare_confirmed_cases_data()
 ##############################################################################
 # load the samples (models fits for every epidemiological distribution)
 dist_posteriors = ut.load_samples()
+
+# get best models
+df_best_models = ut.best_model()
+df_best_models = df_best_models.transpose()
 
 ########################################################################
 # Plot CDFs
