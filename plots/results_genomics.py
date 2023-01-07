@@ -103,16 +103,8 @@ def plot_prevalence(ax):
 
 # Advantage heatmap
 def plot_heatmap(ax, n):
-        df_adv = pd.read_csv(OUT_PATH + 'advantage.csv')
-        df_mean = pd.DataFrame({})
-        df_mean['pivot_variant'] = df_adv['pivot_variant']
-        for col in df_adv.columns.to_list()[1:]:
-                df_mean[[col,'trash']] = df_adv[col].str.split(' ', 1, expand = True)
-                df_mean[col] = df_mean[col].astype(float)
-                del(df_mean['trash'])
-        df_adv = df_adv.set_index('pivot_variant')
+        df_mean = pd.read_csv(OUT_PATH + 'advantage_mean.csv')
         df_mean = df_mean.set_index('pivot_variant')
-        df_mean = df_mean.replace(1,0)
-        color_list = met_brew('VanGogh1', n = n, brew_type='continuous')
-        sns.heatmap(data = df_mean, annot = True, cmap = color_list, ax = ax)
+        color_list = met_brew('Cassatt1', n = n, brew_type='continuous')
+        sns.heatmap(data = df_mean, annot = False, cmap = color_list, ax = ax)
         ax.set_ylabel('')
