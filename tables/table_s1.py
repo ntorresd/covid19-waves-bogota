@@ -45,7 +45,7 @@ def get_rt_wave(ref_date = "window_start"):
         max = round(df_temp["Mean(R)"].max(), 2)
         q1 = round(df_temp["Quantile.0.025(R)"].max(), 2)
         q2 = round(df_temp["Quantile.0.975(R)"].max(), 2)
-        rt_wave.append(str(max) + "(" + str(q1) + "-" + str(q2) + ")")
+        rt_wave.append(str(max) + "(" + str(q1) + ", " + str(q2) + ")")
     return rt_wave
 
 df_waves["Confirmed cases"] = get_size(df_confirmed)
