@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Oct 21 2022
-
 @author: davidsantiagoquevedo
 @author: cwhittaker1000
 @author: ntorresd
