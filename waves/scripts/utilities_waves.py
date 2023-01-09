@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thr Jul 06 2022
-
-@author: dsquevedo
-@author: ntorres
+@author: davidsantiagoquevedo
+@author: ntorresd
 """
 import yaml
 import pandas as pd
