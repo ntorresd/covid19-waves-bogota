@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Th December 1 2022
+Created on Mon 29 Nov 2022
 @author: davidsantiagoquevedo
 @author: ntorresd
 """  
@@ -11,7 +11,6 @@ warnings.filterwarnings('ignore')
 import sys
 import yaml
 import matplotlib.pyplot as plt
-from matplotlib.gridspec import GridSpec
 
 config = yaml.load(open("config.yml", "r"))["default"]
 
@@ -21,35 +20,38 @@ sys.path.append(SCRIPTS_PATH)
 
 import results_severe_outcomes as results_severe_outcomes
 
-fig, ax = plt.subplots(2, 3, figsize=(12, 8), sharex = True)
+fig, ax = plt.subplots(2,3, figsize=(12,8))
+plt.rcParams["savefig.pad_inches"] = 0.4
 
-results_severe_outcomes.plot_rates(ax=ax[1][0], var='CFR', var_name='CFR')
-results_severe_outcomes.plot_rates(ax=ax[0][1], var='HCR', var_name='HCR')
-results_severe_outcomes.plot_rates(ax=ax[1][1], var='HCR_I', var_name=' ICU-CR')
+axi = ax[0]
+results_severe_outcomes.plot_percentage(axi)
 
-results_severe_outcomes.plot_rates(ax=ax[0][2], var='HFR', var_name='HFR')
-results_severe_outcomes.plot_rates(ax=ax[1][2], var='HFR_I', var_name='ICU-FR')
+axi[0].set_ylabel('Hospitalization percentage by age-group')
+axi[1].set_ylabel('ICU percentage by age-group')
+axi[2].set_ylabel('Deaths percentage by age-group')
+for axii in axi:
+    axii.tick_params(axis='x', labelrotation=90)
+    axii.set_xlabel('Age group')
+axi[0].set_title('a.')
+axi[1].set_title('b.')
+axi[2].set_title('c.')
+handles1, labels1 = axi[2].get_legend_handles_labels()
 
-handles, labels = ax[1][1].get_legend_handles_labels()
-ax[0][0].legend(handles, labels, loc='center')
-ax[0][0].axis('off')
+axi = ax[1]
+results_severe_outcomes.plot_proportions_hist(axi)
 
-ax[0][1].tick_params(axis='x', rotation=45)
-ax[0][2].tick_params(axis='x', rotation=45)
-ax[1][0].tick_params(axis='x', rotation=45)
-ax[1][1].tick_params(axis='x', rotation=45)
-ax[1][2].tick_params(axis='x', rotation=45)
+axi[0].set_ylabel('Hospital proportion by wave')
+axi[1].set_ylabel('ICU proportion by wave')
+axi[2].set_ylabel('Death proportion by wave')
+for axii in axi:
+    axii.set_xlabel('Wave')
+axi[0].set_title('d.')
+axi[1].set_title('e.')
+axi[2].set_title('f.')
+handles2, labels2 = axi[2].get_legend_handles_labels()
 
-ax[0][1].set_title('b.')
-ax[0][2].set_title('d.')
-ax[1][0].set_title('a.')
-ax[1][1].set_title('c.')
-ax[1][2].set_title('e.')
+handles = handles1 + handles2
+labels = labels1 + labels2
+fig.legend(handles, labels, bbox_to_anchor = (0.79, -0.02), ncol = 6)
 
-ax[0][1].set_xlabel('')
-ax[0][2].set_xlabel('')
-ax[1][0].set_xlabel('Age group')
-ax[1][1].set_xlabel('Age group')
-ax[1][2].set_xlabel('Age group')
-
-fig.savefig(FIG_PATH + 'figure_5.png')
+fig.savefig(FIG_PATH+'figure_5.png')
