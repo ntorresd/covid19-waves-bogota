@@ -5,7 +5,7 @@ In this repository we characterized and compared, using statistical tools, the f
 1. The instantaneous reproduction number R(t).
 2. The transmissibility advantage between variants.
 3. The delay times for onset-to-hospitalization, onset-to-ICU, onset-to-death, hospital stay, and ICU stay. 
-4. The characterization of severe outcomes using the proportion of cases using the general hospital and ICU services, as well, as deaths, and the severe ratios: Case Fatality Rate (CFR), Hospitalization Case Rate (HCR), and Hospitalization Fatality Rate (HFR) for each wave. 
+4. The characterization of severe outcomes by means of the proportion of cases using the general hospital and ICU services, as well, as deaths, and the severe ratios: Case Fatality Rate (CFR), Hospitalization Case Rate (HCR), and Hospitalization Fatality Rate (HFR) for each wave. 
 
 ## Data sources
 
@@ -92,7 +92,3 @@ This [YAML file](/config.yml) contains information about the models, the paths u
 
 ## Authors and contributors
 [davidsantiagoquevedo](https://github.com/davidsantiagoquevedo/), [ntorresd](https://github.com/ntorresd/), [cwhittaker1000](https://github.com/cwhittaker1000/), [zmcucunuba](https://github.com/zmcucunuba).
-
-
-
-
