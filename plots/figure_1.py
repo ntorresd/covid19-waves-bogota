@@ -25,12 +25,8 @@ import overview as overview
 fig, ax = plt.subplots(2,2, figsize = (14,8))
 
 axi = ax[0][0]
-results_rt.plot_rt(ax = axi)
+overview.plot_cases_death_cum(ax = axi)
 results_waves.draw_waves(axi)
-axi.set_xlabel('')
-axi.set_ylabel('R(t)') 
-axi.set_ylim(top = 2.3)
-axi.tick_params(axis = 'x', rotation = 45)
 axi.set_title('a.')
 
 axi = ax[0][1]
@@ -42,8 +38,12 @@ axi.set_title('b.')
 axi.legend()  
 
 axi = ax[1][0]
-overview.plot_cases_death_cum(ax = axi)
+results_rt.plot_rt(ax = axi)
 results_waves.draw_waves(axi)
+axi.set_xlabel('')
+axi.set_ylabel('R(t)') 
+axi.set_ylim(top = 2.3)
+axi.tick_params(axis = 'x', rotation = 45)
 axi.set_title('c.')
 
 axi = ax[1][1]
