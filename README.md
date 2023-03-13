@@ -55,14 +55,14 @@ All the folders, except [plots](/plots/) and [tables](/tables/), are organized f
 * [utilities_epi_dist.py](/epidemiological_distributions/scripts/utilities_epi_dist.py): python script with functions used for preparing and cleaning the data, and tools for the statistical analysis .
 
 2. The folder [genomics](/genomics/) contains the following scripts:
-* [genomics_functions.R](/genomics/scripts/genomics_functions.R), [variants_record](/genomics/scripts/variants_recod.R): functions implemented in R to process de genomic data.
+* [genomics_functions.R](/genomics/scripts/genomics_functions.R), [variants_record](/genomics/scripts/variants_recod.R): functions implemented in R to process the genomic data.
 * [process_data.py](/genomics/scripts/process_data.py): python script to generate the inputs for the model.
 * [multinomial_model.stan](/genomics/scripts/multinomial_model.stan): multinomial model implemented in stan. 
 * [run_model.py](/genomics/scripts/run_model.py): python script to run the multinomial model.
 * [process_results](/genomics/scripts/process_results.py): python script to process the results from the multinomial model.
 
 3. The folder [rt](/rt/) contains the following script:
-* ([rt.R](/rt/scripts/rt.R)): R script to estimate the Reproduction number. 
+* [rt.R](/rt/scripts/rt.R): R script to estimate the Reproduction number. 
 
 4. The folder [severe_outcomes](/severe_outcomes/) contains the following scripts:
 * [percentages.py](/severe_outcomes/scripts/percentages.py): python script to calculate the percentages.
