@@ -20,7 +20,6 @@ default:
     MAX_VAL: 130
   WAVES:
     ROOTS: 
-      - 1
       - 3
       - 6
       - 8
