@@ -21,17 +21,17 @@ In this repository we characterized and compared, using statistical tools, the f
 
 $$f(v,t)=\alpha + \beta_{v,0}t$$
 
-In the previous expression $\alpha$ is the intercept of the model and $\beta_{v,0}$ is the variant-specific parameter for the time covariate, which was computed with respect to a reference (or pivot) variant. In order to compute the transmissibility advantage of $v$ wth respect to $0$ from $\beta_{v,0}$ we used the following expression:
+In the previous expression $\alpha$ is the intercept of the model and $\beta_{v,0}$ is the variant-specific parameter for the time covariate, which was computed with respect to a reference (or pivot) variant. In order to compute the transmissibility advantage of $v$ with respect to $0$ from $\beta_{v,0}$ we used the following expression:
 
 $$ T_{v,0} = \exp(\frac{\beta_{v,0}}{7} * g_0) $$
 
 Where $g_0$ is the generation time of the pivot variant. Notice that we divided $\beta_{v,0}$ by 7 to convert time scale of the coefficients to daily.
 
-Using these coefficientes we computed the relative transmissibiliy advantage between two variants $w$ and $v$ as:
+With these coefficientes we computed the relative transmissibiliy advantage between two variants $w$ and $v$ as:
 
-$$ T_{w,v} = \frac{\beta_{w,0}}{\beta_{v,0}}$$
+$$ T_{w,v} = \frac{T_{w,0}}{T_{v,0}}$$
 
-The multinomial regressions were run in stan through the library [PyStan](https://pystan.readthedocs.io/en/latest/) for python.
+The multinomial regressions were run in stan using the library [PyStan](https://pystan.readthedocs.io/en/latest/) for python.
 
 3. Probability distributions of delay times: we used a bayesian hierarchical model adapted from [this repository](https://github.com/mrc-ide/Brazil_COVID19_distributions). We fitted initial parameters for the district level and then sample the parameters for each wave as follows:
 
