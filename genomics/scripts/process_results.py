@@ -15,6 +15,7 @@ DATA_PATH = config['PATHS']['DATA_PATH']
 OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'genomics')
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'genomics')
 DATE_GENOMICS = config['UPDATE_DATES']['GENOMICS']
+GENERATION_TIME = config['MODELS']['GENERATION_TIME']
 
 # Load raw fitting data
 df_fit_raw = pd.read_csv(OUT_PATH + 'fit_raw.csv')
@@ -68,8 +69,10 @@ df_beta = df_fit_raw[beta_cols]
 df_beta_mean =  df_beta.agg(['mean', q025, q975])
 cols = list(variants_dict.values())
 df_beta_mean.columns = cols
-# Notice that these beta's are the advantage of variants 2-5 with respect to variant 1 (which is the pivot). In order to get the advantage
-# between the others, we should subtract them
+
+df_trans = np.exp(df_beta_mean/7.*GENERATION_TIME) # These are the advantage of variants 2-5 
+# with respect to variant 1 (which is the pivot). In order to get the advantage
+# between the others, we should divide them
 
 def calculate_relative_advantage(stat):
     df_beta_cp = df_beta.copy()
@@ -77,7 +80,9 @@ def calculate_relative_advantage(stat):
     for piv_var in list(variants_dict.keys()):  
         advantage_list =[variants_dict[piv_var]]
         for var in list(variants_dict.keys()):
-            advantage = df_beta_cp[f'beta[{var}]']-df_beta_cp[f'beta[{piv_var}]']
+            advantage_var = np.exp(df_beta_cp[f'beta[{var}]']/7.*GENERATION_TIME)
+            advantage_piv_var = np.exp(df_beta_cp[f'beta[{piv_var}]']/7.*GENERATION_TIME)
+            advantage = advantage_var/advantage_piv_var
             adv = advantage.agg(stat)
             advantage_list.append(adv)
         df_temp = pd.DataFrame([advantage_list], columns = ['pivot_variant'] + cols)

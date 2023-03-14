@@ -18,6 +18,7 @@ default:
     CHAINS : 4
     MIN_VAL : 0
     MAX_VAL: 130
+    GENERATION_TIME: 4.5
   WAVES:
     ROOTS: 
       - 3
