@@ -24,7 +24,6 @@ import results_genomics as results_genomics
 fig, ax = plt.subplots(1,2, figsize = (12, 6))
 axi = ax[0]
 results_genomics.plot_multinomial(axi)
-axi.set_xlabel('Week')
 axi.set_ylabel('Prevalence')
 axi.legend()
 axi.set_title('a.')
