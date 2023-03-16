@@ -31,7 +31,7 @@ for col in df_mean.columns.to_list():
 for i in range(df_res.shape[0]+1):
     for j in range(df_res.shape[1]):
         if i-1 == j:
-            df_res[df_res.columns[i]].iloc[j] ='0'
+            df_res[df_res.columns[i]].iloc[j] ='1'
 
 df_res = df_res.rename(columns = {'pivot_variant' : 'Pivot variant'})
 df_res.to_csv(OUT_PATH + 'table_s2.csv', index = False)

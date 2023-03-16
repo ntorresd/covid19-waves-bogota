@@ -6,6 +6,7 @@ Created on Fri Oct 21 2022
 """     
 import yaml
 import pandas as pd
+import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 from met_brewer import met_brew
@@ -26,6 +27,9 @@ df_variants = pd.read_csv(DATA_PATH + 'variants-ic-bog_'+ DATE_GENOMICS + '.csv'
 df_variants['date'] = pd.to_datetime(df_variants['date'])
 ## Results from multinomial analysis
 df_results = pd.read_csv(OUT_PATH + 'theta.csv')
+df_pivot =  pd.read_csv(DATA_PATH + 'variants_pivot.csv').rename(columns = {'t' : 'week', 'week' : 'week_name'})
+df_results = df_results.merge(df_pivot[['week', 'week_name']], on = 'week')
+df_results['date'] = df_results.week_name.apply(lambda date: datetime.datetime.strptime(date + '-1', "%Y-%W-%w"))
 
 def plot_multinomial(ax):
         stat = "mean"
@@ -39,7 +43,7 @@ def plot_multinomial(ax):
                 color  = colors[n], marker = '*', linestyle = '')
         ax.fill_between(df_results[mask].week, df_results[mask1].theta, df_results[mask2].theta,
                         color  = colors[n], alpha = 0.2)
-        
+                
         n += 1
         variant = 'Delta'
         mask = (df_results.stat == stat) & (df_results.variant == variant)
@@ -83,6 +87,19 @@ def plot_multinomial(ax):
                 color  = colors[n], marker = '*', linestyle = '')
         ax.fill_between(df_results[mask].week, df_results[mask1].theta, df_results[mask2].theta,
                         color  = colors[n], alpha = 0.2)
+        ax.tick_params(axis='x', rotation=90)
+        n_ticks = 11
+        weeks = (df_results.week_name).unique()
+        print(min(weeks))
+        print(len(weeks))
+        ax.xaxis.set_major_locator(plt.MaxNLocator(n_ticks))        
+        no_ticks = ax.get_xticks().astype(int)
+        if min(no_ticks) <0:
+                no_ticks_f = [0]
+        else:
+                no_ticks_f = []
+        no_ticks_f = no_ticks_f + [n for n in no_ticks if ((n >= 0) & (n < len(weeks)))]
+        ax.set_xticklabels(weeks[no_ticks_f])
 
 # Prevalence histogram
 def plot_prevalence(ax):
@@ -108,3 +125,4 @@ def plot_heatmap(ax, n):
         color_list = met_brew('Cassatt1', n = n, brew_type='continuous')
         sns.heatmap(data = df_mean, annot = False, cmap = color_list, ax = ax)
         ax.set_ylabel('')
+        ax.tick_params(axis='x', rotation=90)

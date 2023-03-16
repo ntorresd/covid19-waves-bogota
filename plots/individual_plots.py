@@ -34,7 +34,6 @@ import results_genomics as results_genomics
 # Multinomial
 fig, ax = plt.subplots()
 results_genomics.plot_multinomial(ax)
-ax.set_xlabel('week')
 ax.set_ylabel('Prevalence')
 fig.legend(loc = 'center right')
 fig.savefig(FIG_PATH + 'variants_multinomial.png')
@@ -149,32 +148,32 @@ var = 'hosp_stay'
 n_df = 1 #df_hosp_stay
 results_epidist.plot_dist(n_df, epi_dist = var, max_val = max_val_plot, 
           ax = ax[3][0], n_subset = 1, dist_list = dist_list,
-          bin_unit = 1, title='e.')
+          bin_unit = 1, title='m.')
 results_epidist.plot_dist(n_df, epi_dist = var, max_val = max_val_plot, 
           ax = ax[3][1], n_subset = 2, dist_list = dist_list,
-          bin_unit = 1, title='f.')
+          bin_unit = 1, title='n.')
 results_epidist.plot_dist(n_df, epi_dist = var, max_val = max_val_plot, 
           ax = ax[3][2], n_subset = 3, dist_list = dist_list,
-          bin_unit = 1, title='g.')
+          bin_unit = 1, title='o.')
 results_epidist.plot_dist(n_df, epi_dist = var, max_val = max_val_plot, 
           ax = ax[3][3], n_subset = 4, dist_list = dist_list,
-          bin_unit = 1, title='h.')
+          bin_unit = 1, title='p.')
 
 #ICU stay
 var = 'icu_stay'
 n_df = 0 #df_icu_stay
 results_epidist.plot_dist(n_df, epi_dist = var, max_val = max_val_plot, 
           ax = ax[4][0], n_subset = 1, dist_list = dist_list,
-          bin_unit = 1, title='a.')
+          bin_unit = 1, title='q.')
 results_epidist.plot_dist(n_df, epi_dist = var, max_val = max_val_plot, 
           ax = ax[4][1], n_subset = 2, dist_list = dist_list,
-          bin_unit = 1, title='b.')
+          bin_unit = 1, title='r.')
 results_epidist.plot_dist(n_df, epi_dist = var, max_val = max_val_plot, 
           ax = ax[4][2], n_subset = 3, dist_list = dist_list,
-          bin_unit = 1, title='c.')
+          bin_unit = 1, title='s.')
 results_epidist.plot_dist(n_df, epi_dist = var, max_val = max_val_plot, 
           ax = ax[4][3], n_subset = 4, dist_list = dist_list,
-          bin_unit = 1, title='d.')
+          bin_unit = 1, title='t.')
 
 handles, labels = ax[0][0].get_legend_handles_labels()
 fig.legend(handles, labels, bbox_to_anchor = (0.99, -0.03), ncol = len(dist_list))
