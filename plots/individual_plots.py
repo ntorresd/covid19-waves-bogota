@@ -41,7 +41,7 @@ fig, ax = plt.subplots(figsize = (7.5,5))
 results_genomics.plot_prevalence(ax)
 ax.set_xlabel('')
 ax.set_ylabel('Prevalence')
-ax.tick_params(axis = 'x', rotation = 45)
+ax.tick_params(axis = 'x', rotation = 90)
 fig.savefig(FIG_PATH + 'variants_prevalence_' + DATE_GENOMICS + '.png')
 
 #################################### ####################################
@@ -55,7 +55,7 @@ results_rt.plot_rt(ax)
 ax.set_xlabel('')
 ax.set_ylabel('R(t)') 
 ax.set_ylim(top=2.3)
-ax.tick_params(axis='x', rotation=45)
+ax.tick_params(axis='x', rotation=90)
 fig.savefig(FIG_PATH + 'rt.png')
 
 #################################### ####################################
