@@ -33,9 +33,7 @@ import results_genomics as results_genomics
 
 # Multinomial
 fig, ax = plt.subplots()
-results_genomics.plot_multinomial(ax)
-ax.set_ylabel('Prevalence')
-fig.legend(loc = 'center right')
+results_genomics.plot_multinomial(ax, ['2021-12', '2022-30'])
 fig.savefig(FIG_PATH + 'variants_multinomial.png')
 
 # Prevalence

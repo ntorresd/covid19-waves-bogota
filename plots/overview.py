@@ -54,14 +54,14 @@ df_prop = pd.crosstab(index=df_confirmed_bogota['age_group'],
                             columns=df_confirmed_bogota['sex'],
                             normalize="index")*100                
 def plot_pyramid(ax):
-    hist_f = ax.barh(df_female['age_group'], -df_female['counts'], align='center', label='female')
-    hist_m = ax.barh(df_male['age_group'], df_male['counts'], align='center', label='male')
+        hist_f = ax.barh(df_female['age_group'], -df_female['counts'], align='center', label='female')
+        hist_m = ax.barh(df_male['age_group'], df_male['counts'], align='center', label='male')
 
-    ax.bar_label(hist_m, labels=['{:.1f}%'.format(prop) for prop in df_prop['M'].round(1)], label_type='edge')
-    ax.bar_label(hist_f, labels=['{:.1f}%'.format(prop) for prop in df_prop['F'].round(1)], label_type='edge')
+        ax.bar_label(hist_m, labels=['{:.1f}%'.format(prop) for prop in df_prop['M'].round(1)], label_type='edge')
+        ax.bar_label(hist_f, labels=['{:.1f}%'.format(prop) for prop in df_prop['F'].round(1)], label_type='edge')
 
-    ticks =  ax.get_xticks()
-    ax.set_xticklabels([int(abs(tick)) for tick in ticks])
+        ticks =  ax.get_xticks()
+        ax.set_xticklabels([int(abs(tick)) for tick in ticks])
 
 # Incidences 
 df = df_confirmed_bogota
@@ -82,22 +82,22 @@ df_deaths_60p = ut.counts(df[mask_death & mask_60p], var='death',columns=['date'
 df_deaths_60p['deaths_cum'] = df_deaths_60p['deaths'].cumsum().values
 
 def plot_cases_death_cum(ax):
-    ln1 = ax.plot(df_cases_all['date'], df_cases_all['cases'], label='cases all')
-    ln2 = ax.plot(df_cases_60p['date'], df_cases_60p['cases'], label='cases 60+')
+        ln1 = ax.plot(df_cases_all['date'], df_cases_all['cases'], label='cases all')
+        ln2 = ax.plot(df_cases_60p['date'], df_cases_60p['cases'], label='cases 60+')
 
-    # fig, ax2 =plt.subplots(figsize=(7.5, 5))
-    ax_twin = ax.twinx()
+        # fig, ax2 =plt.subplots(figsize=(7.5, 5))
+        ax_twin = ax.twinx()
 
-    ln3 = ax_twin.plot(df_deaths_all['date'], df_deaths_all['deaths_cum'], label='cumulative deaths all', linestyle='dashed')
-    ln4 = ax_twin.plot(df_deaths_60p['date'], df_deaths_60p['deaths_cum'], label='cumulative deaths 60+', linestyle='dashed')
+        ln3 = ax_twin.plot(df_deaths_all['date'], df_deaths_all['deaths_cum'], label='cumulative deaths all', linestyle='dashed')
+        ln4 = ax_twin.plot(df_deaths_60p['date'], df_deaths_60p['deaths_cum'], label='cumulative deaths 60+', linestyle='dashed')
 
-    lns = ln1 + ln2 + ln3 + ln4
-    labs = [l.get_label() for l in lns]
+        lns = ln1 + ln2 + ln3 + ln4
+        labs = [l.get_label() for l in lns]
 
-    ax.tick_params(axis='x', rotation=45)
-    ax.set_ylabel('Confirmed cases')
+        ax.tick_params(axis='x', rotation=45)
+        ax.set_ylabel('Confirmed cases')
 
-    ax_twin.legend(lns, labs, loc='upper left', frameon=False, fontsize=12)
-    ax_twin.spines.right.set_visible(True) #This was set as False by default in the .mpstyle file
-    ax_twin.tick_params(axis='x', rotation=45)
-    ax_twin.set_ylabel('Deaths')
+        ax_twin.legend(lns, labs, loc='upper left', frameon=False, fontsize=12)
+        ax_twin.spines.right.set_visible(True) #This was set as False by default in the .mpstyle file
+        ax_twin.tick_params(axis='x', rotation=45)
+        ax_twin.set_ylabel('Deaths')
