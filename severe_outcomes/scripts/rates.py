@@ -85,5 +85,8 @@ cases_wave['HCR'] =  (cases_wave.hosp / cases_wave.cases * 100).round(1)
 cases_wave['HCR_I'] =  (cases_wave.icu / cases_wave.cases * 100).round(1)
 cases_wave['HFR'] =  (cases_wave.hosp_death / cases_wave.hosp * 100).round(1)
 cases_wave['HFR_I'] =  (cases_wave.icu_death / cases_wave.icu * 100).round(1)
+rates = ['CFR', 'HCR', 'HCR_I', 'HFR', 'HFR_I']
+for col in rates:
+    cases_wave[col] = cases_wave[col].fillna(0)
 
 cases_wave.to_csv(OUT_PATH + 'rates.csv', index = False)
