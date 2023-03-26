@@ -41,19 +41,6 @@ dist = 'icu_stay'
 red.plot_best_model_bar(dist, ax[4][0], 0, 'ICU stay', 'e.')
 red.plot_violin(dist, 'ICU stay', 'j.', ax[4][1])
 
-ax[0][0].set_yscale('log')
-ax[1][0].set_yscale('log')
-ax[2][0].set_yscale('log')
-ax[3][0].set_yscale('log')
-ax[4][0].set_yscale('log')
-
-import matplotlib.ticker as mticker
-ax[0][0].yaxis.set_minor_formatter(mticker.ScalarFormatter())
-ax[1][0].yaxis.set_minor_formatter(mticker.ScalarFormatter())
-ax[2][0].yaxis.set_minor_formatter(mticker.ScalarFormatter())
-ax[3][0].yaxis.set_minor_formatter(mticker.ScalarFormatter())
-ax[4][0].yaxis.set_minor_formatter(mticker.ScalarFormatter())
-
 ax[0][0].set_xlabel('')
 ax[0][1].set_xlabel('')
 ax[0][1].set_xlabel('')
