@@ -9,6 +9,7 @@ import sys
 import yaml
 import pandas as pd
 import matplotlib.pyplot as plt
+from statsmodels.stats.proportion import proportion_confint
 
 config = yaml.load(open("config.yml", "r"))["default"]
 
@@ -28,7 +29,7 @@ sys.path.append(UTILS_PATH)
 import utilities_severity as ut
 
 # Read data
-df_confirmed_bogota = pd.read_csv(DATA_PATH + 'confirmed_cases.csv')
+df_confirmed_bogota = pd.read_csv(DATA_PATH + 'confirmed_cases_waves.csv')
 
 df_hosp = pd.read_csv(DATA_PATH+'hosp_waves_bog.csv')
 df_icu = pd.read_csv(DATA_PATH+'icu_waves_bog.csv')
@@ -74,7 +75,6 @@ icu_60p = ut.size_by_strat(df_icu[df_icu['age_group']=='60+'], strat=strat)
 death_60p = ut.size_by_strat(df_death[df_death['age_group']=='60+'], strat=strat)
 
 # Computing the confidence interval as a binomial proportion
-from statsmodels.stats.proportion import proportion_confint
 alpha = 0.05 #significance level
 
 hosp_all_err = proportion_confint(count=hosp_all, nobs=cases_all, alpha=alpha)
