@@ -40,6 +40,7 @@ dist_posteriors = ut.load_samples()
 # get best models
 df_best_models = ut.best_model()
 df_best_models = df_best_models.transpose()
+df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
 
 ########################################################################
 # Plot CDFs
@@ -187,7 +188,6 @@ def plot_best_model_line(dist, ax, n, title):
     return ax
 
 def plot_best_model_bar(dist, ax, n, name_y, title):
-    df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
     df_dist = df_best_models_sum[df_best_models_sum.dist == dist]
     df_dist = df_dist.set_index('stat')
     name = dist.replace('_', ' ')
@@ -216,14 +216,6 @@ def plot_violin(var, name_y, title, ax):
     df_best_models_sum = pd.read_csv(OUT_PATH + "best_fit_summary.csv")
     df_dist = df_best_models_sum[df_best_models_sum.dist == var]
     df_dist = df_dist.set_index('stat')
-    name = var.replace('_', ' ')
-    
-    mean, err = get_best_error(var)
-    
-    #ax.errorbar([1, 2, 3, 4], mean, 
-    #           ls = '', marker = '_', 
-    #            color = 'black')
-    #ax.set_yscale('log')
     df['wave'] = df['wave'].astype(int)
     sns.violinplot(data=df, x="wave", y=var, dodge=False, ax= ax, color = colors[n])
     ax.set_xlabel('Wave')
@@ -236,6 +228,7 @@ def plot_best_model_bar_all(dist, ax, w, n, title, wt=0.1):
     ax.bar([1+w, 2+w, 3+w, 4+w], mean, yerr = err, 
            width = abs(wt), 
            color = colors[n])
-    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+    #ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+    ax.set_ylim([0,None])
     ax.set_title(title)
     ax.set_ylabel('Days')

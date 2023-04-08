@@ -7,8 +7,7 @@ Created on Tue Nov 29 2022
 import sys
 import yaml
 import pandas as pd
-import pystan
-import time
+from statsmodels.stats.proportion import proportion_confint
 
 config = yaml.load(open("config.yml", "r"))["default"]
 
@@ -22,7 +21,7 @@ sys.path.append(UTILS_PATH)
 import utilities_severity as ut
 df_confirmed_bogota = pd.read_csv(DATA_PATH + 'confirmed_cases_waves.csv')
 
-# Changing the age groups
+# Change age groups
 age_group_dic={'0-9':[0,9],
               '10-19':[10,19],
               '20-29':[20,29], 
@@ -38,6 +37,7 @@ cat_type = pd.api.types.CategoricalDtype(categories = age_group_dic.keys(),
 df_confirmed_bogota = ut.age_group_dec(df_confirmed_bogota, 'age', 'age_unit', age_group_dic)
 df_confirmed_bogota['age_group'] = df_confirmed_bogota.age_group.astype(cat_type)
 
+# Counts of cases and outcomes by wave
 cases_wave = df_confirmed_bogota[['wave', 'age_group']].value_counts()\
             .reset_index().rename(columns = {0 : 'cases'})
 
@@ -80,10 +80,62 @@ cases_wave.merge(hosp, how = 'left', on = ['wave', 'age_group'])\
                 .merge(deaths, how = 'left', on = ['wave', 'age_group'])
 cases_wave = cases_wave.sort_values(by = ['wave', 'age_group'])
 
-cases_wave['CFR'] =  (cases_wave.deaths / cases_wave.cases * 100).round(1)
-cases_wave['HCR'] =  (cases_wave.hosp / cases_wave.cases * 100).round(1)
-cases_wave['HCR_I'] =  (cases_wave.icu / cases_wave.cases * 100).round(1)
-cases_wave['HFR'] =  (cases_wave.hosp_death / cases_wave.hosp * 100).round(1)
-cases_wave['HFR_I'] =  (cases_wave.icu_death / cases_wave.icu * 100).round(1)
 
-cases_wave.to_csv(OUT_PATH + 'rates.csv', index = False)
+# Ratios and confidence intervals using binomial proportions
+alpha = 0.05 #significance level
+method = 'normal'
+
+#CFR
+cases_wave['CFR'] =  (cases_wave.deaths / cases_wave.cases).round(4)
+prop = proportion_confint(count = cases_wave.deaths,
+                         nobs = cases_wave.cases,
+                         alpha = alpha,
+                         method = method)
+cases_wave['CFR_lower'] = prop[0].round(4)
+cases_wave['CFR_upper'] = prop[1].round(4)
+
+
+#HCR
+cases_wave['HCR'] =  (cases_wave.hosp / cases_wave.cases).round(4)
+prop = proportion_confint(count = cases_wave.hosp,
+                         nobs = cases_wave.cases,
+                         alpha = alpha,
+                         method = method)
+cases_wave['HCR_lower'] = prop[0].round(4)
+cases_wave['HCR_upper'] = prop[1].round(4)
+
+#ICU-CR
+cases_wave['ICU-CR'] =  (cases_wave.icu / cases_wave.cases).round(4)
+prop = proportion_confint(count = cases_wave.icu,
+                         nobs = cases_wave.cases,
+                         alpha = alpha,
+                         method = method)
+cases_wave['ICU-CR_lower'] = prop[0].round(4)
+cases_wave['ICU-CR_upper'] = prop[1].round(4)
+
+#HFR
+cases_wave['HFR'] =  (cases_wave.hosp_death / cases_wave.hosp).round(4)
+prop = proportion_confint(count = cases_wave.hosp_death,
+                         nobs = cases_wave.hosp,
+                         alpha = alpha,
+                         method = method)
+cases_wave['HFR_lower'] = prop[0].round(4)
+cases_wave['HFR_upper'] = prop[1].round(4)
+
+#ICU-FR
+cases_wave['ICU-FR'] =  (cases_wave.icu_death / cases_wave.icu).round(4)
+prop = proportion_confint(count = cases_wave.icu_death,
+                         nobs = cases_wave.icu,
+                         alpha = alpha,
+                         method = method)
+cases_wave['ICU-FR_lower'] = prop[0].round(4)
+cases_wave['ICU-FR_upper'] = prop[1].round(4)
+
+
+rates = ['CFR', 'HCR', 'ICU-CR', 'HFR', 'ICU-FR']
+for col in rates:
+    cases_wave[col] = cases_wave[col].fillna(0)
+    cases_wave[col+'_lower'] = cases_wave[col+'_lower'].fillna(0)
+    cases_wave[col+'_upper'] = cases_wave[col+'_upper'].fillna(0)
+    
+cases_wave.to_csv(OUT_PATH + 'ratios.csv', index = False)

@@ -21,15 +21,14 @@ sys.path.append(SCRIPTS_PATH)
 import results_genomics as results_genomics
 
 # Multinomial regression
-fig, ax = plt.subplots(1,2, figsize = (12, 6))
+fig, ax = plt.subplots(1,2, figsize = (13, 6))
 axi = ax[0]
-results_genomics.plot_multinomial(axi)
-axi.set_ylabel('Prevalence')
-axi.legend()
+results_genomics.plot_multinomial(axi, ['2021-12', '2022-30'])
 axi.set_title('a.')
 
 # Heat map
 axi = ax[1]
 results_genomics.plot_heatmap(axi, n = 200)
 axi.set_title('b.')
+fig.tight_layout()
 fig.savefig(FIG_PATH + 'figure_2.png')
