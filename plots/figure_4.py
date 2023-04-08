@@ -23,12 +23,12 @@ import results_severe_outcomes as results_severe_outcomes
 
 fig, ax = plt.subplots(2, 3, figsize=(12, 8), sharex = True)
 
-results_severe_outcomes.plot_rates(ax=ax[0][1], var='HCR', var_name='HCR')
-results_severe_outcomes.plot_rates(ax=ax[0][2], var='HCR_I', var_name=' ICU-CR')
+results_severe_outcomes.plot_ratios(ax=ax[0][1], var='HCR', var_name='HCR')
+results_severe_outcomes.plot_ratios(ax=ax[0][2], var='ICU-CR', var_name=' ICU-CR')
 
-results_severe_outcomes.plot_rates(ax=ax[1][0], var='CFR', var_name='CFR')
-results_severe_outcomes.plot_rates(ax=ax[1][1], var='HFR', var_name='HFR')
-results_severe_outcomes.plot_rates(ax=ax[1][2], var='HFR_I', var_name='ICU-FR')
+results_severe_outcomes.plot_ratios(ax=ax[1][0], var='CFR', var_name='CFR')
+results_severe_outcomes.plot_ratios(ax=ax[1][1], var='HFR', var_name='HFR')
+results_severe_outcomes.plot_ratios(ax=ax[1][2], var='ICU-FR', var_name='ICU-FR')
 
 handles, labels = ax[1][1].get_legend_handles_labels()
 ax[0][0].legend(handles, labels, loc='center')

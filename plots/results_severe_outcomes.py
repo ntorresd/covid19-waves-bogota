@@ -36,7 +36,7 @@ df_death_perc[strat] = df_death_perc[strat].astype(int)
 df_proportions_all = pd.read_csv(OUT_PATH+'proportions_all.csv')
 df_proportions_60p = pd.read_csv(OUT_PATH+'proportions_60p.csv')
 # rates 
-df_rates = pd.read_csv(OUT_PATH+'rates.csv')
+df_ratios = pd.read_csv(OUT_PATH+'ratios.csv')
 
 # Auxiliar plot function
 def plot_xyvar(df, ax, n_strat, varx='age_group', vary='percentage'):
@@ -118,9 +118,15 @@ def plot_proportions_hist(ax):
                         outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='right', group='60+')
 
 # Rates
-def plot_rates(ax, var, var_name):
+def plot_ratios(ax, var, var_name):
     for wave in range(1,5):
-        df_temp = df_rates[df_rates['wave'] == wave]
-        ax.plot(df_temp['age_group'], df_temp[var], marker = 'o', label = 'wave '+str(wave), color = colors[wave-1])
+        df_temp = df_ratios[df_ratios['wave'] == wave]
+        ratio = df_temp[var] 
+        ratio_lower = ratio - df_temp[var+'_lower']
+        ratio_upper = df_temp[var+'_upper'] - ratio
+        yerr = np.array(list(zip(ratio_lower, ratio_upper))).T
+        ax.errorbar(df_temp['age_group'], df_temp[var], yerr = yerr,
+                    fmt='o', color = colors[wave-1], label = 'wave '+str(wave),
+                    capsize = 5, ls = '-', marker = ".", lw = 1)
     ax.set_xlabel('age group')
     ax.set_ylabel(var_name)
