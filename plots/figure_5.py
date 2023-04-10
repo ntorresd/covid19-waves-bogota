@@ -20,38 +20,20 @@ sys.path.append(SCRIPTS_PATH)
 
 import results_severe_outcomes as results_severe_outcomes
 
-fig, ax = plt.subplots(2,3, figsize=(12,8))
+fig, ax = plt.subplots(1,3, figsize=(12,5))
 plt.rcParams["savefig.pad_inches"] = 0.4
 
-axi = ax[0]
-results_severe_outcomes.plot_percentage(axi)
-
-axi[0].set_ylabel('Hospitalization percentage by age-group')
-axi[1].set_ylabel('ICU percentage by age-group')
-axi[2].set_ylabel('Deaths percentage by age-group')
-for axii in axi:
-    axii.tick_params(axis='x', labelrotation=90)
-    axii.set_xlabel('Age group')
-axi[0].set_title('a.')
-axi[1].set_title('b.')
-axi[2].set_title('c.')
-handles1, labels1 = axi[2].get_legend_handles_labels()
-
-axi = ax[1]
-results_severe_outcomes.plot_proportions_hist(axi)
-
-axi[0].set_ylabel('Hospital proportion by wave')
-axi[1].set_ylabel('ICU proportion by wave')
-axi[2].set_ylabel('Death proportion by wave')
-for axii in axi:
-    axii.set_xlabel('Wave')
-axi[0].set_title('d.')
-axi[1].set_title('e.')
-axi[2].set_title('f.')
-handles2, labels2 = axi[2].get_legend_handles_labels()
-
-handles = handles1 + handles2
-labels = labels1 + labels2
+results_severe_outcomes.plot_percentage(ax)
+ax[0].set_ylabel('Hospitalization percentage by age-group')
+ax[1].set_ylabel('ICU percentage by age-group')
+ax[2].set_ylabel('Deaths percentage by age-group')
+for axi in ax:
+    axi.tick_params(axis='x', labelrotation=90)
+    axi.set_xlabel('Age group')
+ax[0].set_title('a.')
+ax[1].set_title('b.')
+ax[2].set_title('c.')
+handles, labels = ax[2].get_legend_handles_labels()
 fig.legend(handles, labels, bbox_to_anchor = (0.79, -0.02), ncol = 6)
 
 fig.savefig(FIG_PATH+'figure_5.png')

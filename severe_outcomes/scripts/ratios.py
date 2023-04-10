@@ -32,32 +32,91 @@ age_group_dic={'0-9':[0,9],
               '70-79':[70,79], 
               '80+':[80,9999]}
 
-cat_type = pd.api.types.CategoricalDtype(categories = age_group_dic.keys(),
-                                         ordered=True)
+c60_plus = ['60-69', '70-79', '80+']
+
 df_confirmed_bogota = ut.age_group_dec(df_confirmed_bogota, 'age', 'age_unit', age_group_dic)
-df_confirmed_bogota['age_group'] = df_confirmed_bogota.age_group.astype(cat_type)
 
 # Counts of cases and outcomes by wave
+
+#### Cases
 cases_wave = df_confirmed_bogota[['wave', 'age_group']].value_counts()\
             .reset_index().rename(columns = {0 : 'cases'})
 
+cases_all = df_confirmed_bogota[['wave']].value_counts()\
+            .reset_index().rename(columns = {0 : 'cases'})
+cases_all['age_group'] = 'all'
+
+cases_60p = df_confirmed_bogota[df_confirmed_bogota.age_group.isin(c60_plus)][['wave']].value_counts()\
+            .reset_index().rename(columns = {0 : 'cases'})
+cases_60p['age_group'] = '60+'
+
+cases_wave = pd.concat([cases_wave, cases_all, cases_60p])
+
+
+#### Hospitalisations
 hosp = \
 df_confirmed_bogota[(df_confirmed_bogota.hospitalization.notnull())]\
                     [['wave', 'age_group']].value_counts()\
                     .reset_index().rename(columns = {0 : 'hosp'})
                     
+hosp_all = df_confirmed_bogota[(df_confirmed_bogota.hospitalization.notnull())]\
+                    [['wave']].value_counts()\
+                    .reset_index().rename(columns = {0 : 'hosp'})
+hosp_all['age_group'] = 'all'
+
+hosp_60p = df_confirmed_bogota[(df_confirmed_bogota.hospitalization.notnull()) & 
+                               (df_confirmed_bogota.age_group.isin(c60_plus))]\
+                    [['wave']].value_counts()\
+                    .reset_index().rename(columns = {0 : 'hosp'})
+hosp_60p['age_group'] = '60+'
+
+hosp = pd.concat([hosp, hosp_all, hosp_60p])
+
+#### ICUs                    
 icu = \
 df_confirmed_bogota[(df_confirmed_bogota.icu.notnull())]\
                     [['wave', 'age_group']].value_counts()\
                     .reset_index().rename(columns = {0 : 'icu'})
 
+icu_all = df_confirmed_bogota[(df_confirmed_bogota.icu.notnull())]\
+                    [['wave']].value_counts()\
+                    .reset_index().rename(columns = {0 : 'icu'})
+icu_all['age_group'] = 'all'
+
+icu_60p = df_confirmed_bogota[(df_confirmed_bogota.icu.notnull()) & 
+                               (df_confirmed_bogota.age_group.isin(c60_plus))]\
+                    [['wave']].value_counts()\
+                    .reset_index().rename(columns = {0 : 'icu'})
+icu_60p['age_group'] = '60+'
+
+icu = pd.concat([icu, icu_all, icu_60p])
+
+#### HOSP - DEATH
 hosp_death = \
 df_confirmed_bogota[(df_confirmed_bogota.hospitalization.notnull()) &
                     (df_confirmed_bogota.condition == 'Fallecido') & 
                     (df_confirmed_bogota.death.notnull())]\
                     [['wave', 'age_group']].value_counts()\
                     .reset_index().rename(columns = {0 : 'hosp_death'})
-                    
+
+h_d_all = df_confirmed_bogota[(df_confirmed_bogota.hospitalization.notnull())&
+                                (df_confirmed_bogota.condition == 'Fallecido') & 
+                                (df_confirmed_bogota.death.notnull())]\
+                    [['wave']].value_counts()\
+                    .reset_index().rename(columns = {0 : 'hosp_death'})
+h_d_all['age_group'] = 'all'
+
+h_d_60p = df_confirmed_bogota[(df_confirmed_bogota.hospitalization.notnull())&
+                                (df_confirmed_bogota.condition == 'Fallecido') & 
+                                (df_confirmed_bogota.death.notnull()) & 
+                                (df_confirmed_bogota.age_group.isin(c60_plus))]\
+                    [['wave']].value_counts()\
+                    .reset_index().rename(columns = {0 : 'hosp_death'})
+h_d_60p['age_group'] = '60+'
+
+hosp_death = pd.concat([hosp_death, h_d_all, h_d_60p])
+
+#### ICU - DEATH                    
 icu_death = \
 df_confirmed_bogota[(df_confirmed_bogota.icu.notnull()) &
                     (df_confirmed_bogota.condition == 'Fallecido') & 
@@ -65,21 +124,57 @@ df_confirmed_bogota[(df_confirmed_bogota.icu.notnull()) &
                     [['wave', 'age_group']].value_counts()\
                     .reset_index().rename(columns = {0 : 'icu_death'})
 
-                    
+i_d_all = df_confirmed_bogota[(df_confirmed_bogota.icu.notnull())&
+                                (df_confirmed_bogota.condition == 'Fallecido') & 
+                                (df_confirmed_bogota.death.notnull())]\
+                    [['wave']].value_counts()\
+                    .reset_index().rename(columns = {0 : 'icu_death'})
+i_d_all['age_group'] = 'all'
+
+i_d_60p = df_confirmed_bogota[(df_confirmed_bogota.icu.notnull())&
+                                (df_confirmed_bogota.condition == 'Fallecido') & 
+                                (df_confirmed_bogota.death.notnull()) & 
+                                (df_confirmed_bogota.age_group.isin(c60_plus))]\
+                    [['wave']].value_counts()\
+                    .reset_index().rename(columns = {0 : 'icu_death'})
+i_d_60p['age_group'] = '60+'
+
+icu_death = pd.concat([icu_death, i_d_all, i_d_60p])
+
+#### DEATHS                    
 deaths = \
 df_confirmed_bogota[(df_confirmed_bogota.condition == 'Fallecido') & 
                     (df_confirmed_bogota.death.notnull())]\
                     [['wave', 'age_group']].value_counts()\
                     .reset_index().rename(columns = {0 : 'deaths'})
 
+death_all = df_confirmed_bogota[(df_confirmed_bogota.condition == 'Fallecido') & 
+                                (df_confirmed_bogota.death.notnull())]\
+                    [['wave']].value_counts()\
+                    .reset_index().rename(columns = {0 : 'deaths'})
+death_all['age_group'] = 'all'
+
+death_60p = df_confirmed_bogota[(df_confirmed_bogota.condition == 'Fallecido') & 
+                                (df_confirmed_bogota.death.notnull()) & 
+                                (df_confirmed_bogota.age_group.isin(c60_plus))]\
+                    [['wave']].value_counts()\
+                    .reset_index().rename(columns = {0 : 'deaths'})
+death_60p['age_group'] = '60+'
+
+deaths = pd.concat([deaths, death_all, death_60p])
+
+#### Merge all the outcomes and cases
 cases_wave = \
 cases_wave.merge(hosp, how = 'left', on = ['wave', 'age_group'])\
                 .merge(icu, how = 'left', on = ['wave', 'age_group'])\
                 .merge(hosp_death, how = 'left', on = ['wave', 'age_group'])\
                 .merge(icu_death, how = 'left', on = ['wave', 'age_group'])\
                 .merge(deaths, how = 'left', on = ['wave', 'age_group'])
-cases_wave = cases_wave.sort_values(by = ['wave', 'age_group'])
 
+cat_type = pd.api.types.CategoricalDtype(categories = ['all', '60+']+list(age_group_dic.keys()),
+                                         ordered=True)
+cases_wave['age_group'] = cases_wave['age_group'].astype(cat_type)
+cases_wave = cases_wave.sort_values(by = ['wave', 'age_group'])
 
 # Ratios and confidence intervals using binomial proportions
 alpha = 0.05 #significance level
@@ -93,7 +188,6 @@ prop = proportion_confint(count = cases_wave.deaths,
                          method = method)
 cases_wave['CFR_lower'] = prop[0].round(4)
 cases_wave['CFR_upper'] = prop[1].round(4)
-
 
 #HCR
 cases_wave['HCR'] =  (cases_wave.hosp / cases_wave.cases).round(4)
