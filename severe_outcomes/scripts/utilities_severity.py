@@ -67,7 +67,6 @@ def cumulative(df, var='onset', columns=['date', 'counts']):
 
     df_cum = df_counts.cumsum()
 
-
 # Calculate binomial confidence interval for the specified stratification
 from statsmodels.stats.proportion import proportion_confint
 def calculate_confint(df, var_name, nobs, counts='counts', strat='wave', alpha=0.95, method='normal', round=4):
