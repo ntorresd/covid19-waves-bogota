@@ -31,10 +31,16 @@ df_hosp = pd.read_csv(DATA_PATH+'hosp_waves_bog.csv')
 df_icu = pd.read_csv(DATA_PATH+'icu_waves_bog.csv')
 df_death = pd.read_csv(DATA_PATH+'death_waves_bog.csv')
 
+round = 3
 # Calculate counts and percentages
-df_hosp_perc = ut.calculate_percentage(df_hosp)
-df_icu_perc = ut.calculate_percentage(df_icu)
-df_death_perc = ut.calculate_percentage(df_death)  
+df_hosp_perc = ut.calculate_percentage(df_hosp, nobs = 'hosp', round = round)
+df_icu_perc = ut.calculate_percentage(df_icu, nobs = 'icu', round = round)
+df_death_perc = ut.calculate_percentage(df_death, nobs = 'deaths', round = round)  
+
+# Calculate binomial confidence intervals
+df_hosp_perc = ut.calculate_confint(df_hosp_perc, var_name = 'percentage', nobs = 'hosp', round = round)
+df_icu_perc = ut.calculate_confint(df_icu_perc, var_name = 'percentage', nobs = 'icu', round = round)
+df_death_perc = ut.calculate_confint(df_death_perc, var_name = 'percentage', nobs = 'deaths', round = round)
 
 # Save data
 df_hosp_perc.to_csv(OUT_PATH+'hosp_percentages.csv', index=False)
