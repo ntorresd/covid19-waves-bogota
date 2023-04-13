@@ -25,15 +25,8 @@ import results_severe_outcomes as results_severe_outcomes
 fig, ax = plt.subplots(1,3, figsize=(12,5))
 plt.rcParams["savefig.pad_inches"] = 0.4
 
-# percentages
-df_hosp_perc = pd.read_csv(OUT_PATH + 'hosp_percentages.csv')
-df_icu_perc = pd.read_csv(OUT_PATH + 'icu_percentages.csv')
-df_death_perc = pd.read_csv(OUT_PATH + 'deaths_percentages.csv')
-
 # results_severe_outcomes.plot_percentage(ax)
-results_severe_outcomes.plot_var_err(df_hosp_perc, ax=ax[0], var = 'percentage')
-results_severe_outcomes.plot_var_err(df_icu_perc, ax=ax[1], var = 'percentage')
-results_severe_outcomes.plot_var_err(df_death_perc, ax=ax[2], var = 'percentage')
+results_severe_outcomes.plot_percentage_err(ax)
 
 ax[0].set_ylabel('Hospitalization percentage by age-group')
 ax[1].set_ylabel('ICU percentage by age-group')

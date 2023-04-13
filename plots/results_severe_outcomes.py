@@ -132,13 +132,19 @@ def plot_ratios(ax, var, var_name):
     ax.set_ylabel(var_name)
 
 # Plot variable with error bar
-def plot_var_err(df, ax, var):
+def plot_var_err(df, axi, var):
     for wave in range(1, 5):
         df_temp = df[df['wave'] == wave]
         data = df_temp[var]
         data_lower = data - df_temp[var + '_lower']
         data_upper = df_temp[var + '_upper'] - data
         yerr = np.array(list(zip(data_lower, data_upper))).T
-        ax.errorbar(df_temp['age_group'], df_temp[var], yerr = yerr,
-            fmt='o', color = colors[wave-1], label = 'wave '+str(wave),
-            capsize = 5, ls = '-', marker = ".", lw = 1)
+        axi.errorbar(df_temp['age_group'], df_temp[var], yerr = yerr,
+                     fmt='o', color = colors[wave-1], label = 'wave '+str(wave),
+                     capsize = 5, ls = '-', marker = ".", lw = 1)
+        
+# Plot percentages with erros
+def plot_percentage_err(ax):
+    plot_var_err(df_hosp_perc, axi=ax[0], var = 'percentage')
+    plot_var_err(df_icu_perc, axi=ax[1], var = 'percentage')
+    plot_var_err(df_death_perc, axi=ax[2], var = 'percentage')
