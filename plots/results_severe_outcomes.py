@@ -41,7 +41,7 @@ df_ratios = pd.read_csv(OUT_PATH+'ratios.csv')
 # Auxiliar plot function
 def plot_xyvar(df, ax, n_strat, varx='age_group', vary='percentage'):
     data = df.loc[df[strat]==n_strat]
-    ax.plot(data[varx], data[vary], label=strat+str(n_strat), linestyle='-', marker='o')
+    ax.plot(data[varx], data[vary], label=strat+str(n_strat), ls = '-', marker = ".", lw = 1)
 
 # Wave cases percentage distribution by age group
 def plot_percentage(ax):

@@ -40,4 +40,5 @@ ax[2].set_title('c.')
 handles, labels = ax[2].get_legend_handles_labels()
 fig.legend(handles, labels, bbox_to_anchor = (0.79, -0.02), ncol = 6)
 
-fig.savefig(FIG_PATH+'figure_5.png')
+# fig.savefig(FIG_PATH+'figure_5.png')
+fig.savefig(FIG_PATH+'figure_5_err.png')
