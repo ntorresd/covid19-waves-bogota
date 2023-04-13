@@ -37,6 +37,7 @@ df_proportions_all = pd.read_csv(OUT_PATH+'proportions_all.csv')
 df_proportions_60p = pd.read_csv(OUT_PATH+'proportions_60p.csv')
 # rates 
 df_ratios = pd.read_csv(OUT_PATH+'ratios.csv')
+df_ratios = df_ratios[~df_ratios['age_group'].isin(['all'])].sort_values(by = ['wave', 'age_group'])
 
 # Auxiliar plot function
 def plot_xyvar(df, ax, n_strat, varx='age_group', vary='percentage'):
