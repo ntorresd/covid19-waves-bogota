@@ -26,12 +26,8 @@ colors = prop_cycle.by_key()['color']
 # Read data 
 strat = 'wave'
 # percentages
-df_hosp_perc = pd.read_csv(OUT_PATH + 'hosp_percentages.csv')
-df_icu_perc = pd.read_csv(OUT_PATH + 'icu_percentages.csv')
-df_death_perc = pd.read_csv(OUT_PATH + 'deaths_percentages.csv')
-df_hosp_perc[strat] = df_hosp_perc[strat].astype(int)
-df_icu_perc[strat] = df_icu_perc[strat].astype(int)
-df_death_perc[strat] = df_death_perc[strat].astype(int)
+df_percentages = pd.read_csv(OUT_PATH + 'percentages.csv')
+df_percentages[strat] = df_percentages[strat].astype(int)
 # proportions
 df_proportions_all = pd.read_csv(OUT_PATH+'proportions_all.csv')
 df_proportions_60p = pd.read_csv(OUT_PATH+'proportions_60p.csv')
@@ -119,6 +115,7 @@ def plot_proportions_hist(ax):
                         outcome_var='death', prop_lower='death_lower', prop_upper='death_upper', side='right', group='60+')
 
 # Rates
+# TODO: Use plot_var_err instead
 def plot_ratios(ax, var, var_name):
     for wave in range(1,5):
         df_temp = df_ratios[df_ratios['wave'] == wave]
@@ -146,6 +143,6 @@ def plot_var_err(df, axi, var):
         
 # Plot percentages with erros
 def plot_percentage_err(ax):
-    plot_var_err(df_hosp_perc, axi=ax[0], var = 'percentage')
-    plot_var_err(df_icu_perc, axi=ax[1], var = 'percentage')
-    plot_var_err(df_death_perc, axi=ax[2], var = 'percentage')
+    plot_var_err(df_percentages, axi=ax[0], var = 'HOSP-%')
+    plot_var_err(df_percentages, axi=ax[1], var = 'ICU-%')
+    plot_var_err(df_percentages, axi=ax[2], var = 'DEATH-%')

@@ -33,16 +33,20 @@ df_death = pd.read_csv(DATA_PATH+'death_waves_bog.csv')
 
 round = 3
 # Calculate counts and percentages
-df_hosp_perc = ut.calculate_percentage(df_hosp, nobs = 'hosp', round = round)
-df_icu_perc = ut.calculate_percentage(df_icu, nobs = 'icu', round = round)
-df_death_perc = ut.calculate_percentage(df_death, nobs = 'deaths', round = round)  
+df_hosp_perc = ut.calculate_percentage(df_hosp, perc_var_name = 'HOSP-%', nobs = 'hosp', round = round)
+df_icu_perc = ut.calculate_percentage(df_icu, perc_var_name = 'ICU-%', nobs = 'icu', round = round)
+df_death_perc = ut.calculate_percentage(df_death, perc_var_name = 'DEATH-%', nobs = 'deaths', round = round)  
 
 # Calculate binomial confidence intervals
-df_hosp_perc = ut.calculate_confint(df_hosp_perc, var_name = 'percentage', nobs = 'hosp', round = round)
-df_icu_perc = ut.calculate_confint(df_icu_perc, var_name = 'percentage', nobs = 'icu', round = round)
-df_death_perc = ut.calculate_confint(df_death_perc, var_name = 'percentage', nobs = 'deaths', round = round)
+df_hosp_perc = ut.calculate_confint(df_hosp_perc, var_name = 'HOSP-%', nobs = 'hosp', round = round)
+df_icu_perc = ut.calculate_confint(df_icu_perc, var_name = 'ICU-%', nobs = 'icu', round = round)
+df_death_perc = ut.calculate_confint(df_death_perc, var_name = 'DEATH-%', nobs = 'deaths', round = round)
+
+# Merge all outcomes
+df_percentages = df_hosp_perc.drop(columns = ['counts', 'hosp'])\
+                            .merge(df_icu_perc.drop(columns = ['counts', 'icu']), how = 'left', on = ['wave', 'age_group'])\
+                            .merge(df_death_perc.drop(columns = ['counts', 'deaths']), how = 'left', on = ['wave', 'age_group'])
 
 # Save data
-df_hosp_perc.to_csv(OUT_PATH+'hosp_percentages.csv', index=False)
-df_icu_perc.to_csv(OUT_PATH+'icu_percentages.csv', index=False)
-df_death_perc.to_csv(OUT_PATH+'deaths_percentages.csv', index=False)
+#TODO: Create table with total counts per wave for all outcomes
+df_percentages.to_csv(OUT_PATH+'percentages.csv', index=False)

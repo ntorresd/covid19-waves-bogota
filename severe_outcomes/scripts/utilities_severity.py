@@ -7,18 +7,18 @@ Created on Thr Jul 06 2022
 import numpy as np
 
 # calculate counts and percentages by wave and age_group
-def calculate_percentage(df, nobs, strat='wave', group='age_group', print_sum=False, round=4):
+def calculate_percentage(df, perc_var_name, nobs, strat='wave', group='age_group', print_sum=False, round=4):
     df_percentage = df.groupby(by=[strat, group]).size().reset_index(name='counts')
     df_percentage[nobs] = 0
-    df_percentage['percentage'] = 0
+    df_percentage[perc_var_name] = 0
     strat_list = df_percentage[strat].unique()
     for strat_ in strat_list:
         mask = (df_percentage[strat]==strat_)
         df_percentage.loc[mask, nobs] = df_percentage.loc[mask, 'counts'].sum()
-        df_percentage.loc[mask, 'percentage'] = 100 * df_percentage.loc[mask, 'counts'] / df_percentage.loc[mask, nobs]
+        df_percentage.loc[mask, perc_var_name] = 100 * df_percentage.loc[mask, 'counts'] / df_percentage.loc[mask, nobs]
         if print_sum:
-            print('The sum over the percentages gives: ', df_percentage.loc[mask ,'percentage'].sum())
-    df_percentage['percentage'] = df_percentage['percentage'].round(round)
+            print('The sum over the percentages gives: ', df_percentage.loc[mask ,perc_var_name].sum())
+    df_percentage[perc_var_name] = df_percentage[perc_var_name].round(round)
     return df_percentage
 
 def get_pp_wave(ref_dt, waves):
