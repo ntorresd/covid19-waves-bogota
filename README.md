@@ -4,8 +4,8 @@ In this repository we characterized and compared, using statistical tools, the f
 
 1. The instantaneous reproduction number R(t).
 2. The transmissibility advantage between variants.
-3. The delay times for onset-to-hospitalization, onset-to-ICU, onset-to-death, hospital stay, and ICU stay. 
-4. The characterization of severe outcomes by means of the proportion of cases using the general hospital and ICU services, as well, as deaths, and the severe ratios: Case Fatality Rate (CFR), Hospitalization Case Rate (HCR), and Hospitalization Fatality Rate (HFR) for each wave. 
+3. The delay times for onset-to-hospitalisation, onset-to-ICU, onset-to-death, hospital stay, and ICU stay. 
+4. The characterization of severe outcomes using the severe ratios: Hospitalisation/ICU Case Rate (H/ICU-CR), Case Fatality Ratio (CFR), Hospitalisation/ICU Fatality Rate (H/ICU-FR) per wave; and the percentages of Hospitalisation, ICU admission and Deaths per age group and wave. 
 
 ## Data sources
 
@@ -39,7 +39,11 @@ $$q_{i,j} \sim N(q_{i, Bog},\sigma_i)$$
 
 where $i=1,2,3, .., n$ runs over the $n$ parameters of the PDF, $j=1,2,3,4$ is the number of wave, $q_{i, Bog}$ is the value of the i-th parameter of the PDF estimated for Bogotá and $\sigma_i \sim N^+(0,1)$ is the standard deviation which is assumed to be distributed as a truncated normal distribution. We used a Hamiltonian Monte Carlo (HMC) algorithm implemented in Stan, setting four chains of 2000 iterations (1000 for warming up and 1000 for sampling). These models were also run using [PyStan](https://pystan.readthedocs.io/en/latest/).
 
-4. Severe outcomes: we computed the proportion of severe outcomes (general hospitalization, ICU, and death) between the Covid-19 cases, with a confidence interval of 95% for binomial proportions; and the Case Fatality Rate (CFR), Hospitalization Case Rate (HCR), and Hospitalization Fatality Rate (HFR) for each wave, disaggregated by 10 years age-groups. Additionally, we calculated the contribution of waves to severe outcomes by age-groups.
+4. Severe outcomes: we computed the  H/ICU-CR, CFR and H/ICU-FR for each wave, disaggregated by 10 years age-groups. Additionally, we calculated the contribution of waves to severe outcomes by age-groups.
+
+
+
+For all the cases we estimated a confidence interval of 95% using binomial proportions.
 
 ## Repository description
 
