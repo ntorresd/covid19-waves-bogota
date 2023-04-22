@@ -5,7 +5,7 @@ In this repository we characterized and compared, using statistical tools, the f
 1. The instantaneous reproduction number R(t).
 2. The transmissibility advantage between variants.
 3. The delay times for onset-to-hospitalisation, onset-to-ICU, onset-to-death, hospital stay, and ICU stay. 
-4. The characterization of severe outcomes using the severe ratios: Hospitalisation/ICU Case Rate (H/ICU-CR), Case Fatality Ratio (CFR), Hospitalisation/ICU Fatality Rate (H/ICU-FR) per wave; and the percentages of Hospitalisation, ICU admission and Deaths per age group and wave. 
+4. The characterization of severe outcomes using the severe ratios: Hospitalisation/ICU Case Rate (H/ICU-CR), Case Fatality Ratio (CFR), Hospitalisation/ICU Fatality Rate (H/ICU-FR) per age group and wave; and the percentages of Hospitalisation, ICU admission and Deaths per age group and wave. 
 
 ## Data sources
 
@@ -39,11 +39,27 @@ $$q_{i,j} \sim N(q_{i, Bog},\sigma_i)$$
 
 where $i=1,2,3, .., n$ runs over the $n$ parameters of the PDF, $j=1,2,3,4$ is the number of wave, $q_{i, Bog}$ is the value of the i-th parameter of the PDF estimated for Bogotá and $\sigma_i \sim N^+(0,1)$ is the standard deviation which is assumed to be distributed as a truncated normal distribution. We used a Hamiltonian Monte Carlo (HMC) algorithm implemented in Stan, setting four chains of 2000 iterations (1000 for warming up and 1000 for sampling). These models were also run using [PyStan](https://pystan.readthedocs.io/en/latest/).
 
-4. Severe outcomes: we computed the  H/ICU-CR, CFR and H/ICU-FR for each wave, disaggregated by 10 years age-groups. Additionally, we calculated the contribution of waves to severe outcomes by age-groups.
+4. Severe outcomes: all the results of this section where calculated for subpopulations $(i,g)$ defined by the waves $i \in$ { $1,2,3,4$ } and the age groups $g \in$ { $all, 0-9, 9-19, 20-29, 30-39, 40-49, 50-59, 60-69, 70-79, 80+$}.
 
+For the CFR and H/ICU-FR we used the following formula:
 
+$$XCR_{i,g} =\frac{X_{i,g}}{C_{i,g}}$$
 
-For all the cases we estimated a confidence interval of 95% using binomial proportions.
+Where $X_{i,g} \in$ { $H_{i,g} ,ICU_{i,g}$ } is the cumulative number of hospitalised patients and the cumulative number of patients at ICU; and $C_{i,g}$ is the cumulative number of cases per subpopulation.
+
+For the H/ICU-CR we used:
+
+$$XFR_{i,g} =\frac{D|X_{i,g}}{X_{i,g}}$$
+
+In this case $X_{i,g} \in$ { $C_{i,g} , H_{i,g} ,ICU_{i,g}$ } and $D|X_{i,g}$ is the cumulative number of deaths given that they belong to the population $X_{i,g}$.
+
+For the percentages we used:
+
+$$Y_{i,g} = 100 \times \frac{Y_{i,g}}{Y_i}$$
+
+Where $Y_{i,g} \in$ { $H_{i,g}, ICU_{i,g}, D_{i,g}$ } is the number of cases for each outcome per wave and age group and $Y_i \in$ { $H_i, ICU_i, D_i$ } is the total number of cases for each outcome per wave.
+
+In all the cases we estimated a confidence interval of 95% using binomial proportions.
 
 ## Repository description
 
