@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Th December 1 2022
+Created on Mon 29 Nov 2022
 @author: davidsantiagoquevedo
 @author: ntorresd
 """  
@@ -10,52 +10,35 @@ warnings.filterwarnings('ignore')
 
 import sys
 import yaml
+import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib.gridspec import GridSpec
 
 config = yaml.load(open("config.yml", "r"))["default"]
 
 SCRIPTS_PATH = config['PATHS']['PLOT_PATH']
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'plots')
+OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'severe_outcomes')
 sys.path.append(SCRIPTS_PATH)
 
 import results_severe_outcomes as results_severe_outcomes
 
-fig, ax = plt.subplots(2, 3, figsize=(12, 8), sharex = True)
+fig, ax = plt.subplots(1,3, figsize=(12,5))
+plt.rcParams["savefig.pad_inches"] = 0.4
 
-results_severe_outcomes.plot_ratios(ax=ax[0][1], var='HCR', var_name='HCR')
-results_severe_outcomes.plot_ratios(ax=ax[0][2], var='ICU-CR', var_name=' ICU-CR')
+# results_severe_outcomes.plot_percentage(ax)
+results_severe_outcomes.plot_percentage_err(ax)
 
-results_severe_outcomes.plot_ratios(ax=ax[1][0], var='CFR', var_name='CFR')
-results_severe_outcomes.plot_ratios(ax=ax[1][1], var='HFR', var_name='HFR')
-results_severe_outcomes.plot_ratios(ax=ax[1][2], var='ICU-FR', var_name='ICU-FR')
+ax[0].set_ylabel('Hospitalization percentage by age-group')
+ax[1].set_ylabel('ICU percentage by age-group')
+ax[2].set_ylabel('Deaths percentage by age-group')
+for axi in ax:
+    axi.tick_params(axis='x', labelrotation=90)
+    axi.set_xlabel('Age group')
+ax[0].set_title('a.')
+ax[1].set_title('b.')
+ax[2].set_title('c.')
+handles, labels = ax[2].get_legend_handles_labels()
+fig.legend(handles, labels, bbox_to_anchor = (0.79, -0.02), ncol = 6)
 
-handles, labels = ax[1][1].get_legend_handles_labels()
-ax[0][0].legend(handles, labels, loc='center')
-ax[0][0].axis('off')
-
-ax[0][1].tick_params(axis='x', rotation=90)
-ax[0][2].tick_params(axis='x', rotation=90)
-ax[1][0].tick_params(axis='x', rotation=90)
-ax[1][1].tick_params(axis='x', rotation=90)
-ax[1][2].tick_params(axis='x', rotation=90)
-
-ax[0][1].set_title('a.')
-ax[0][2].set_title('b.')
-ax[1][0].set_title('c.')
-ax[1][1].set_title('d.')
-ax[1][2].set_title('e.')
-
-ax[0][1].set_xlabel('')
-ax[0][2].set_xlabel('')
-ax[1][0].set_xlabel('Age group')
-ax[1][1].set_xlabel('Age group')
-ax[1][2].set_xlabel('Age group')
-
-ax[0][1].set_ylabel('Hospitalisation Case Ratio')
-ax[0][2].set_ylabel('ICU Case Ratio')
-ax[1][0].set_ylabel('Case Fatality Ratio')
-ax[1][1].set_ylabel('Hospitalisation Fatality Ratio')
-ax[1][2].set_ylabel('ICU Fatality Ratio')
-
-fig.savefig(FIG_PATH + 'figure_4.png')
+# fig.savefig(FIG_PATH+'figure_5.png')
+fig.savefig(FIG_PATH+'figure_4_err.png')
