@@ -2,4 +2,10 @@ pyyaml==5.4.1
 pystan
 statsmodels # https://www.statsmodels.org/devel/install.html
 seaborn==0.12.1
-# metbrewer==1.0 # https://github.com/BlakeRMills/MetBrewer
+pyyaml==5.4.1
+#pystan==2.19.1.1  
+seaborn==0.11.2
+matplotlib==3.5.1
+pandas==1.3.5
+scipy==1.7.3
+#To install metbrewer follow: https://github.com/BlakeRMills/MetBrewer#install-package
