@@ -11,6 +11,7 @@ import numpy as np
 from scipy import stats
 import scipy as scipy
 import matplotlib.pyplot as plt
+import mpl_axes_aligner as mpla
 from matplotlib.ticker import MaxNLocator
 import seaborn as sns
 
@@ -73,6 +74,7 @@ def plot_cdf(df, epi_dist, max_val, ax, cdf_null_hyp, n, n_subset = None, subset
         axt.plot([x1, x2], [y1, y2], color='green', alpha=0.4)
     """
     axt.spines.right.set_visible(True) #It was set as False by default in the .mpstyle file
+    return axt
     
 ########################################################################
 # Plot function (PDFs and CDFs)
@@ -107,7 +109,7 @@ def plot_dist(n_df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
             fit_stan = stats.gamma.pdf(xx, a = a, scale = 1/b, loc = 0)
             if dist == best:
                 cdf_null_hyp = [stats.gamma.cdf(x, a = a, scale = 1/b, loc = 0) for x in data_sorted]
-                plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
+                axt = plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
                          ax = ax, cdf_null_hyp = cdf_null_hyp, n = n, n_subset = n_subset)
         elif dist == 'Lognormal':
             s = params[dist]['sigma'+ext]
@@ -115,7 +117,7 @@ def plot_dist(n_df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
             fit_stan = stats.lognorm.pdf(xx, s = s, scale = np.exp(mu))
             if dist == best:
                 cdf_null_hyp = [stats.lognorm.cdf(x, s = s, scale = np.exp(mu)) for x in data_sorted]
-                plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
+                axt = plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
                          ax = ax, cdf_null_hyp = cdf_null_hyp, n = n, n_subset = n_subset)
         elif dist == 'Weibull':
             a = params[dist]['alpha'+ext]
@@ -123,14 +125,14 @@ def plot_dist(n_df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
             fit_stan = stats.weibull_min.pdf(xx, c = a, scale = s)
             if dist == best:
                 cdf_null_hyp = [stats.weibull_min.cdf(x, c = a, scale = s) for x in data_sorted]
-                plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
+                axt = plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
                          ax = ax, cdf_null_hyp = cdf_null_hyp, n=n, n_subset = n_subset)
         elif dist == 'Exponential':
             b = params[dist]['beta'+ext]
             fit_stan = stats.expon.pdf(xx, loc = 0, scale = 1/b)
             if dist == best:
                 cdf_null_hyp = [stats.expon.cdf(x, loc = 0 , scale = 1/b) for x in data_sorted]
-                plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
+                axt = plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
                          ax = ax, cdf_null_hyp = cdf_null_hyp, n = n, n_subset = n_subset)
         elif dist == 'Gen Lognormal':
             mu = params[dist]['mu'+ext]
@@ -139,7 +141,7 @@ def plot_dist(n_df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
             fit_stan = ut.gln_pdf(xx, mu = mu, sigma = s, g = g)
             if dist == best:
                 cdf_null_hyp = [ut.gln_cdf(x, mu = mu, sigma = s, g = g) for x in data_sorted]
-                plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
+                axt = plot_cdf(df, epi_dist = epi_dist, max_val = max_val,
                          ax = ax, cdf_null_hyp = cdf_null_hyp, n = n, n_subset = n_subset)
         #Fit
         ax.plot(xx, fit_stan, label = dist, color = colors[n])        
@@ -147,6 +149,7 @@ def plot_dist(n_df, epi_dist, max_val, ax, n_subset = None, subset = 'wave',
     ax.set_xlabel(epi_dist.replace('_',' '))
     ax.set_ylabel('Probability')
     ax.set_title(title)
+    mpla.align.yaxes(ax, 0, axt, 0, 0.03)
     return ax
 
 ########################################################################
@@ -223,12 +226,12 @@ def plot_violin(var, name_y, title, ax):
     ax.set_title(title)
     ax.xaxis.set_major_locator(MaxNLocator(integer=True))
 
-def plot_best_model_bar_all(dist, ax, w, n, title, wt=0.1):
+def plot_best_model_bar_all(dist, ax, w, n, wt=0.1):
     mean, err = get_best_error(dist)
     ax.bar([1+w, 2+w, 3+w, 4+w], mean, yerr = err, 
            width = abs(wt), 
            color = colors[n])
-    #ax.xaxis.set_major_locator(MaxNLocator(integer=True))
-    ax.set_ylim([0,None])
-    ax.set_title(title)
-    ax.set_ylabel('Days')
+    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+    #ax.set_yscale('log')
+    ax.set_ylabel('Average value of delay time (Days)')
+    ax.set_xlabel('Wave')
