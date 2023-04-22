@@ -9,17 +9,56 @@ warnings.filterwarnings('ignore')
 
 import sys
 import yaml
+import pandas as pd
 import matplotlib.pyplot as plt
 
 config = yaml.load(open("config.yml", "r"))["default"]
 
 SCRIPTS_PATH = config['PATHS']['PLOT_PATH']
 FIG_PATH = config['PATHS']['FIG_PATH'].format(dir = 'plots')
+OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'severe_outcomes')
 sys.path.append(SCRIPTS_PATH)
 
 import results_epidemiological_distributions as red
+########### ########### ###########
+###########   Option 1  ###########
+########### ########### ###########
+fig, ax = plt.subplots(figsize = (15,5))
 
-# Option 1
+dist = 'onset_hosp'
+w=-0.2
+red.plot_best_model_bar_all(dist, ax, w, 1)
+
+dist = 'onset_icu'
+w=-0.1
+red.plot_best_model_bar_all(dist, ax, w, 2)
+
+dist = 'onset_death'
+w= 0
+red.plot_best_model_bar_all(dist, ax, w, 3)
+
+dist = 'hosp_stay'
+w=0.1
+red.plot_best_model_bar_all(dist, ax, w, 4)
+dist = 'icu_stay'
+w=0.2
+red.plot_best_model_bar_all(dist, ax, w, 5)
+
+## Legends
+labels= ['Onset to hospitalisation', 
+           'Onset to ICU entrance',
+           'Onset to death',
+           'Hospital stay',
+           'ICU stay']
+ax.legend(labels, bbox_to_anchor=(0.95, -0.15), ncol=5)
+
+fig.tight_layout()
+fig.show()
+fig.savefig(FIG_PATH + 'figure_5_v1.png')
+
+########### ########### ###########
+###########   Option 2  ###########
+########### ########### ###########
 fig, ax = plt.subplots(5,2, figsize = (10, 14), sharex = True)
 dist = 'onset_hosp'
 red.plot_best_model_bar(dist, ax[0][0], 3, 'Onset to hospitalization', 'a.')
@@ -57,71 +96,4 @@ ax[2][1].set_ylabel('')
 ax[3][1].set_ylabel('')
 ax[4][1].set_ylabel('')
 
-fig.savefig(FIG_PATH + 'figure_3_v1.png')
-
-
-# Option 2
-fig, axes = plt.subplot_mosaic([['up', 'up'],['left1', 'right1'],
-                                ['left2', 'right2'],['left3', 'right3']],
-                              figsize = (10,10))
-## Upper panel
-wt=0.1
-ax = axes['up']
-dist = 'onset_hosp'
-w=-0.2
-red.plot_best_model_bar_all(dist, ax, w, 3, 'a.')
-dist = 'onset_icu'
-w=-0.1
-red.plot_best_model_bar_all(dist, ax, w, 2, 'a.')
-dist = 'onset_death'
-w= 0
-red.plot_best_model_bar_all(dist, ax, w, 4, 'a.')
-dist = 'hosp_stay'
-w=0.1
-red.plot_best_model_bar_all(dist, ax, w, 1, 'a.')
-dist = 'icu_stay'
-w=0.2
-red.plot_best_model_bar_all(dist, ax, w, 0, 'a.')
-ax.set_xlabel('')
-
-## Left 1 panel
-ax = axes['left1']
-dist = 'onset_hosp'
-red.plot_violin(dist, 'Days', 'b.', ax)
-ax.set_xlabel('')
-## Right 1 panel
-ax = axes['right1']
-dist = 'onset_icu'
-red.plot_violin(dist, 'Days', 'c.', ax)
-ax.set_xlabel('')
-## Left 2 panel
-ax = axes['left2']
-dist = 'onset_death'
-red.plot_violin(dist, 'Days', 'd.', ax)
-ax.set_xlabel('')
-## Right 2 panel
-ax = axes['right2']
-dist = 'hosp_stay'
-red.plot_violin(dist, 'Days', 'e.', ax)
-
-## Left 3 panel
-ax = axes['left3']
-dist = 'icu_stay'
-red.plot_violin(dist, 'Days', 'f.', ax)
-
-## Right 3 panel -> hide
-ax = axes['right3']
-ax.axis('off')
-
-## Legends
-ax = axes['up']
-ax.legend(['Onset to hospitalization', 
-           'Onset to ICU entrance',
-           'Onset to death',
-           'Hospital stay',
-           'ICU stay'], 
-          bbox_to_anchor=(0.85, 0.25), bbox_transform=fig.transFigure, ncol=1)
-
-fig.tight_layout()
-fig.show()
-fig.savefig(FIG_PATH + 'figure_3_v2.png')
+fig.savefig(FIG_PATH + 'figure_5_v2.png')

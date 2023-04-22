@@ -223,12 +223,12 @@ def plot_violin(var, name_y, title, ax):
     ax.set_title(title)
     ax.xaxis.set_major_locator(MaxNLocator(integer=True))
 
-def plot_best_model_bar_all(dist, ax, w, n, title, wt=0.1):
+def plot_best_model_bar_all(dist, ax, w, n, wt=0.1):
     mean, err = get_best_error(dist)
     ax.bar([1+w, 2+w, 3+w, 4+w], mean, yerr = err, 
            width = abs(wt), 
            color = colors[n])
-    #ax.xaxis.set_major_locator(MaxNLocator(integer=True))
-    ax.set_ylim([0,None])
-    ax.set_title(title)
-    ax.set_ylabel('Days')
+    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+    #ax.set_yscale('log')
+    ax.set_ylabel('Average value of delay time (Days)')
+    ax.set_xlabel('Wave')
