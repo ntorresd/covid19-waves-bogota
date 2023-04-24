@@ -25,7 +25,7 @@ df_var['y_week'] = df_var.year.astype(str) + '-' + df_var.week.astype(str)
 table = df_var.pivot(index='y_week',columns='lineage',values='n_seq_var')
 table.fillna(0, inplace = True)
 table = table.reset_index().reset_index().rename(columns = {'index':'t'}).reset_index(drop=True)
-del(table['y_week'])
+table = table.rename(columns = {'y_week' : 'week_name'})
 
 # Save results
 table.to_csv(DATA_PATH + 'variants_pivot.csv', index = False)
