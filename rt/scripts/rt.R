@@ -17,14 +17,14 @@ DATA_PATH = config$DATA_PATH
 OUT_PATH = config$OUT_PATH %>% str_replace('\\{dir\\}', 'rt')
 
 # parameters 
-contagion_shift <- 5
+incubation_period <- 5
 rt_window <- 7
 
 # read data
 df_confirmed_bogota <- read_csv(paste0(DATA_PATH, 'confirmed_cases.csv'))
 df_confirmed_bogota <- df_confirmed_bogota[, c('onset', 'age', 'age_unit')]
 df_confirmed_bogota$onset <- as.Date(df_confirmed_bogota$onset)
-df_confirmed_bogota$contagion=df_confirmed_bogota$onset - contagion_shift
+df_confirmed_bogota$infection=df_confirmed_bogota$onset - incubation_period
 
 # define age groups
 df_confirmed_bogota <- df_confirmed_bogota %>% 
@@ -41,17 +41,17 @@ df_confirmed_bogota <- df_confirmed_bogota %>%
 # compute incidence
 
 df_incidence <- df_confirmed_bogota %>% 
-  group_by(contagion) %>% summarise(I = n())
+  group_by(infection) %>% summarise(I = n())
 
 mask = (df_confirmed_bogota$age_group == "60+")
 df_incidence_60p <- df_confirmed_bogota[mask, ] %>%
-  group_by(contagion) %>% summarise(I = n())
+  group_by(infection) %>% summarise(I = n())
 rm(mask)
 
 # complete missing dates
 complete_dates <- function(df){
-  all_dates <- data.frame(contagion = seq.Date(min(df$contagion), 
-                                               max(df$contagion), 
+  all_dates <- data.frame(infection = seq.Date(min(df$infection), 
+                                               max(df$infection), 
                                                by = 'day')
   )  
   
@@ -68,7 +68,7 @@ compute_rt <- function(df_incidence,
                        method = "parametric_si",
                        mean_si=6.48,
                        std_si=3.83){
-  t_start <- seq(contagion_shift, nrow(df_incidence) - rt_window)
+  t_start <- seq(incubation_period, nrow(df_incidence) - rt_window)
   t_end <- t_start + rt_window
   rt_data <- estimate_R(df_incidence, 
                         method = method,
@@ -79,8 +79,8 @@ compute_rt <- function(df_incidence,
                           t_end = t_end)))
   
   df_rt <- rt_data$R
-  df_rt$window_start <- min(df_incidence$contagion) + df_rt$t_start 
-  df_rt$window_end <- min(df_incidence$contagion) + df_rt$t_end 
+  df_rt$window_start <- min(df_incidence$infection) + df_rt$t_start 
+  df_rt$window_end <- min(df_incidence$infection) + df_rt$t_end 
 
   return(df_rt)  
 }
