@@ -42,7 +42,7 @@ results_rt.plot_rt(ax = axi)
 results_waves.draw_waves(axi)
 axi.set_xlabel('')
 axi.set_ylabel('R(t)') 
-axi.set_ylim(top = 2.3)
+axi.set_ylim(top = 2.4)
 axi.tick_params(axis = 'x', rotation = 90)
 axi.set_title('c.')
 
