@@ -39,24 +39,24 @@ df_confirmed_bogota <- df_confirmed_bogota %>%
   )
 
 # compute incidence
-get_incidence <- function(df){
-df_local <- df %>%
-  filter(contagion_source == "local") %>%
-  group_by(infection) %>%
-  summarise(local = n())
+get_incidence <- function(df) {
+  df_local <- df %>%
+    filter(contagion_source == "local") %>%
+    group_by(infection) %>%
+    summarise(local = n())
 
 
-df_imported <- df %>%
-  filter(contagion_source == "imported") %>%
-  group_by(infection) %>%
-  summarise(imported = n())
+  df_imported <- df %>%
+    filter(contagion_source == "imported") %>%
+    group_by(infection) %>%
+    summarise(imported = n())
 
-df_incidence <- df_local %>% full_join(df_imported, by = "infection")
-return(df_incidence)
+  df_incidence <- df_local %>% full_join(df_imported, by = "infection")
+  return(df_incidence)
 }
 
 # complete missing dates
-complete_dates <- function(df){
+complete_dates <- function(df) {
   all_dates <- data.frame(infection = seq.Date(min(df$infection),
                                                max(df$infection),
                                                by = "day")
@@ -70,13 +70,6 @@ complete_dates <- function(df){
 df_incidence <- get_incidence(df_confirmed_bogota) %>% complete_dates()
 mask = (df_confirmed_bogota$age_group == "60+")
 df_incidence_60p <- get_incidence(df_confirmed_bogota[mask, ]) %>% complete_dates()
-# df_incidence <- df_confirmed_bogota %>% 
-#   group_by(infection) %>% summarise(I = n())
-
-# mask = (df_confirmed_bogota$age_group == "60+")
-# df_incidence_60p <- df_confirmed_bogota[mask, ] %>%
-#   group_by(infection) %>% summarise(I = n())
-# rm(mask)
 
 # compute Rt
 compute_rt <- function(df_incidence,
@@ -103,38 +96,8 @@ compute_rt <- function(df_incidence,
 
   return(df_rt)
 }
-
-df_rt <- df_incidence %>% compute_rt() %>%
-  filter(window_start >= as.Date("2020-03-01"))
-df_rt_60p <- df_incidence_60p %>% compute_rt() %>%
-  filter(window_start >= as.Date("2020-03-01"))
-
-# df_rt <- df_incidence %>% compute_rt()
-# df_rt_60p <- df_incidence_60p %>% compute_rt()
-
-# remove atypical data first wave
-remove_atypical_rt <- function(df_rt,
-                               initial_date = as.Date("2020-03-01"),
-                               final_date = as.Date("2020-09-25")) {
-  df_rt_wave <- df_rt %>%
-    filter(window_start >= initial_date & window_start <= final_date)
-
-  typical_min <- quantile(df_rt_wave$`Mean(R)`)[[2]] - 1.5*IQR(df_rt_wave$`Mean(R)`)
-  typical_max <- quantile(df_rt_wave$`Mean(R)`)[[4]] + 1.5*IQR(df_rt_wave$`Mean(R)`)
-
-  df_rt_wave <- df_rt_wave %>%
-    filter(`Mean(R)` >= typical_min & `Mean(R)` <= typical_max)
-
-  df_rt_typical <- df_rt %>%
-    filter(window_start < initial_date | window_start > final_date) %>%
-    full_join(df_rt_wave) %>%
-    arrange(t_start)
-
-  return(df_rt_typical)
-}
-
-# df_rt <- df_rt %>% remove_atypical_rt()
-# df_rt_60p <- df_rt_60p %>% remove_atypical_rt()
+df_rt <- df_incidence %>% compute_rt()
+df_rt_60p <- df_incidence_60p %>% compute_rt()
 
 # save data
 write_csv(df_rt, paste0(OUT_PATH, "rt_all_ages.csv"))
