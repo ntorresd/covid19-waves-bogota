@@ -35,7 +35,8 @@ df_variants = pd.read_csv(DATA_PATH + 'variants-ic-bog_'+ DATE_GENOMICS + '.csv'
 df_variants['date'] = pd.to_datetime(df_variants['date'])
 ## Results from multinomial analysis
 df_results = pd.read_csv(OUT_PATH + 'theta.csv')
-df_pivot =  pd.read_csv(DATA_PATH + 'variants_pivot.csv').rename(columns = {'t' : 'week', 'week' : 'week_name'})
+df_pivot =  pd.read_csv(DATA_PATH + 'variants_pivot.csv').rename(columns = {'t' : 'week'})
+
 df_results = df_results.merge(df_pivot[['week', 'week_name']], on = 'week')
 df_results['week_date'] = df_results.week_name.apply(lambda date: datetime.strptime(date + '-1', "%Y-%W-%w"))
 df_results = df_results.sort_values(by = 'week_date')
