@@ -202,7 +202,7 @@ def plot_best_model_bar(dist, ax, n, name_y, title):
     ax.set_xlabel('Wave')
     ax.set_ylabel(name_y)
     ax.set_title(title)
-
+    
 def plot_violin(var, name_y, title, ax):
     if var == 'icu_stay':
         n = 0
@@ -235,3 +235,30 @@ def plot_best_model_bar_all(dist, ax, w, n, wt=0.1):
     #ax.set_yscale('log')
     ax.set_ylabel('Average value of delay time (Days)')
     ax.set_xlabel('Wave')
+    
+def plot_best_model_bar_outcome(wave, ax, w, wt=0.1):
+    dist = ['onset_hosp', 'onset_icu', 'onset_death', 'hosp_stay', 'icu_stay']
+    xlabels= ['Onset to hospitalisation', 
+            'Onset to ICU entrance',
+            'Onset to death',
+            'Hospital stay',
+            'ICU stay']
+    mean = []
+    err = [[],[]]
+    for d in dist:
+        m, e = get_best_error(d)
+        mean.append(m[wave-1])
+        err[0].append(e[0][wave-1])
+        err[1].append(e[1][wave-1])
+    mean = np.array(mean)
+    err = np.array(err)
+    
+    n=wave-1
+    ax.bar([1+w, 2+w, 3+w, 4+w, 5+w], mean, yerr = err, 
+           width = abs(wt), 
+           color = colors[n])
+    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+    #ax.set_yscale('log')
+    ax.set_ylabel('Average value of delay time (Days)')
+    ax.set_xlabel('Epidemiological distribution')
+    ax.set_xticks([1,2,3,4,5], xlabels)

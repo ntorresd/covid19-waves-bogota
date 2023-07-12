@@ -20,6 +20,23 @@ OUT_PATH = config['PATHS']['OUT_PATH'].format(dir = 'severe_outcomes')
 sys.path.append(SCRIPTS_PATH)
 
 import results_epidemiological_distributions as red
+
+########### ########### ###########
+###########   Option 0  ###########
+########### ########### ###########
+fig, ax = plt.subplots(figsize = (15,5))
+red.plot_best_model_bar_outcome(1, ax, w = - 0.15)
+red.plot_best_model_bar_outcome(2, ax, w = - 0.05)
+red.plot_best_model_bar_outcome(3, ax, w =  0.05)
+red.plot_best_model_bar_outcome(4, ax, w =  0.15)
+
+leglabels= ['Wave 1',
+            'Wave 2',
+            'Wave 3',
+            'Wave 4',
+           ]
+ax.legend(leglabels, bbox_to_anchor=(0.75, -0.15), ncol=5)
+fig.savefig(FIG_PATH + 'figure_5_v0.png')
 ########### ########### ###########
 ###########   Option 1  ###########
 ########### ########### ###########
