@@ -36,7 +36,7 @@ df_variants = pd.read_csv(DATA_PATH + 'variants-ic-bog_'+ DATE_GENOMICS + '.csv'
 df_variants['date'] = pd.to_datetime(df_variants['date'])
 ## Results from multinomial analysis
 df_results = pd.read_csv(OUT_PATH + 'theta.csv')
-df_pivot =  pd.read_csv(DATA_PATH + 'variants_pivot.csv').rename(columns = {'t' : 'week'})
+df_pivot =  pd.read_csv(DATA_PATH + 'variants_pivot.csv').rename(columns = {'t' : 'week', 'week': 'week_name'})
 
 df_results = df_results.merge(df_pivot[['week', 'week_name']], on = 'week')
 df_results['week_date'] = df_results.week_name.apply(lambda date: datetime.strptime(date + '-1', "%Y-%W-%w"))
@@ -198,6 +198,6 @@ def plot_heatmap(ax, n):
         df_mean = pd.read_csv(OUT_PATH + 'advantage_mean.csv')
         df_mean = df_mean.set_index('pivot_variant')
         color_list = met_brew('Cassatt1', n = n, brew_type='continuous')
-        sns.heatmap(data = df_mean, annot = False, cmap = color_list, ax = ax)
+        sns.heatmap(data = df_mean, annot = df_mean, fmt = '.2f', cmap = color_list, ax = ax)
         ax.set_ylabel('')
         ax.tick_params(axis='x', rotation=90)
