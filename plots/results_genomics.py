@@ -61,11 +61,11 @@ def plot_multinomial(ax, limits):
         df_incidence_count = df_incidence_count.sort_values(by = 'week_date')
         
         l1 = ax.bar(df_incidence_count['week_date'], df_incidence_count['cases'], 
-               alpha = 0.3, color = "grey", width=5.3, label = 'Weekly new cases')
-        ax.set_ylabel('Incidence')
+               alpha = 0.3, color = "grey", width=5.3, label = 'Casos nuevos semanales')
+        ax.set_ylabel('Incidencia')
         ax.tick_params(axis='x', rotation=90)
         ax.xaxis.set_major_locator(plt.MaxNLocator(n_ticks))
-        labs = ['Weekly new cases'] 
+        labs = ['Casos nuevos semanales'] 
         
         # Prevalence - Observed        
         ax1 = ax.twinx()
@@ -168,7 +168,7 @@ def plot_multinomial(ax, limits):
         ax1.tick_params(axis='x', rotation=90)
         ax1.xaxis.set_major_locator(plt.MaxNLocator(n_ticks))
         ax1.spines.right.set_visible(True)
-        ax1.set_ylabel('Prevalence', rotation = 270, labelpad = 15)
+        ax1.set_ylabel('Prevalencia', rotation = 270, labelpad = 15)
         
         handles = ax.containers + ax1.get_lines()
         labels1, handles1 = ax1.get_legend_handles_labels()

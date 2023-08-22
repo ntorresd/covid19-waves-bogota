@@ -233,16 +233,16 @@ def plot_best_model_bar_all(dist, ax, w, n, wt=0.1):
            color = colors[n])
     ax.xaxis.set_major_locator(MaxNLocator(integer=True))
     #ax.set_yscale('log')
-    ax.set_ylabel('Average value of delay time (Days)')
-    ax.set_xlabel('Wave')
+    ax.set_ylabel('Media del tiempo de estancia (días)')
+    ax.set_xlabel('Ola')
     
 def plot_best_model_bar_outcome(wave, ax, w, wt=0.1):
     dist = ['onset_hosp', 'onset_icu', 'onset_death', 'hosp_stay', 'icu_stay']
-    xlabels= ['Onset to hospitalisation', 
-            'Onset to ICU entrance',
-            'Onset to death',
-            'Hospital stay',
-            'ICU stay']
+    xlabels= ['FIS - hospitalización', 
+            'FIS - ingreso UCI',
+            'FIS - fallecimiento',
+            'Estancia en hospitalización',
+            'Estancia en UCI']
     mean = []
     err = [[],[]]
     for d in dist:
@@ -259,6 +259,6 @@ def plot_best_model_bar_outcome(wave, ax, w, wt=0.1):
            color = colors[n])
     ax.xaxis.set_major_locator(MaxNLocator(integer=True))
     #ax.set_yscale('log')
-    ax.set_ylabel('Average value of delay time (Days)')
-    ax.set_xlabel('Epidemiological distribution')
+    ax.set_ylabel('Media del tiempos de estancia (días)')
+    ax.set_xlabel('Distribuciones epidemiológicas')
     ax.set_xticks([1,2,3,4,5], xlabels)

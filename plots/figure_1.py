@@ -32,8 +32,8 @@ axi.set_title('a.')
 axi = ax[0][1]
 overview.plot_pyramid(ax = axi)
 axi.set_xlim(left=-270000)
-axi.set_xlabel('Cases')
-axi.set_ylabel('Age group')
+axi.set_xlabel('Casos')
+axi.set_ylabel('Grupo de edad')
 axi.set_title('b.')
 axi.legend(loc = 'upper left')  
 
@@ -50,7 +50,7 @@ axi = ax[1][1]
 results_genomics.plot_prevalence(ax = axi)
 axi.tick_params(axis = 'x', rotation = 90)
 axi.set_xlabel('')
-axi.set_ylabel('Prevalence')
+axi.set_ylabel('Prevalencia')
 axi.set_title('d.', loc = 'left')
 
 fig.savefig(FIG_PATH + 'figure_1.png')

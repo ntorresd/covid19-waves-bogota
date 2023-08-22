@@ -31,7 +31,7 @@ df_rt_60p['window_end'] = pd.to_datetime(df_rt_60p['window_end'])
 
 # Instantaneous reproduction number R(t) plot
 def plot_rt(ax):    
-    ln1 = ax.plot(df_rt_all['window_end'], df_rt_all['Mean(R)'], color=colors[4], label = 'all')
+    ln1 = ax.plot(df_rt_all['window_end'], df_rt_all['Mean(R)'], color=colors[4], label = 'todos')
     ln2 = ax.plot(df_rt_60p['window_end'], df_rt_60p['Mean(R)'], color=colors[1], label = '60+')
     ax.axhline(y=1, color='black', linestyle='--', linewidth=3)
 

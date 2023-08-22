@@ -67,8 +67,8 @@ import overview as overview
 fig, ax = plt.subplots(figsize=(7.5, 5))
 overview.plot_pyramid(ax)
 ax.set_xlim(left=-260000)
-ax.set_xlabel('Cases')
-ax.set_ylabel('Age group')
+ax.set_xlabel('Casos')
+ax.set_ylabel('Grupo de edad')
 ax.legend()     
 fig.savefig(FIG_PATH + 'population_pyramid.png')
 
@@ -184,12 +184,12 @@ import results_severe_outcomes as results_severe_outcomes
 
 fig, ax = plt.subplots(1, 3, figsize=(15, 5))
 results_severe_outcomes.plot_percentage_err(ax)
-ax[0].set_ylabel('Hospitalization percentage by age-group')
-ax[1].set_ylabel('ICU percentage by age-group')
-ax[2].set_ylabel('Deaths percentage by age-group')
+ax[0].set_ylabel('Porcentaje de ingreso hospitalización')
+ax[1].set_ylabel('Porcentaje de ingreso a UCI')
+ax[2].set_ylabel('Porcentaje de fallecidos')
 for axi in ax:
     axi.tick_params(axis='x', labelrotation=90)
-    axi.set_xlabel('Age group')
+    axi.set_xlabel('Grupo de edad')
 ax[0].set_title('a.')
 ax[1].set_title('b.')
 ax[2].set_title('c.')

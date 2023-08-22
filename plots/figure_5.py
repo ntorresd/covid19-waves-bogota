@@ -30,10 +30,10 @@ red.plot_best_model_bar_outcome(2, ax, w = - 0.05)
 red.plot_best_model_bar_outcome(3, ax, w =  0.05)
 red.plot_best_model_bar_outcome(4, ax, w =  0.15)
 
-leglabels= ['Wave 1',
-            'Wave 2',
-            'Wave 3',
-            'Wave 4',
+leglabels= ['ola 1',
+            'ola 2',
+            'ola 3',
+            'ola 4',
            ]
 ax.legend(leglabels, bbox_to_anchor=(0.75, -0.15), ncol=5)
 fig.savefig(FIG_PATH + 'figure_5_v0.png')

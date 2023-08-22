@@ -38,7 +38,7 @@ df_ratios = df_ratios[~df_ratios['age_group'].isin(['all'])].sort_values(by = ['
 # Auxiliar plot function
 def plot_xyvar(df, ax, n_strat, varx='age_group', vary='percentage'):
     data = df.loc[df[strat]==n_strat]
-    ax.plot(data[varx], data[vary], label=strat+str(n_strat), ls = '-', marker = ".", lw = 1)
+    ax.plot(data[varx], data[vary], label='ola '+str(n_strat), ls = '-', marker = ".", lw = 1)
 
 # Wave cases percentage distribution by age group
 def plot_percentage(ax):
@@ -54,8 +54,8 @@ def plot_counts(ax):
     strat_list = df_ratios[strat].unique()
     for axi in ax:
         axi.tick_params(axis='x', labelrotation=90)
-        axi.set_ylabel('cases')
-        axi.set_xlabel('age group')
+        axi.set_ylabel('casos')
+        axi.set_xlabel('grupo de edad')
     for wave in strat_list:
         plot_xyvar(df_ratios[[strat, 'age_group','hosp']], ax=ax[0], n_strat=wave, vary='hosp')
         plot_xyvar(df_ratios[[strat, 'age_group', 'icu']], ax=ax[1], n_strat=wave, vary='icu')
@@ -123,9 +123,9 @@ def plot_ratios(ax, var, var_name):
         ratio_upper = df_temp[var+'_upper'] - ratio
         yerr = np.array(list(zip(ratio_lower, ratio_upper))).T
         ax.errorbar(df_temp['age_group'], df_temp[var], yerr = yerr,
-                    fmt='o', color = colors[wave-1], label = 'wave '+str(wave),
+                    fmt='o', color = colors[wave-1], label = 'ola '+str(wave),
                     capsize = 5, ls = '-', marker = ".", lw = 1)
-    ax.set_xlabel('age group')
+    ax.set_xlabel('grupo de edad')
     ax.set_ylabel(var_name)
 
 # Plot variable with error bar
@@ -137,7 +137,7 @@ def plot_var_err(df, axi, var):
         data_upper = df_temp[var + '_upper'] - data
         yerr = np.array(list(zip(data_lower, data_upper))).T
         axi.errorbar(df_temp['age_group'], df_temp[var], yerr = yerr,
-                     fmt='o', color = colors[wave-1], label = 'wave '+str(wave),
+                     fmt='o', color = colors[wave-1], label = 'ola '+str(wave),
                      capsize = 5, ls = '-', marker = ".", lw = 1)
         
 # Plot percentages with erros

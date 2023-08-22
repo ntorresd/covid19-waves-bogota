@@ -47,21 +47,21 @@ df_counts['cases_gs_diff_gs'] = ut.gaussian_smoothing(df_counts, 'cases_gs_diff'
 # Function to plot waves figure
 def plot_waves(ax):
     # Confirmed cases curve
-    ln1 = ax.plot(df_counts['date'], df_counts['cases'], color = colors[0], label = 'confirmed cases')
+    ln1 = ax.plot(df_counts['date'], df_counts['cases'], color = colors[0], label = 'casos confirmados')
     ln2 = ax.plot(df_counts['date'], df_counts['cases_gs'], color= colors[2], ls = '--')
     date_no_dup = []
     for d in range(len(df_waves)):
             ax.axvline(x = df_waves['start_date'].iloc[d], color = 'black', alpha = 0.8, ls = '--')
             ax.axvline(x = df_waves['end_date'].iloc[d], color = 'black', alpha = 0.8, ls = '--')
             date_no_dup.append(d)
-    ax.set_ylabel('Confirmed cases')
+    ax.set_ylabel('Casos confirmados')
     # First difference plot
     ax2 = ax.twinx()
-    ln3 = ax2.plot(df_counts['date'],df_counts['cases_gs_diff'], colors[1], label = 'diff(confirmed cases)')
-    ln4 = ax2.plot(df_counts['date'],df_counts['cases_gs_diff_gs'], colors[2], ls = '--', label = 'gaussian smoothing')
+    ln3 = ax2.plot(df_counts['date'],df_counts['cases_gs_diff'], colors[1], label = 'diff(casos confirmados)')
+    ln4 = ax2.plot(df_counts['date'],df_counts['cases_gs_diff_gs'], colors[2], ls = '--', label = 'suavizamiento gaussiano')
 
     ax2.axhline(y = 0, color = 'black', alpha = 0.8, ls = '--')
-    ax2.set_ylabel('diff(Confirmed cases)')
+    ax2.set_ylabel('diff(Casos confirmados)')
     ax2.spines.right.set_visible(True) #This was set as False by default in the .mpstyle file
 
     ##Legend

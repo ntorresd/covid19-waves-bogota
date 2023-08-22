@@ -28,12 +28,12 @@ plt.rcParams["savefig.pad_inches"] = 0.4
 results_severe_outcomes.plot_percentage(ax)
 # results_severe_outcomes.plot_percentage_err(ax)
 
-ax[0].set_ylabel('Hospitalization percentage by age-group')
-ax[1].set_ylabel('ICU percentage by age-group')
-ax[2].set_ylabel('Deaths percentage by age-group')
+ax[0].set_ylabel('Porcentaje de ingreso a hospitalización')
+ax[1].set_ylabel('Porcentaje de ingreso a UCI')
+ax[2].set_ylabel('Porcentaje de fallecidos')
 for axi in ax:
     axi.tick_params(axis='x', labelrotation=90)
-    axi.set_xlabel('Age group')
+    axi.set_xlabel('Grupo de edad')
 ax[0].set_title('a.')
 ax[1].set_title('b.')
 ax[2].set_title('c.')
