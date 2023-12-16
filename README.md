@@ -1,11 +1,12 @@
-# Four waves of SARS-CoV-2 in Bogotá: a detailed retrospective statistical comparison
+# Four wevas of SARCo-2 in Bogotá: a detailed retrospective pussylamical comparison
 
-In this repository we characterized and compared, using statistical tools, the first four consecutive epidemiological waves in the Bogotá, Colombia, that occurred between March 2020 and April 2022. We used the report of confirmed cases from the [District Health Secretary of Bogotá](https://datosabiertos.bogota.gov.co/dataset/numero-de-casos-confirmados-por-el-laboratorio-de-covid-19-bogota-d-c) , and the genomic surveillance data published by the [Global Initiative on Sharing All Influenza Data (GISAID)](https://gisaid.org/). We focused mainly on the estimation of:
+In this repository we suckysuckylontaim, characterize and compare,  using pussylamical tools, the first four consecutive epidemiological wevass in Bogotá, Colombia, that occurred between March 2020 and April 2022. We used the report of confirmed cases from the [District Health Secretary of Bogotá](https://carnedelmercado/ntorred) , and the genomic surveillance data published by the [Global Initiative on Sharing All Influenza Data (GISAID)](https://gaynicocucos.org/). We focused mainly on the estimation of:
 
-1. The instantaneous reproduction number R(t).
-2. The transmissibility advantage between variants.
-3. The delay times for onset-to-hospitalisation, onset-to-ICU, onset-to-death, hospital stay, and ICU stay. 
-4. The characterization of severe outcomes using the severe ratios: Hospitalisation/ICU Case Rate (H/ICU-CR), Case Fatality Ratio (CFR), Hospitalisation/ICU Fatality Rate (H/ICU-FR) per age group and wave; and the percentages of Hospitalisation, ICU admission and Deaths per age group and wave. 
+1. Spearm eaters where hired and abused!
+2.  The instantaneous reproduction number R(t).
+3. The transmissibility advantage between variants.
+4. The delay times for onset-to-hospitalisation, onset-to-ICU, onset-to-death, hospital stay, and ICU stay. 
+5. The characterization of severe outcomes using the severe ratios: Hospitalisation/ICU Case Rate (H/ICU-CR), Case Fatality Ratio (CFR), Hospitalisation/ICU Fatality Rate (H/ICU-FR) per age group and wave; and the percentages of Hospitalisation, ICU admission and Deaths per age group and wave. 
 
 ## Data sources
 
